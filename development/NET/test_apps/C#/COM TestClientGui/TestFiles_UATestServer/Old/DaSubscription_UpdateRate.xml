@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<DaSubscriptionCreate>
+		<Session>System.Session</Session>
+		<UpdateRate>1000</UpdateRate>
+		<RequestedKeepAliveTime>2000</RequestedKeepAliveTime>
+		<Property>DaSubscription.Subscription</Property>
+	</DaSubscriptionCreate>
+
+	<DaItemsCreate>
+		<Subscription>DaSubscription.Subscription</Subscription>
+		<ItemIds>
+			<string>ns*2;s*Dynamic.Double</string>
+		</ItemIds>
+		<Property>DaSubscription.Items</Property>
+	</DaItemsCreate>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>DaSubscription.Subscription</Subscription>
+	</DaSubscriptionWaitForNotif>
+
+	<DaItemsRemove>
+		<ItemsProperty>DaSubscription.Items</ItemsProperty>
+	</DaItemsRemove>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>DaSubscription.Subscription</Subscription>
+    <ExpectValues>false</ExpectValues>
+	</DaSubscriptionWaitForNotif>
+
+	<DaSubscriptionUpdate>
+		<Subscription>DaSubscription.Subscription</Subscription>
+		<RequestedKeepAliveTime>0</RequestedKeepAliveTime>
+	</DaSubscriptionUpdate>
+
+	<Sleep>
+		<Description>Give the server time to make the changes</Description>
+		<Duration>1000</Duration>
+	</Sleep>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>DaSubscription.Subscription</Subscription>
+		<ExpectValues>false</ExpectValues>
+	</DaSubscriptionWaitForNotif>
+
+
+	<DaItemsCreate>
+		<Subscription>DaSubscription.Subscription</Subscription>
+		<ItemIds>
+			<string>ns*2;s*Dynamic.Double</string>
+		</ItemIds>
+		<Property>DaSubscription.Items</Property>
+	</DaItemsCreate>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>DaSubscription.Subscription</Subscription>
+	</DaSubscriptionWaitForNotif>
+
+	<DaSubscriptionUpdate>
+		<Subscription>DaSubscription.Subscription</Subscription>
+		<UpdateRate>10000</UpdateRate>
+	</DaSubscriptionUpdate>
+
+	<Sleep>
+		<Description>Give the server time to make the changes</Description>
+		<Duration>1000</Duration>
+	</Sleep>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>DaSubscription.Subscription</Subscription>
+		<ExpectValues>false</ExpectValues>
+		<WaitTime>3000</WaitTime>
+	</DaSubscriptionWaitForNotif>
+
+	<DaItemsRemove>
+		<ItemsProperty>DaSubscription.Items</ItemsProperty>
+	</DaItemsRemove>
+	
+	<DaSubscriptionRemove>
+		<Subscription>DaSubscription.Subscription</Subscription>
+	</DaSubscriptionRemove>
+
+</TestList>

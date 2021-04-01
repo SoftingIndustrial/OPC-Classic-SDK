@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressSpace_Console_VS2005", "NET\samples\server\AddressSpace\CS\AddressSpace_Console_VS2005.csproj", "{EAB2D9CC-F5CD-48FD-B97D-C3F2FA3DDADE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressSpace_Service_VS2005", "NET\samples\server\AddressSpace\CS\AddressSpace_Service_VS2005.csproj", "{B9CF45D2-11B8-48B5-A303-D42F43504241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BISDemo_VS2005", "NET\samples\server\BISDemo\CS\BISDemo_VS2005.csproj", "{9BBF9B60-EBF3-4E77-BB07-782205CA6A70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_VS2005", "NET\samples\server\Console\CS\Console_VS2005.csproj", "{26EBAA93-DD2E-429E-BC75-1E154C13F98E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoServer_VS2005", "NET\samples\server\DemoServer\CS\DemoServer_VS2005.csproj", "{3B4B4662-BAB9-4A24-ADC9-AD7487AC0355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpcServerSerialIO_VS2005", "NET\samples\server\Serial_IO\CS\OpcServerSerialIO_VS2005.csproj", "{085C8615-4E7C-483E-9A04-FDFE33627E46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpcProject_Dll_VS2005", "NET\samples\server\ServerDLL\CS\OpcProject\OpcProject_Dll_VS2005.csproj", "{D6D67451-AD8A-471E-B270-C7D9CB32B42D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDll_VS2005", "NET\samples\server\ServerDLL\CS\TestDll\TestDll_VS2005.csproj", "{47178D5F-D59E-4A82-8DE6-480A298C05FA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D6D67451-AD8A-471E-B270-C7D9CB32B42D} = {D6D67451-AD8A-471E-B270-C7D9CB32B42D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session_VS2005", "NET\samples\server\Session\CS\Session_VS2005.csproj", "{7106F181-AB82-402B-B537-D51822835801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateMode_VS2005", "NET\samples\server\UpdateMode\CS\UpdateMode_VS2005.csproj", "{41A3209B-BA97-4A2A-9A15-ABA91A2EA974}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCtt_VS2005", "NET\samples\server\ctt\CS\ConsoleCtt_VS2005.csproj", "{90350331-F1CF-4A38-AA69-9E3956F07FFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAB2D9CC-F5CD-48FD-B97D-C3F2FA3DDADE}.Debug|x86.ActiveCfg = Debug|x86
+		{EAB2D9CC-F5CD-48FD-B97D-C3F2FA3DDADE}.Debug|x86.Build.0 = Debug|x86
+		{EAB2D9CC-F5CD-48FD-B97D-C3F2FA3DDADE}.Release|x86.ActiveCfg = Release|x86
+		{EAB2D9CC-F5CD-48FD-B97D-C3F2FA3DDADE}.Release|x86.Build.0 = Release|x86
+		{B9CF45D2-11B8-48B5-A303-D42F43504241}.Debug|x86.ActiveCfg = Debug|x86
+		{B9CF45D2-11B8-48B5-A303-D42F43504241}.Debug|x86.Build.0 = Debug|x86
+		{B9CF45D2-11B8-48B5-A303-D42F43504241}.Release|x86.ActiveCfg = Release|x86
+		{B9CF45D2-11B8-48B5-A303-D42F43504241}.Release|x86.Build.0 = Release|x86
+		{9BBF9B60-EBF3-4E77-BB07-782205CA6A70}.Debug|x86.ActiveCfg = Debug|x86
+		{9BBF9B60-EBF3-4E77-BB07-782205CA6A70}.Debug|x86.Build.0 = Debug|x86
+		{9BBF9B60-EBF3-4E77-BB07-782205CA6A70}.Release|x86.ActiveCfg = Release|x86
+		{9BBF9B60-EBF3-4E77-BB07-782205CA6A70}.Release|x86.Build.0 = Release|x86
+		{26EBAA93-DD2E-429E-BC75-1E154C13F98E}.Debug|x86.ActiveCfg = Debug|x86
+		{26EBAA93-DD2E-429E-BC75-1E154C13F98E}.Debug|x86.Build.0 = Debug|x86
+		{26EBAA93-DD2E-429E-BC75-1E154C13F98E}.Release|x86.ActiveCfg = Release|x86
+		{26EBAA93-DD2E-429E-BC75-1E154C13F98E}.Release|x86.Build.0 = Release|x86
+		{3B4B4662-BAB9-4A24-ADC9-AD7487AC0355}.Debug|x86.ActiveCfg = Debug|x86
+		{3B4B4662-BAB9-4A24-ADC9-AD7487AC0355}.Debug|x86.Build.0 = Debug|x86
+		{3B4B4662-BAB9-4A24-ADC9-AD7487AC0355}.Release|x86.ActiveCfg = Release|x86
+		{3B4B4662-BAB9-4A24-ADC9-AD7487AC0355}.Release|x86.Build.0 = Release|x86
+		{085C8615-4E7C-483E-9A04-FDFE33627E46}.Debug|x86.ActiveCfg = Debug|x86
+		{085C8615-4E7C-483E-9A04-FDFE33627E46}.Debug|x86.Build.0 = Debug|x86
+		{085C8615-4E7C-483E-9A04-FDFE33627E46}.Release|x86.ActiveCfg = Release|x86
+		{085C8615-4E7C-483E-9A04-FDFE33627E46}.Release|x86.Build.0 = Release|x86
+		{D6D67451-AD8A-471E-B270-C7D9CB32B42D}.Debug|x86.ActiveCfg = Debug|x86
+		{D6D67451-AD8A-471E-B270-C7D9CB32B42D}.Debug|x86.Build.0 = Debug|x86
+		{D6D67451-AD8A-471E-B270-C7D9CB32B42D}.Release|x86.ActiveCfg = Release|x86
+		{D6D67451-AD8A-471E-B270-C7D9CB32B42D}.Release|x86.Build.0 = Release|x86
+		{47178D5F-D59E-4A82-8DE6-480A298C05FA}.Debug|x86.ActiveCfg = Debug|x86
+		{47178D5F-D59E-4A82-8DE6-480A298C05FA}.Debug|x86.Build.0 = Debug|x86
+		{47178D5F-D59E-4A82-8DE6-480A298C05FA}.Release|x86.ActiveCfg = Release|x86
+		{47178D5F-D59E-4A82-8DE6-480A298C05FA}.Release|x86.Build.0 = Release|x86
+		{7106F181-AB82-402B-B537-D51822835801}.Debug|x86.ActiveCfg = Debug|x86
+		{7106F181-AB82-402B-B537-D51822835801}.Debug|x86.Build.0 = Debug|x86
+		{7106F181-AB82-402B-B537-D51822835801}.Release|x86.ActiveCfg = Release|x86
+		{7106F181-AB82-402B-B537-D51822835801}.Release|x86.Build.0 = Release|x86
+		{41A3209B-BA97-4A2A-9A15-ABA91A2EA974}.Debug|x86.ActiveCfg = Debug|x86
+		{41A3209B-BA97-4A2A-9A15-ABA91A2EA974}.Debug|x86.Build.0 = Debug|x86
+		{41A3209B-BA97-4A2A-9A15-ABA91A2EA974}.Release|x86.ActiveCfg = Release|x86
+		{41A3209B-BA97-4A2A-9A15-ABA91A2EA974}.Release|x86.Build.0 = Release|x86
+		{90350331-F1CF-4A38-AA69-9E3956F07FFE}.Debug|x86.ActiveCfg = Debug|x86
+		{90350331-F1CF-4A38-AA69-9E3956F07FFE}.Debug|x86.Build.0 = Debug|x86
+		{90350331-F1CF-4A38-AA69-9E3956F07FFE}.Release|x86.ActiveCfg = Release|x86
+		{90350331-F1CF-4A38-AA69-9E3956F07FFE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

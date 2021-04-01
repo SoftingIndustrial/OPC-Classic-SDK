@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="OPCToolboxC++">
+      <UniqueIdentifier>{ffdd7264-4d67-4016-ab91-fe803ae1facd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OPCToolboxC++\Common">
+      <UniqueIdentifier>{639581f6-c145-4165-be6c-5d4e99ed37b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OPCToolboxC++\Client">
+      <UniqueIdentifier>{bdd6be9e-bce2-4cfb-a9bb-ce02dd35bc5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OPCToolboxC++\Client\Da">
+      <UniqueIdentifier>{b163bc6b-6124-420b-b36d-40d31e09f490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OPCToolboxC++\Client\Ae">
+      <UniqueIdentifier>{f5b4355b-8fcb-4877-8604-9028a9a5772a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OPCToolboxC++\Server">
+      <UniqueIdentifier>{35a40d7b-cdc9-4f50-a8b4-b2775d6e3140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OPCToolboxC++\Server\Da">
+      <UniqueIdentifier>{0d9150b7-8753-4c95-bd62-3d113737819e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OPCToolboxC++\Server\Ae">
+      <UniqueIdentifier>{06ad2edb-90f8-450e-891a-1c9a12c06b9e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Enums.h">
+      <Filter>OPCToolboxC++\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Mutex.h">
+      <Filter>OPCToolboxC++\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="OSCompat.h">
+      <Filter>OPCToolboxC++\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SOModule.h">
+      <Filter>OPCToolboxC++\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\core\common\SOVersion.h">
+      <Filter>OPCToolboxC++\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Trace.h">
+      <Filter>OPCToolboxC++\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ValueQT.h">
+      <Filter>OPCToolboxC++\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="client\ClientAddressSpaceElement.h">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="client\ClientAddressSpaceElementBrowseOptions.h">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="client\ClientApplication.h">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="client\ClientCommon.h">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="Client\ClientEnums.h">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="Client\ClientObjectSpaceElement.h">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="client\ClientServerBrowser.h">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="client\ClientServerStatus.h">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="client\DA\ClientDaAddressSpaceElement.h">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClInclude>
+    <ClInclude Include="client\DA\ClientDaGetPropertiesOptions.h">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClInclude>
+    <ClInclude Include="client\DA\ClientDaItem.h">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClInclude>
+    <ClInclude Include="client\DA\ClientDaProperty.h">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClInclude>
+    <ClInclude Include="Client\DA\ClientDaSession.h">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClInclude>
+    <ClInclude Include="client\DA\ClientDaSubscription.h">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClInclude>
+    <ClInclude Include="client\AE\ClientAeAttribute.h">
+      <Filter>OPCToolboxC++\Client\Ae</Filter>
+    </ClInclude>
+    <ClInclude Include="client\AE\ClientAeCategory.h">
+      <Filter>OPCToolboxC++\Client\Ae</Filter>
+    </ClInclude>
+    <ClInclude Include="client\Ae\ClientAeCondition.h">
+      <Filter>OPCToolboxC++\Client\Ae</Filter>
+    </ClInclude>
+    <ClInclude Include="client\Ae\ClientAeEvent.h">
+      <Filter>OPCToolboxC++\Client\Ae</Filter>
+    </ClInclude>
+    <ClInclude Include="client\Ae\ClientAeSession.h">
+      <Filter>OPCToolboxC++\Client\Ae</Filter>
+    </ClInclude>
+    <ClInclude Include="client\Ae\ClientAeSubscription.h">
+      <Filter>OPCToolboxC++\Client\Ae</Filter>
+    </ClInclude>
+    <ClInclude Include="server\ServerAddressSpaceElement.h">
+      <Filter>OPCToolboxC++\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\ServerApplication.h">
+      <Filter>OPCToolboxC++\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\ServerCommon.h">
+      <Filter>OPCToolboxC++\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\ServerCreator.h">
+      <Filter>OPCToolboxC++\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\ServerEnums.h">
+      <Filter>OPCToolboxC++\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\ServerWebTemplate.h">
+      <Filter>OPCToolboxC++\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\DA\ServerDaAddressSpaceElement.h">
+      <Filter>OPCToolboxC++\Server\Da</Filter>
+    </ClInclude>
+    <ClInclude Include="server\DA\ServerDaProperty.h">
+      <Filter>OPCToolboxC++\Server\Da</Filter>
+    </ClInclude>
+    <ClInclude Include="server\DA\ServerDaRequest.h">
+      <Filter>OPCToolboxC++\Server\Da</Filter>
+    </ClInclude>
+    <ClInclude Include="server\DA\ServerDaSession.h">
+      <Filter>OPCToolboxC++\Server\Da</Filter>
+    </ClInclude>
+    <ClInclude Include="server\DA\ServerDaTransaction.h">
+      <Filter>OPCToolboxC++\Server\Da</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\AE\ServerAeAddressSpaceElement.h">
+      <Filter>OPCToolboxC++\Server\Ae</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\AE\ServerAeAttribute.h">
+      <Filter>OPCToolboxC++\Server\Ae</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\AE\ServerAeCategory.h">
+      <Filter>OPCToolboxC++\Server\Ae</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\AE\ServerAeCondition.h">
+      <Filter>OPCToolboxC++\Server\Ae</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\AE\ServerAeEvent.h">
+      <Filter>OPCToolboxC++\Server\Ae</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Mutex.cpp">
+      <Filter>OPCToolboxC++\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Trace.cpp">
+      <Filter>OPCToolboxC++\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ValueQT.cpp">
+      <Filter>OPCToolboxC++\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="client\ClientAddressSpaceElement.cpp">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="client\ClientAddressSpaceElementBrowseOptions.cpp">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="client\ClientApplication.cpp">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="Client\ClientObjectSpaceElement.cpp">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="client\ClientServerBrowser.cpp">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="client\ClientServerStatus.cpp">
+      <Filter>OPCToolboxC++\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="client\DA\ClientDaAddressSpaceElement.cpp">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClCompile>
+    <ClCompile Include="client\DA\ClientDaGetPropertiesOptions.cpp">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClCompile>
+    <ClCompile Include="client\DA\ClientDaItem.cpp">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClCompile>
+    <ClCompile Include="client\DA\ClientDaProperty.cpp">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClCompile>
+    <ClCompile Include="Client\DA\ClientDaSession.cpp">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClCompile>
+    <ClCompile Include="client\DA\ClientDaSubscription.cpp">
+      <Filter>OPCToolboxC++\Client\Da</Filter>
+    </ClCompile>
+    <ClCompile Include="client\AE\ClientAeCategory.cpp">
+      <Filter>OPCToolboxC++\Client\Ae</Filter>
+    </ClCompile>
+    <ClCompile Include="client\AE\ClientAeCondition.cpp">
+      <Filter>OPCToolboxC++\Client\Ae</Filter>
+    </ClCompile>
+    <ClCompile Include="client\Ae\ClientAeSession.cpp">
+      <Filter>OPCToolboxC++\Client\Ae</Filter>
+    </ClCompile>
+    <ClCompile Include="client\Ae\ClientAeSubscription.cpp">
+      <Filter>OPCToolboxC++\Client\Ae</Filter>
+    </ClCompile>
+    <ClCompile Include="server\ServerAddressSpaceElement.cpp">
+      <Filter>OPCToolboxC++\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\ServerApplication.cpp">
+      <Filter>OPCToolboxC++\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\ServerCreator.cpp">
+      <Filter>OPCToolboxC++\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\DA\ServerDaAddressSpaceElement.cpp">
+      <Filter>OPCToolboxC++\Server\Da</Filter>
+    </ClCompile>
+    <ClCompile Include="server\DA\ServerDaProperty.cpp">
+      <Filter>OPCToolboxC++\Server\Da</Filter>
+    </ClCompile>
+    <ClCompile Include="server\DA\ServerDaRequest.cpp">
+      <Filter>OPCToolboxC++\Server\Da</Filter>
+    </ClCompile>
+    <ClCompile Include="server\DA\ServerDaSession.cpp">
+      <Filter>OPCToolboxC++\Server\Da</Filter>
+    </ClCompile>
+    <ClCompile Include="server\DA\ServerDaTransaction.cpp">
+      <Filter>OPCToolboxC++\Server\Da</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\AE\ServerAeAddressSpaceElement.cpp">
+      <Filter>OPCToolboxC++\Server\Ae</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\AE\ServerAeAttribute.cpp">
+      <Filter>OPCToolboxC++\Server\Ae</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\AE\ServerAeCategory.cpp">
+      <Filter>OPCToolboxC++\Server\Ae</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\AE\ServerAeCondition.cpp">
+      <Filter>OPCToolboxC++\Server\Ae</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\AE\ServerAeEvent.cpp">
+      <Filter>OPCToolboxC++\Server\Ae</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\core\common\Version.rc">
+      <Filter>OPCToolboxC++\Common</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

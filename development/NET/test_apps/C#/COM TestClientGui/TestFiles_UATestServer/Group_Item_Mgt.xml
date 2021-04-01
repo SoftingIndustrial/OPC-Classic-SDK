@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<DaSubscriptionCreate>
+		<Session>System.Session</Session>
+		<UpdateRate>1000</UpdateRate>
+		<RequestedKeepAliveTime>2</RequestedKeepAliveTime>
+		<Property>System.Subscription</Property>
+	</DaSubscriptionCreate>
+
+	
+	<DaItemsCreate>
+		<Subscription>System.Subscription</Subscription>
+		<ItemIds>
+			<string>CTT.Static.All Profiles.Scalar.Double</string>
+		</ItemIds>
+		<Property>System.Items</Property>
+	</DaItemsCreate>
+	
+	<Connect>
+		<Object>System.Subscription</Object>
+		<Active>false</Active>
+	</Connect>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>System.Subscription</Subscription>
+		<ExpectValues>false</ExpectValues>
+	</DaSubscriptionWaitForNotif>
+
+	<Connect>
+		<Object>System.Subscription</Object>
+		<Active>true</Active>
+	</Connect>
+
+	<DaSubscriptionWrite>
+		<ItemsProperty>System.Items</ItemsProperty>
+		<Values>
+			<Value>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+		</Values>	
+	</DaSubscriptionWrite>
+	
+	<sleep>1000</sleep>
+	
+	<DaSubscriptionWaitForNotif>
+		<Subscription>System.Subscription</Subscription>
+		<ExpectValues>true</ExpectValues>
+	</DaSubscriptionWaitForNotif>
+
+	<DaSubscriptionUpdate>
+		<Subscription>System.Subscription</Subscription>
+		<RequestedKeepAliveTime>100</RequestedKeepAliveTime>
+		<Property>System.Subscription.1</Property>
+	</DaSubscriptionUpdate>
+
+	<DaSubscriptionRefresh>
+		<Subscription>System.Subscription</Subscription>
+	</DaSubscriptionRefresh>
+	
+	
+	<DaItemsRemove>
+		<ItemsProperty>System.Items</ItemsProperty>
+	</DaItemsRemove>
+	
+	
+	<DaSubscriptionRemove>
+		<Subscription>System.Subscription</Subscription>
+	</DaSubscriptionRemove>
+	
+</TestList>

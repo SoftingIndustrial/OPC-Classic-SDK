@@ -1,0 +1,1014 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+	<TestList StopIfOneFailed="false"  DisplayName="Read/Write tests on DA3" RunInParallel="false">
+	<DaSubscriptionCreate>
+		<Session>System.Session</Session>
+		<UpdateRate>1000</UpdateRate>
+		<RequestedKeepAliveTime>2000</RequestedKeepAliveTime>
+		<Property>System.Subscription_DA3</Property>
+	</DaSubscriptionCreate>
+
+	<DaItemsCreate>
+		<Subscription>System.Subscription_DA3</Subscription>
+		<ItemIds>
+			<string>CTT.Static.All Profiles.Arrays.Double</string>
+			<string>CTT.Static.All Profiles.Arrays.Boolean</string>
+			<string>CTT.Static.All Profiles.Arrays.Byte</string>
+			<string>CTT.Static.All Profiles.Arrays.Date Time</string>
+			<string>CTT.Static.All Profiles.Arrays.Float</string>
+			<string>CTT.Static.All Profiles.Arrays.Int16</string>
+			<string>CTT.Static.All Profiles.Arrays.Int32</string>
+			<string>CTT.Static.All Profiles.Arrays.Int64</string>
+			<string>CTT.Static.All Profiles.Arrays.String</string>
+			<!--<string>CTT.Static.All Profiles.Arrays.Sbyte</string>-->
+			<string>CTT.Static.All Profiles.Arrays.UInt16</string>
+			<string>CTT.Static.All Profiles.Arrays.UInt32</string>
+			<string>CTT.Static.All Profiles.Arrays.UInt64</string>
+		</ItemIds>
+		<Property>System.StaticItems_DA3</Property>
+	</DaItemsCreate>
+
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>false</Active>
+    </Connect>
+	
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite V" >
+	<DaSubscriptionWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+    <Values>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+	<DataArray>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+	</DataArray>
+	</Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+        </DataArray>
+      </Value>
+      <!--<Value>
+        <DataArray>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+        </DataArray>
+      </Value>-->
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+        </DataArray>
+      </Value>
+    </Values>
+		<ItemsProperty>System.Subscription_DA3</ItemsProperty>
+	</DaSubscriptionWrite>
+
+		<Sleep>
+		<Duration>100</Duration>
+		</Sleep>
+	
+	<DaSubscriptionRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExpectedValues>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+	<DataArray>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+	</DataArray>
+	</Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+        </DataArray>
+      </Value>
+      <!--<Value>
+        <DataArray>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+        </DataArray>
+      </Value>-->
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+        </DataArray>
+      </Value>
+		</ExpectedValues>
+	</DaSubscriptionRead>
+	</TestList>
+	
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>true</Active>
+    </Connect>
+	
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite VQ" >
+	<DaSubscriptionWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+    <Values>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+	<Quality>GOOD</Quality>
+	<DataArray>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+	</DataArray>
+	</Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+        </DataArray>
+      </Value>
+      <!--<Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+        </DataArray>
+      </Value>-->
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+        </DataArray>
+      </Value>
+    </Values>
+		<ItemsProperty>System.Subscription_DA3</ItemsProperty>
+	</DaSubscriptionWrite>
+
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<DaSubscriptionRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExpectedValues>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+	<Quality>GOOD</Quality>
+	<DataArray>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		<anyType xsi:type="xsd:unsignedByte">127</anyType>
+	</DataArray>
+	</Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+        </DataArray>
+      </Value>
+      <!--<Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+        </DataArray>
+      </Value>-->
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+        </DataArray>
+      </Value>
+		</ExpectedValues>
+	</DaSubscriptionRead>
+	</TestList>
+	
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>false</Active>
+    </Connect>
+	
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite VT" >
+	<DaSubscriptionWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+    <Values>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+	<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+		<DataArray>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		</DataArray>
+	</Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+        </DataArray>
+      </Value>
+      <!--<Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+        </DataArray>
+      </Value>-->
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+        </DataArray>
+      </Value>
+    </Values>
+		<ItemsProperty>System.Subscription_DA3</ItemsProperty>
+	</DaSubscriptionWrite>
+
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<DaSubscriptionRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExpectedValues>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+	<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+		<DataArray>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		</DataArray>
+	</Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+        </DataArray>
+      </Value>
+      <!--<Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+        </DataArray>
+      </Value>-->
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+        </DataArray>
+      </Value>
+		</ExpectedValues>
+	</DaSubscriptionRead>
+	</TestList>
+	
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>true</Active>
+    </Connect>
+	
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite VQT" >
+	<DaSubscriptionWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+    <Values>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+	<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+	<Quality>GOOD</Quality>
+		<DataArray>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		</DataArray>
+	</Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+        </DataArray>
+      </Value>
+      <!--<Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+        </DataArray>
+      </Value>-->
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+        </DataArray>
+      </Value>
+    </Values>
+		<ItemsProperty>System.Subscription_DA3</ItemsProperty>
+	</DaSubscriptionWrite>
+
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<DaSubscriptionRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExpectedValues>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+          <anyType xsi:type="xsd:double">1.79769e+308</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+          <anyType xsi:type="xsd:boolean">false</anyType>
+          <anyType xsi:type="xsd:boolean">true</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+		<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+		<Quality>GOOD</Quality>
+		<DataArray>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+			<anyType xsi:type="xsd:unsignedByte">127</anyType>
+		</DataArray>
+	</Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+          <anyType xsi:type="xsd:dateTime">2012-10-10T16:00:00Z</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+          <anyType xsi:type="xsd:float">-1.79769</anyType>
+          <anyType xsi:type="xsd:float">1.79769</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+          <anyType xsi:type="xsd:short">5555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+          <anyType xsi:type="xsd:int">55555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+          <anyType xsi:type="xsd:long">5555555555</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+          <anyType xsi:type="xsd:string">some string</anyType>
+        </DataArray>
+      </Value>
+      <!--<Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+          <anyType xsi:type="xsd:byte">33</anyType>
+        </DataArray>
+      </Value>-->
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+          <anyType xsi:type="xsd:unsignedShort">444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+          <anyType xsi:type="xsd:unsignedInt">44444444</anyType>
+        </DataArray>
+      </Value>
+      <Value>
+        <TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+        <Quality>GOOD</Quality>
+        <DataArray>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+          <anyType xsi:type="xsd:unsignedLong">4444444444</anyType>
+        </DataArray>
+      </Value>
+		</ExpectedValues>
+	</DaSubscriptionRead>
+	    <DaSubscriptionRemove>
+      <Subscription>System.Subscription_DA3</Subscription>
+    </DaSubscriptionRemove>
+	</TestList>
+	</TestList>
+</TestList>

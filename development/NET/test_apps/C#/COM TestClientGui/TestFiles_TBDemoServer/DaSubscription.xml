@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<DaSubscriptionCreate>
+		<Session>System.Session</Session>
+		<UpdateRate>1000</UpdateRate>
+		<Property>System.Subscription</Property>
+	</DaSubscriptionCreate>
+
+	<DaItemsCreate>
+		<Subscription>System.Subscription</Subscription>
+		<ItemIds>
+			<string>IOP.dynamic.I4</string>
+			<string>IOP.dynamic.R8</string>
+			<string>IOP.dynamic.BSTR</string>
+			<string>IOP.static.I4</string>
+		</ItemIds>
+		<Property>System.Items</Property>
+	</DaItemsCreate>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>System.Subscription</Subscription>
+	</DaSubscriptionWaitForNotif>
+
+	<Connect>
+		<Object>System.Subscription</Object>
+		<Active>false</Active>
+	</Connect>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>System.Subscription</Subscription>
+		<ExpectValues>false</ExpectValues>
+	</DaSubscriptionWaitForNotif>
+
+	<Connect>
+		<Object>System.Subscription</Object>
+		<Active>true</Active>
+	</Connect>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>System.Subscription</Subscription>
+		<ExpectValues>true</ExpectValues>
+	</DaSubscriptionWaitForNotif>
+
+
+	<DaItemsWaitForNotif>
+		<ItemsProperty>System.Items</ItemsProperty>
+	</DaItemsWaitForNotif>
+
+</TestList>

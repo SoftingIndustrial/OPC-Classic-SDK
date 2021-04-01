@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd" StopIfOneFailed="false" RunInParallel="false" RepeatCount="999999999">
+
+
+	<TestList StopIfOneFailed="false" DisplayName="Default OPC specification DA3">
+
+	<DaSessionCreate DisplayName="Default OPC specification DA3">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>System.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<ImportFile>
+		<FilePath>Browse\\DaBrowse_GetDaProperties_DA3.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Browse\\Browse.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Group\\Group_Item_Mgt.xml</FilePath>
+	</ImportFile>
+	
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Array\\Async\\Item_WriteRead\\Item_WriteReadAllAsyncArrayValues_DA3.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Array\\Async\\Session_WriteRead\\Session_WriteReadAllAsyncArrayValues.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Array\\Async\\Subscription_WriteRead\\Subscription_WriteReadAllAsyncArrayValues_DA3.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Array\\Sync\\Item_WriteRead\\Item_WriteReadAllSyncArrayValues_DA3.0.xml</FilePath>
+	</ImportFile>
+
+	<ImportFile>
+		<FilePath>Write_Read\\Array\\Sync\\Session_WriteRead\\Session_WriteReadAllSyncArrayValues.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Array\\Sync\\Subscription_WriteRead\\Subscription_WriteReadAllSyncArrayValues_DA3.0.xml</FilePath>
+	</ImportFile>
+	
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Scalar\\Async\\Item_WriteRead\\Item_WriteReadAllAsyncScalarValues_DA3.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Scalar\\Async\\Session_WriteRead\\Session_WriteReadAllAsyncScalarValues.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Scalar\\Async\\Subscription_WriteRead\\Subscription_WriteReadAllAsyncScalarValues_DA3.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Scalar\\Sync\\Item_WriteRead\\Item_WriteReadAllSyncScalarValues_DA3.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Scalar\\Sync\\Session_WriteRead\\Session_WriteReadAllSyncScalarValues.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Scalar\\Sync\\Subscription_WriteRead\\Subscription_WriteReadAllSyncScalarValues_DA3.0.xml</FilePath>
+	</ImportFile>
+
+	
+	<DaSessionRemove>
+		<Session>System.Session</Session>
+	</DaSessionRemove>
+	
+</TestList>
+	
+	<DaSessionCreate DisplayName="Forced OPC specification DA2.05">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<ForcedOpcSpecification>DA20</ForcedOpcSpecification>
+		<Property>System.Session</Property>
+	</DaSessionCreate>
+
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Array\\Async\\Item_WriteRead\\Item_WriteReadAllAsyncArrayValues_DA2.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Array\\Async\\Subscription_WriteRead\\Subscription_WriteReadAllAsyncArrayValues_DA2.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Array\\Sync\\Item_WriteRead\\Item_WriteReadAllSyncArrayValues_DA2.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Array\\Sync\\Subscription_WriteRead\\Subscription_WriteReadAllSyncArrayValues_DA2.0.xml</FilePath>
+	</ImportFile>
+	
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Scalar\\Async\\Item_WriteRead\\Item_WriteReadAllAsyncScalarValues_DA2.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Scalar\\Async\\Subscription_WriteRead\\Subscription_WriteReadAllAsyncScalarValues_DA2.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Scalar\\Sync\\Item_WriteRead\\Item_WriteReadAllSyncScalarValues_DA2.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Write_Read\\Scalar\\Sync\\Subscription_WriteRead\\Subscription_WriteReadAllSyncScalarValues_DA2.0.xml</FilePath>
+	</ImportFile>
+	
+	
+	<DaSessionRemove>
+		<Session>System.Session</Session>
+	</DaSessionRemove>
+	
+	<Sleep>
+		<Duration>100</Duration>
+	</Sleep>
+	
+</TestList>

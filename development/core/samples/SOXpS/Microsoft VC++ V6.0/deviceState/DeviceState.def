@@ -1,0 +1,9 @@
+EXPORTS			
+				SOXpSInitialize
+				SOXpSStart
+				SOXpSStop
+				SOXpSBuildDANameSpace
+				SOXpSHandleDARequests
+				SOXpSBuildAEEventSpace
+				SOXpSBuildAEAreaSpace
+

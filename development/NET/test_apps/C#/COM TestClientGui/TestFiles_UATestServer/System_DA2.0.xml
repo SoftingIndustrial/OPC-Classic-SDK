@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+	
+	<DaSessionCreate DisplayName="Forced OPC specification DA2.05">
+		<Url>opcda:///Softing.COM TestServer.DA.3/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<ForcedOpcSpecification>DA20</ForcedOpcSpecification>
+		<Property>System.Session</Property>
+	</DaSessionCreate>
+	
+	<ImportFile>
+		<FilePath>Group_Item_Mgt.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Browse_DA2.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Item_WriteReadAllAsyncArrayValues.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Item_WriteReadAllAsyncScalarValues.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Item_WriteReadAllSyncArrayValues.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Item_WriteReadAllSyncScalarValues.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Subscription_WriteReadAllAsyncArrayValues.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Subscription_WriteReadAllAsyncScalarValues.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Subscription_WriteReadAllSyncArrayValues.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>Subscription_WriteReadAllSyncScalarValues.xml</FilePath>
+	</ImportFile>
+	
+	<DaSessionRemove>
+		<Session>System.Session</Session>
+	</DaSessionRemove>
+	
+</TestList>

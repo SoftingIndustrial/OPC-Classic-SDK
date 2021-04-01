@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XMLSchema1"
+    targetNamespace="http://softing-ia.com/TestClientCOM.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://softing-ia.com/TestClientCOM.xsd"
+    xmlns:mstns="http://softing-ia.com/TestClientCOM.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:element name="TestList" type="TestList" />
+
+	<xs:complexType name="Element">
+		<xs:sequence minOccurs="0">
+			<xs:element name="Description" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="RepeatCount" type="xs:string" />
+		<xs:attribute name="RepeatDuration" type="xs:string" />
+		<xs:attribute name="DisplayName" type="xs:string" />
+		<xs:attribute name="Id" type="xs:long" />
+	</xs:complexType>
+
+	<!-- Elements -->
+	<xs:complexType name="TestList">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					
+					<xs:element name="Connect" type="Element_Connect" />
+					<xs:element name="DaItemRead" type="Element_DaItemRead" />
+					<xs:element name="DaItemsCreate" type="Element_DaItemsCreate" />
+					<xs:element name="DaItemsRemove" type="Element_DaItemsRemove" />
+					<xs:element name="DaItemsWaitForNotif" type="Element_DaItemsWaitForNotif" />
+					<xs:element name="DaItemWrite" type="Element_DaItemWrite" />
+					<xs:element name="DaSessionBrowse" type="Element_DaSessionBrowse" />
+					<xs:element name="DaSessionBrowseV20" type="Element_DaSessionBrowseV20" />
+					<xs:element name="DaSessionCreate" type="Element_DaSessionCreate" />
+					<xs:element name="DaSessionRead" type="Element_DaSessionRead" />
+					<xs:element name="DaSessionRemove" type="Element_DaSessionRemove" />
+					<xs:element name="DaSessionWrite" type="Element_DaSessionWrite" />
+					<xs:element name="DaVariableNodesCreateProxy" type="Element_DaVariableNodesCreateProxy" />
+					<xs:element name="DaVariableNodesSimulationProxy" type="Element_DaVariableNodesSimulationProxy" />
+
+					<xs:element name="DaSubscriptionCreate" type="Element_DaSubscriptionCreate" />
+					<xs:element name="DaSubscriptionRead" type="Element_DaSubscriptionRead" />
+					<xs:element name="DaSubscriptionRefresh" type="Element_DaSubscriptionRefresh" />
+					<xs:element name="DaSubscriptionRemove" type="Element_DaSubscriptionRemove" />
+					<xs:element name="DaSubscriptionUpdate" type="Element_DaSubscriptionUpdate" />
+					<xs:element name="DaSubscriptionWaitForNotif" type="Element_DaSubscriptionWaitForNotif" />
+					<xs:element name="DaSubscriptionWrite" type="Element_DaSubscriptionWrite" />
+
+					<xs:element name="Disconnect" type="Element_Disconnect" />
+					<xs:element name="ForEach" type="TestList" />
+
+					<xs:element name="ImportFile" type="Element_ImportFile" />
+					<xs:element name="Sleep" type="Element_Sleep" />					
+					<xs:element name="TestList" type="TestList" />
+
+					<xs:element name="Transform" type="Element_Transform" />
+				</xs:choice>
+				<xs:attribute name="RunInParallel" type="xs:boolean" default="false"/>
+				<xs:attribute name="StopIfOneFailed" type="xs:boolean" default="false"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_Connect">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Object" type="xs:string" />
+					<xs:element name="Deep" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaItemRead">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="ItemsProperty" type="xs:string" />
+					<xs:element name="MaxAge" type="xs:unsignedInt" minOccurs="0" />
+					<xs:element name="ValuesProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ResultsProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ExpectedValues" type="ListOfValues" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaItemsCreate">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Subscription" type="xs:string" />
+					<xs:element name="ItemIds" type="ListOfStrings" />
+					<xs:element name="Connect" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="Deadband" type="xs:float" minOccurs="0" />
+					<xs:element name="Property" type="xs:string" />
+					<xs:element name="ExpectedSuccess" type="xs:boolean" default="true" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaItemsRemove">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="ItemsProperty" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Element_DaItemsWaitForNotif">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="ItemsProperty" type="xs:string" />
+					<xs:element name="ExpectValues" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="ValuesProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ResultsProperty" type="xs:string" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaItemWrite">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="ItemsProperty" type="xs:string" />
+					<xs:element name="Values" type="ListOfValues" />
+					<xs:element name="ValuesProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ResultsProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ValidateAllResults" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="ExpectedResults" type="ListOfInts" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaSessionBrowse">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Session" type="xs:string" />
+					<xs:element name="RootID" type="xs:string" />
+					<xs:element name="RootPath" type="xs:string" minOccurs="0" />
+					<xs:element name="BrowseOptions" type="DaAddressSpaceElementBrowseOptions" />
+					<xs:element name="ExpectedElements" type="ListOfDaAddressSpaceElement" minOccurs="0" />
+					<xs:element name="ExecutionType" type="EnumExecutionType" minOccurs="0" />
+					<xs:element name="ExpectedServiceResult" type="xs:string" minOccurs="0" />
+					<xs:element name="Property" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaSessionBrowseV20">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Session" type="xs:string" />
+					<xs:element name="RootID" type="xs:string" />
+					<xs:element name="RootPath" type="xs:string" minOccurs="0" />
+					<xs:element name="BrowseOptions" type="DaAddressSpaceElementBrowseOptions" />
+					<xs:element name="DataTypeFilter" type="xs:string" minOccurs="0" />
+					<xs:element name="ExpectedElements" type="ListOfDaAddressSpaceElement" minOccurs="0" />
+					<xs:element name="ExecutionType" type="EnumExecutionType" minOccurs="0" />
+					<xs:element name="Property" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Element_DaSessionCreate">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Url" type="xs:string" />
+					<xs:element name="Connect" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="Deep" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="ForcedOpcSpecification" type="EnumOPCSpecification" default="DEFAULT" minOccurs="0" />
+					<xs:element name="Property" type="xs:string" />
+					<xs:element name="ExpectedSuccess" type="xs:boolean" default="true" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaSessionRead">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Session" type="xs:string" />
+					<xs:element name="ItemIds" type="ListOfStrings" />
+					<xs:element name="ItemPaths" type="ListOfStrings" minOccurs="0" />
+					<xs:element name="MaxAge" type="xs:unsignedInt" minOccurs="0" />
+					<xs:element name="ValuesProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ResultsProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ExpectedValues" type="ListOfValues" minOccurs="0" />
+					<xs:element name="ExpectedServiceResult" type="xs:string" minOccurs="0" />
+					<xs:element name="ExecutionType" type="EnumExecutionType" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+		
+	<xs:complexType name="Element_DaSessionRemove">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Session" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaSessionWrite">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Session" type="xs:string" />
+					<xs:element name="ItemIds" type="ListOfStrings" />
+					<xs:element name="ItemPaths" type="ListOfStrings" minOccurs="0" />
+					<xs:element name="Values" type="ListOfValues" />
+					<xs:element name="ValuesProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ResultsProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ValidateAllResults" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="ExpectedResults" type="ListOfInts" minOccurs="0" />
+					<xs:element name="ExpectedServiceResult" type="xs:string" minOccurs="0" />
+					<xs:element name="ExecutionType" type="EnumExecutionType" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaVariableNodesCreateProxy">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Session" type="xs:string" />
+					<xs:element name="Property" type="xs:string" />
+					<xs:element name="Count" type="xs:unsignedInt"/>
+					<xs:element name="NodeType" type="xs:unsignedInt"/>
+					<xs:element name="IsAnalog" type="xs:boolean" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaVariableNodesSimulationProxy">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Session" type="xs:string" />
+					<xs:element name="NodeSetId" type="xs:string" />
+					<xs:element name="ChangeInterval" type="xs:unsignedInt"/>
+					<xs:element name="RepeatCount" type="xs:unsignedInt"/>
+					<xs:element name="Increment" type="xs:unsignedInt"/>
+					<xs:element name="StartStopCommand" type="xs:boolean" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+
+
+	<xs:complexType name="Element_DaSubscriptionCreate">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Session" type="xs:string" />
+					<xs:element name="UpdateRate" type="xs:unsignedInt" minOccurs="0" />
+					<xs:element name="Connect" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="Deep" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="RequestedKeepAliveTime" type="xs:unsignedInt" minOccurs="0" />
+					<xs:element name="Deadband" type="xs:float" minOccurs="0" />
+					<xs:element name="Property" type="xs:string" />
+					<xs:element name="ExpectedSuccess" type="xs:boolean" default="true" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaSubscriptionRead">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="ItemsProperty" type="xs:string" />
+					<xs:element name="MaxAge" type="xs:unsignedInt" minOccurs="0" />
+					<xs:element name="ValuesProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ResultsProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ExpectedValues" type="ListOfValues" minOccurs="0" />
+					<xs:element name="ExecutionType" type="EnumExecutionType" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaSubscriptionRefresh">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Subscription" type="xs:string" />
+					<xs:element name="MaxAge" type="xs:unsignedInt" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaSubscriptionRemove">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Subscription" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaSubscriptionUpdate">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Subscription" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaSubscriptionWaitForNotif">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Subscription" type="xs:string" />
+					<xs:element name="WaitTime" type="xs:int" minOccurs="0" />
+					<xs:element name="ExpectValues" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="ValuesProperty" type="xs:string" />
+					<xs:element name="ResultsProperty" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_DaSubscriptionWrite">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="ItemsProperty" type="xs:string" />
+					<xs:element name="Values" type="ListOfValues" />
+					<xs:element name="ValuesProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ResultsProperty" type="xs:string" minOccurs="0" />
+					<xs:element name="ValidateAllResults" type="xs:boolean" default="true" minOccurs="0" />
+					<xs:element name="ExpectedResults" type="ListOfInts" minOccurs="0" />
+					<xs:element name="ExecutionType" type="EnumExecutionType" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_Disconnect">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Object" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_ImportFile">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="FilePath" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_Sleep">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Duration" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Element_Transform">
+		<xs:complexContent>
+			<xs:extension base="Element">
+				<xs:sequence>
+					<xs:element name="Transformation" type="xs:string" />
+					<xs:element name="Property" type="xs:string" />
+					<xs:element name="Parameter" />
+					<xs:element name="ParameterProperty" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	
+	<!-- Suport types -->
+	<xs:complexType name="Value">
+		<xs:sequence>
+			<xs:element name="Quality" type="EnumQuality" minOccurs="0" />
+			<xs:element name="TimeStamp" type="xs:dateTime" minOccurs="0" />
+			<xs:element name="Data" minOccurs="0" />
+			<xs:element name="DataArray" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ListOfValues">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Value" type="Value" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="DaAddressSpaceElementBrowseOptions">
+		<xs:sequence>
+			<xs:element name="AccessRightsFilter" type="EnumAccessRights" />
+			<!--<xs:element name="DataTypeFilter" type="Type" />-->
+			<xs:element name="MaxElements" type="xs:unsignedInt" />
+			<xs:element name="RetrieveItemId" type="xs:boolean" />
+			<xs:element name="ReturnProperties" type="xs:boolean" />
+			<xs:element name="ReturnPropertyValues" type="xs:boolean" />
+			<xs:element name="VendorFilter" type="xs:string" />
+			<xs:element name="ElementNameFilter" type="xs:string" />
+			<xs:element name="ElementTypeFilter" type="EnumAddressSpaceElementType" />
+			<xs:element name="ForceBrowseUp" type="xs:boolean" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="DaAddressSpaceElement">
+		<xs:sequence>
+			<xs:element name="ItemId" type="xs:string" />
+			<xs:element name="ItemPath" type="xs:string" />
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="IsItem" type="xs:boolean" minOccurs="0" />
+			<xs:element name="IsBranch" type="xs:boolean" minOccurs="0" />
+			<xs:element name="IsLeaf" type="xs:boolean" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ListOfDaAddressSpaceElement">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DaAddressSpaceElement" type="DaAddressSpaceElement" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="ListOfStrings">
+		<xs:list itemType="xs:string" />
+	</xs:simpleType>
+
+	<xs:simpleType name="ListOfInts">
+		<xs:list itemType="xs:int" />
+	</xs:simpleType>
+
+
+	<!-- Enumerations -->
+	<xs:simpleType name="EnumQuality" final="restriction" >
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="BAD" />
+			<xs:enumeration value="BAD_CONFIG_ERROR" />
+			<xs:enumeration value="BAD_NOT_CONNECTED" />
+			<xs:enumeration value="BAD_DEVICE_FAILURE" />
+			<xs:enumeration value="BAD_SENSOR_FAILURE" />
+			<xs:enumeration value="BAD_LAST_KNOWN" />
+			<xs:enumeration value="BAD_COMM_FAILURE" />
+			<xs:enumeration value="BAD_OUT_OF_SERVICE" />
+			<xs:enumeration value="BAD_WAITING_FOR_INITIAL_DATA" />
+			<xs:enumeration value="UNCERTAIN" />
+			<xs:enumeration value="UNCERTAIN_LAST_USABLE" />
+			<xs:enumeration value="UNCERTAIN_SENSOR_CAL" />
+			<xs:enumeration value="UNCERTAIN_EGU_EXCEEDED" />
+			<xs:enumeration value="UNCERTAIN_SUB_NORMAL" />
+			<xs:enumeration value="GOOD" />
+			<xs:enumeration value="GOOD_LOCAL_OVERRIDE" />
+			<xs:enumeration value="QUALITY_NOT_SET" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="EnumExecutionType" final="restriction" >
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SYNCHRONOUS" />
+			<xs:enumeration value="ASYNCHRONOUS" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="EnumAccessRights" final="restriction" >
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NOTSET" />
+			<xs:enumeration value="READABLE" />
+			<xs:enumeration value="WRITEABLE" />
+			<xs:enumeration value="READWRITEABLE" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="EnumAddressSpaceElementType" final="restriction" >
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="BRANCH" />
+			<xs:enumeration value="LEAF" />
+			<xs:enumeration value="DA_ITEM" />
+			<xs:enumeration value="ALL" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="EnumOPCSpecification" final="restriction" >
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DEFAULT" />
+			<xs:enumeration value="DA10" />
+			<xs:enumeration value="DA20" />
+			<xs:enumeration value="AE10" />
+			<xs:enumeration value="DA30" />
+			<xs:enumeration value="XMLDA10" />
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

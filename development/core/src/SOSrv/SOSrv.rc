@@ -1,0 +1,36 @@
+//-----------------------------------------------------------------------------
+//                                                                            |
+//                   Softing Industrial Automation GmbH                       |
+//                        Richard-Reitzner-Allee 6                            |
+//                           85540 Haar, Germany                              |
+//                                                                            |
+//                 This is a part of the Softing OPC Toolkit                  |
+//        Copyright (c) 1998-2020 Softing Industrial Automation GmbH          |
+//                           All Rights Reserved                              |
+//                                                                            |
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//                           OPC Toolkit - SOSrv                              |
+//                                                                            |
+//  Filename    : SOSrv.rc                                                    |
+//  Version     : 4.47.1                                                      |
+//  Date        : 27-July-2020                                                |
+//                                                                            |
+//  Description : opc error texts and the version resource                    |
+//                                                                            |
+//-----------------------------------------------------------------------------
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+#include "SOVersion.h"
+#include "SOModule.h"
+#include "winres.h"
+#ifndef UNDER_CE
+#include "SOSrvmc.rc"
+#else // Windows CE supports only one language for FormatMessage -> English Language
+LANGUAGE 0x9,0x1
+1 11 SOSrv409.bin
+#endif
+#include "Version.rc"

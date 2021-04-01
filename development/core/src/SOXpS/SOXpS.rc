@@ -1,0 +1,31 @@
+//-----------------------------------------------------------------------------
+//                                                                            |
+//                   Softing Industrial Automation GmbH                       |
+//                        Richard-Reitzner-Allee 6                            |
+//                           85540 Haar, Germany                              |
+//                                                                            |
+//                 This is a part of the Softing OPC Toolkit                  |
+//        Copyright (c) 1998-2020 Softing Industrial Automation GmbH          |
+//                           All Rights Reserved                              |
+//                                                                            |
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//                           OPC Toolkit - SOXpS                              |
+//                                                                            |
+//  Filename    : SOXpS.rc                                                    |
+//  Version     : 4.47.1                                                      |
+//  Date        : 27-July-2020                                                |
+//                                                                            |
+//  Description : OPC and XPress tool error texts and the version resource    |
+//                                                                            |
+//-----------------------------------------------------------------------------
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+#include "SOVersion.h"
+#include "SOModule.h"
+#include "winres.h"
+#include "SOSrvmc.rc"
+#include "version.rc"

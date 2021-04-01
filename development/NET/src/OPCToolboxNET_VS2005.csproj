@@ -1,0 +1,227 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>TBN20</AssemblyName>
+    <AssemblyOriginatorKeyFile>SoftingKeyPair.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OPCToolboxNET</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2005\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NET20</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\VS2005\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NDEBUG;NET20</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeSubscription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientAddressSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientAddressSpaceElementBrowseOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientApplication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientEnums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientObjectSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientServerBrowser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientServerStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientDataControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientDataElements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientInfoCollector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientSubscriptionProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientValueComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientValueEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaAddressSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaPropertiesGetOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaSubscription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OTBFunctions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OTBStructures.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Ae\ServerAeAddressSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Ae\ServerAeAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Ae\ServerAeCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Ae\ServerAeCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Ae\ServerAeEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Da\ServerDaAddressSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Da\ServerDaProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Da\ServerDaRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Da\ServerDaSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Da\ServerDaTransaction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\ServerAddressSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\ServerApplication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\ServerCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\ServerEnums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\ServerWebTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Trace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValueQT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="client\Control\ClientInfoCollector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ClientInfoCollector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\Control\ClientSubscriptionProperties.resx">
+      <DependentUpon>ClientSubscriptionProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SoftingKeyPair.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>mkdir ..\..\..\..\..\..\bin\Legacy
+copy "$(TargetPath)" ..\..\..\..\..\..\bin\Legacy</PostBuildEvent>
+  </PropertyGroup>
+</Project>

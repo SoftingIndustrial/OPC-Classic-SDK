@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+
+	<TestList StopIfOneFailed="false"  DisplayName="Read/Write tests on DA3" RunInParallel="false">
+	<DaSubscriptionCreate>
+		<Session>System.Session</Session>
+		<UpdateRate>1000</UpdateRate>
+		<RequestedKeepAliveTime>2000</RequestedKeepAliveTime>
+		<Property>System.Subscription_DA3</Property>
+	</DaSubscriptionCreate>
+
+	<DaItemsCreate>
+		<Subscription>System.Subscription_DA3</Subscription>
+		<ItemIds>
+			<string>CTT.Static.All Profiles.Scalar.Double</string>
+			<string>CTT.Static.All Profiles.Scalar.Boolean</string>
+			<string>CTT.Static.All Profiles.Scalar.Byte</string>
+			<string>CTT.Static.All Profiles.Scalar.Date Time</string>
+			<string>CTT.Static.All Profiles.Scalar.Float</string>
+			<string>CTT.Static.All Profiles.Scalar.Int16</string>
+			<string>CTT.Static.All Profiles.Scalar.Int32</string>
+			<string>CTT.Static.All Profiles.Scalar.Int64</string>
+			<string>CTT.Static.All Profiles.Scalar.String</string>
+			<!--string>CTT.Static.All Profiles.Scalar.Sbyte</string>-->
+			<string>CTT.Static.All Profiles.Scalar.UInt16</string>
+			<string>CTT.Static.All Profiles.Scalar.UInt32</string>
+			<string>CTT.Static.All Profiles.Scalar.UInt64</string>
+		</ItemIds>
+		<Property>System.StaticItems_DA3</Property>
+	</DaItemsCreate>
+
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>false</Active>
+    </Connect>
+	
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite V" >
+	<DaSubscriptionWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExecutionType>ASYNCHRONOUS</ExecutionType>
+		<Values>
+			<Value>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ쥐 레몬="石灰蛇" 코끼리="黄色" 원숭이="柠檬" 빨간코끼리="白色" 황색="草莓石灰" 말뱀복숭아="草莓" xmlns:n0="http://백색"&gt;&lt;n0:원숭이&gt;紫色 狗: 猪 红色. 马 马. 香蕉. 蓝莓 香蕉- 葡萄 绿色 大象 黄色_ 草莓] 鼠) 猪$ 菠萝 葡萄 猫@ 红色# 母牛 蛇] 猫} 桃子_ 草莓 柠檬 石灰 香蕉 绿色&amp;amp;&lt;/n0:원숭이&gt;&lt;n0:양코끼리&gt;红色) 绿色} 鼠 猴子 菠萝/ 菠萝 母牛 石灰@ 鼠@ 绿色` 石灰 狗[ 草莓; 蓝莓 柠檬' 绵羊 大象 猴子 芒果 葡萄 马^ 葡萄@ 黑色 大象&amp;lt; 绿色] 蓝色@ 大象&lt;/n0:양코끼리&gt;&lt;n0:딸기고양이&gt;绿色? 母牛% 绿色, 香蕉, 狗 大象 狗{ 蓝莓 蛇 猪 猴子 猴子 猴子 芒果 芒果# 草莓 大象 白色/ 芒果"&lt;/n0:딸기고양이&gt;&lt;n0:녹색석회&gt;白色 黑色 蓝莓+ 菠萝] 葡萄 蓝莓. 黄色( 黑色` 红色&amp;amp; 马 猴子 蛇# 马_ 红色? 母牛 芒果&amp;lt; 母牛 蓝莓 鼠( 红色) 猴子 大象 蓝色 猫[ 红色 大象* 马[ 大象` 芒果&lt;/n0:녹색석회&gt;&lt;n0:파인애플&gt;黑色 猪, 鼠] 马) 黑色 猫# 菠萝* 紫色' 猴子 大象 绿色&amp;lt; 香蕉^ 母牛&amp;lt; 石灰* 猪; 桃子=&lt;/n0:파인애플&gt;&lt;n0:망고&gt;芒果 蛇 黑色{ 狗# 红色} 红色; 狗 菠萝+ 鼠 柠檬` 马[ 龙 龙&amp;lt; 香蕉` 猴子 黄色&lt;/n0:망고&gt;&lt;n0:석회&gt;紫色@&lt;/n0:석회&gt;&lt;n0:코끼리&gt;菠萝 柠檬` 紫色] 红色 葡萄~ 鼠) 葡萄&amp;amp; 石灰' 母牛_ 绿色_ 狗 猴子 蛇 绵羊; 龙+ 葡萄&lt;/n0:코끼리&gt;&lt;/n0:쥐&gt;</Data>
+			</Value>
+			<!--Value>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</Values>
+		<ItemsProperty>System.Subscription_DA3</ItemsProperty>
+	</DaSubscriptionWrite>
+
+		<Sleep>
+		<Duration>100</Duration>
+		</Sleep>
+	
+	<DaSubscriptionRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExecutionType>ASYNCHRONOUS</ExecutionType>
+		<ExpectedValues>
+		<Value>
+			<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ쥐 레몬="石灰蛇" 코끼리="黄色" 원숭이="柠檬" 빨간코끼리="白色" 황색="草莓石灰" 말뱀복숭아="草莓" xmlns:n0="http://백색"&gt;&lt;n0:원숭이&gt;紫色 狗: 猪 红色. 马 马. 香蕉. 蓝莓 香蕉- 葡萄 绿色 大象 黄色_ 草莓] 鼠) 猪$ 菠萝 葡萄 猫@ 红色# 母牛 蛇] 猫} 桃子_ 草莓 柠檬 石灰 香蕉 绿色&amp;amp;&lt;/n0:원숭이&gt;&lt;n0:양코끼리&gt;红色) 绿色} 鼠 猴子 菠萝/ 菠萝 母牛 石灰@ 鼠@ 绿色` 石灰 狗[ 草莓; 蓝莓 柠檬' 绵羊 大象 猴子 芒果 葡萄 马^ 葡萄@ 黑色 大象&amp;lt; 绿色] 蓝色@ 大象&lt;/n0:양코끼리&gt;&lt;n0:딸기고양이&gt;绿色? 母牛% 绿色, 香蕉, 狗 大象 狗{ 蓝莓 蛇 猪 猴子 猴子 猴子 芒果 芒果# 草莓 大象 白色/ 芒果"&lt;/n0:딸기고양이&gt;&lt;n0:녹색석회&gt;白色 黑色 蓝莓+ 菠萝] 葡萄 蓝莓. 黄色( 黑色` 红色&amp;amp; 马 猴子 蛇# 马_ 红色? 母牛 芒果&amp;lt; 母牛 蓝莓 鼠( 红色) 猴子 大象 蓝色 猫[ 红色 大象* 马[ 大象` 芒果&lt;/n0:녹색석회&gt;&lt;n0:파인애플&gt;黑色 猪, 鼠] 马) 黑色 猫# 菠萝* 紫色' 猴子 大象 绿色&amp;lt; 香蕉^ 母牛&amp;lt; 石灰* 猪; 桃子=&lt;/n0:파인애플&gt;&lt;n0:망고&gt;芒果 蛇 黑色{ 狗# 红色} 红色; 狗 菠萝+ 鼠 柠檬` 马[ 龙 龙&amp;lt; 香蕉` 猴子 黄色&lt;/n0:망고&gt;&lt;n0:석회&gt;紫色@&lt;/n0:석회&gt;&lt;n0:코끼리&gt;菠萝 柠檬` 紫色] 红色 葡萄~ 鼠) 葡萄&amp;amp; 石灰' 母牛_ 绿色_ 狗 猴子 蛇 绵羊; 龙+ 葡萄&lt;/n0:코끼리&gt;&lt;/n0:쥐&gt;</Data>
+			</Value>
+			<!--Value>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</ExpectedValues>
+	</DaSubscriptionRead>
+	</TestList>
+	
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>true</Active>
+    </Connect>
+	
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite VQ" >
+	<DaSubscriptionWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExecutionType>ASYNCHRONOUS</ExecutionType>
+		<Values>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ쥐 레몬="石灰蛇" 코끼리="黄色" 원숭이="柠檬" 빨간코끼리="白色" 황색="草莓石灰" 말뱀복숭아="草莓" xmlns:n0="http://백색"&gt;&lt;n0:원숭이&gt;紫色 狗: 猪 红色. 马 马. 香蕉. 蓝莓 香蕉- 葡萄 绿色 大象 黄色_ 草莓] 鼠) 猪$ 菠萝 葡萄 猫@ 红色# 母牛 蛇] 猫} 桃子_ 草莓 柠檬 石灰 香蕉 绿色&amp;amp;&lt;/n0:원숭이&gt;&lt;n0:양코끼리&gt;红色) 绿色} 鼠 猴子 菠萝/ 菠萝 母牛 石灰@ 鼠@ 绿色` 石灰 狗[ 草莓; 蓝莓 柠檬' 绵羊 大象 猴子 芒果 葡萄 马^ 葡萄@ 黑色 大象&amp;lt; 绿色] 蓝色@ 大象&lt;/n0:양코끼리&gt;&lt;n0:딸기고양이&gt;绿色? 母牛% 绿色, 香蕉, 狗 大象 狗{ 蓝莓 蛇 猪 猴子 猴子 猴子 芒果 芒果# 草莓 大象 白色/ 芒果"&lt;/n0:딸기고양이&gt;&lt;n0:녹색석회&gt;白色 黑色 蓝莓+ 菠萝] 葡萄 蓝莓. 黄色( 黑色` 红色&amp;amp; 马 猴子 蛇# 马_ 红色? 母牛 芒果&amp;lt; 母牛 蓝莓 鼠( 红色) 猴子 大象 蓝色 猫[ 红色 大象* 马[ 大象` 芒果&lt;/n0:녹색석회&gt;&lt;n0:파인애플&gt;黑色 猪, 鼠] 马) 黑色 猫# 菠萝* 紫色' 猴子 大象 绿色&amp;lt; 香蕉^ 母牛&amp;lt; 石灰* 猪; 桃子=&lt;/n0:파인애플&gt;&lt;n0:망고&gt;芒果 蛇 黑色{ 狗# 红色} 红色; 狗 菠萝+ 鼠 柠檬` 马[ 龙 龙&amp;lt; 香蕉` 猴子 黄色&lt;/n0:망고&gt;&lt;n0:석회&gt;紫色@&lt;/n0:석회&gt;&lt;n0:코끼리&gt;菠萝 柠檬` 紫色] 红色 葡萄~ 鼠) 葡萄&amp;amp; 石灰' 母牛_ 绿色_ 狗 猴子 蛇 绵羊; 龙+ 葡萄&lt;/n0:코끼리&gt;&lt;/n0:쥐&gt;</Data>
+			</Value>
+			<!--Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</Values>
+		<ItemsProperty>System.Subscription_DA3</ItemsProperty>
+	</DaSubscriptionWrite>
+
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<DaSubscriptionRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExecutionType>ASYNCHRONOUS</ExecutionType>
+		<ExpectedValues>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ쥐 레몬="石灰蛇" 코끼리="黄色" 원숭이="柠檬" 빨간코끼리="白色" 황색="草莓石灰" 말뱀복숭아="草莓" xmlns:n0="http://백색"&gt;&lt;n0:원숭이&gt;紫色 狗: 猪 红色. 马 马. 香蕉. 蓝莓 香蕉- 葡萄 绿色 大象 黄色_ 草莓] 鼠) 猪$ 菠萝 葡萄 猫@ 红色# 母牛 蛇] 猫} 桃子_ 草莓 柠檬 石灰 香蕉 绿色&amp;amp;&lt;/n0:원숭이&gt;&lt;n0:양코끼리&gt;红色) 绿色} 鼠 猴子 菠萝/ 菠萝 母牛 石灰@ 鼠@ 绿色` 石灰 狗[ 草莓; 蓝莓 柠檬' 绵羊 大象 猴子 芒果 葡萄 马^ 葡萄@ 黑色 大象&amp;lt; 绿色] 蓝色@ 大象&lt;/n0:양코끼리&gt;&lt;n0:딸기고양이&gt;绿色? 母牛% 绿色, 香蕉, 狗 大象 狗{ 蓝莓 蛇 猪 猴子 猴子 猴子 芒果 芒果# 草莓 大象 白色/ 芒果"&lt;/n0:딸기고양이&gt;&lt;n0:녹색석회&gt;白色 黑色 蓝莓+ 菠萝] 葡萄 蓝莓. 黄色( 黑色` 红色&amp;amp; 马 猴子 蛇# 马_ 红色? 母牛 芒果&amp;lt; 母牛 蓝莓 鼠( 红色) 猴子 大象 蓝色 猫[ 红色 大象* 马[ 大象` 芒果&lt;/n0:녹색석회&gt;&lt;n0:파인애플&gt;黑色 猪, 鼠] 马) 黑色 猫# 菠萝* 紫色' 猴子 大象 绿色&amp;lt; 香蕉^ 母牛&amp;lt; 石灰* 猪; 桃子=&lt;/n0:파인애플&gt;&lt;n0:망고&gt;芒果 蛇 黑色{ 狗# 红色} 红色; 狗 菠萝+ 鼠 柠檬` 马[ 龙 龙&amp;lt; 香蕉` 猴子 黄色&lt;/n0:망고&gt;&lt;n0:석회&gt;紫色@&lt;/n0:석회&gt;&lt;n0:코끼리&gt;菠萝 柠檬` 紫色] 红色 葡萄~ 鼠) 葡萄&amp;amp; 石灰' 母牛_ 绿色_ 狗 猴子 蛇 绵羊; 龙+ 葡萄&lt;/n0:코끼리&gt;&lt;/n0:쥐&gt;</Data>
+			</Value>
+			<!--Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</ExpectedValues>
+	</DaSubscriptionRead>
+	</TestList>
+	
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>false</Active>
+    </Connect>
+	
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite VT" >
+	<DaSubscriptionWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExecutionType>ASYNCHRONOUS</ExecutionType>
+		<Values>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</Values>
+		<ItemsProperty>System.Subscription_DA3</ItemsProperty>
+	</DaSubscriptionWrite>
+
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<DaSubscriptionRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExecutionType>ASYNCHRONOUS</ExecutionType>
+		<ExpectedValues>
+		<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</ExpectedValues>
+	</DaSubscriptionRead>
+	</TestList>
+	
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>true</Active>
+    </Connect>
+	
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite VQT" >
+	<DaSubscriptionWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExecutionType>ASYNCHRONOUS</ExecutionType>
+		<Values>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</Values>
+		<ItemsProperty>System.Subscription_DA3</ItemsProperty>
+	</DaSubscriptionWrite>
+
+	<Sleep>
+	<Duration>100</Duration>
+	</Sleep>
+	
+	<DaSubscriptionRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExecutionType>ASYNCHRONOUS</ExecutionType>
+		<ExpectedValues>
+		<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</ExpectedValues>
+	</DaSubscriptionRead>
+	</TestList>
+</TestList>
+</TestList>

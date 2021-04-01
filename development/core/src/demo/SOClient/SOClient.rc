@@ -1,0 +1,1248 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 0, 0, 266, 219
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_MULTIWRITE DIALOGEX 0, 0, 412, 145
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CAPTION | WS_THICKFRAME
+CAPTION "Softing OPC Classic Demo Client - Write"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Write",IDOK,355,7,50,14
+    PUSHBUTTON      "Close",IDCANCEL,355,24,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_MULTIWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 405
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINVIEW_FORM DIALOGEX 0, 0, 146, 39
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "List1",IDC_MAIN_LIST_DA,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,27,1,26,11
+    CONTROL         "List1",IDC_MAIN_LIST_AE,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,56,1,26,9
+    CONTROL         "Tree1",IDC_MAIN_TREE_SRV,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,63,19,26,10
+    CONTROL         "Tree1",IDC_MAIN_TREE_DA,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,19,26,12
+    CONTROL         "Tree1",IDC_MAIN_TREE_AE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,35,20,26,12
+    CONTROL         "List1",IDC_MAIN_LIST_ERR,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,1,1,26,14
+    CONTROL         "List1",IDC_MAIN_LIST_AEC,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,99,4,26,22
+    CONTROL         "Tab1",IDC_MAIN_TAB,"SysTabControl32",TCS_BOTTOM,0,0,145,39
+    LTEXT           "URL:",IDC_LABEL_URL,5,10,19,8
+    EDITTEXT        IDC_EDIT_URL,43,9,44,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add Server",IDC_BUTTON_ADDSERVER,96,6,45,14
+END
+
+IDR_DAWRITE DIALOG  0, 0, 80, 24
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_DAITEMVALUE,4,1,71,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_DAITEMWRITE,23,14,33,10,BS_CENTER | BS_VCENTER | BS_FLAT | NOT WS_TABSTOP
+END
+
+IDR_MAINFRAME DIALOG  0, 0, 330, 16
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab1",IDC_LIST_TAB,"SysTabControl32",0x0,1,1,149,15
+END
+
+IDD_PP_ABOUT DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Empty"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+END
+
+IDD_PP_SERVER_ATTRIBUTES DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Server"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "URL:",IDC_STATIC,7,9,49,10
+    EDITTEXT        IDC_SERVER_URL,70,7,390,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Client Name:",IDC_STATIC,7,29,43,10
+    CONTROL         "",IDC_SERVER_VALID_CLIENT_NAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,28,12,11
+    EDITTEXT        IDC_SERVER_CLIENT_NAME,87,27,131,12,ES_AUTOHSCROLL
+    LTEXT           "Locale ID:",IDC_STATIC,7,48,39,10
+    CONTROL         "",IDC_SERVER_VALID_LOCALE_ID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,48,12,11
+    COMBOBOX        IDC_SERVER_LOCALE_ID,87,46,131,43,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "OPC Version:",IDC_STATIC,260,29,50,10
+    EDITTEXT        IDC_SERVER_OPC_VERSION,328,27,35,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Use OPC Version:",IDC_STATIC,260,49,59,10
+    COMBOBOX        IDC_SERVER_USE_OPC_VERSION,328,46,48,51,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PP_SERVER_BROWSE DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Browse filter"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "String Filter:",IDC_STATIC,7,9,54,10
+    EDITTEXT        IDC_ITEM_FILTER,85,7,120,12,ES_AUTOHSCROLL
+    LTEXT           "Datatype Filter:",IDC_STATIC,7,45,69,10
+    COMBOBOX        IDC_ITEM_DATATYPE,85,44,120,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Access Rights Filter:",IDC_STATIC,7,63,69,10
+    COMBOBOX        IDC_ITEM_ACCESS_RIGHTS,85,63,120,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Vendor Filter:",IDC_STATIC,229,45,54,10
+    EDITTEXT        IDC_VENDOR_FILTER,306,44,120,12,ES_AUTOHSCROLL
+    CONTROL         "Data Access V2",IDC_DA2_FILTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,27,67,10
+    CONTROL         "Data Access V3",IDC_DA3_FILTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,229,27,67,10
+END
+
+IDD_PP_SERVER_STATUS DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Status"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Vendor Info:",IDC_STATIC,8,9,47,10
+    EDITTEXT        IDC_SERVER_VENDOR_INFO,79,7,376,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Start Time:",IDC_STATIC,7,27,38,10
+    EDITTEXT        IDC_SERVER_START_TIME,79,25,126,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Current Time:",IDC_STATIC,7,46,45,10
+    EDITTEXT        IDC_SERVER_CURRENT_TIME,79,44,126,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Last Update Time:",IDC_STATIC,7,65,62,10
+    EDITTEXT        IDC_SERVER_UPDATE_TIME,79,63,126,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Version:",IDC_STATIC,232,27,45,10
+    EDITTEXT        IDC_SERVER_VERSION,286,25,169,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Status Info:",IDC_STATIC,232,46,47,10
+    EDITTEXT        IDC_SERVER_STATUS_INFO,286,44,169,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Server State:",IDC_STATIC,232,65,47,10
+    EDITTEXT        IDC_SERVER_STATE,286,63,169,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_PP_GROUP DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Group"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Group Name:",IDC_STATIC,7,9,46,10
+    EDITTEXT        IDC_GROUP_NAME,72,7,98,12,ES_AUTOHSCROLL
+    LTEXT           "Connection Type:",IDC_STATIC,7,28,59,10
+    COMBOBOX        IDC_GROUP_CONNECTION_TYPE,72,26,98,53,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Data Retrieval:",IDC_STATIC,7,47,51,10
+    COMBOBOX        IDC_GROUP_DATA_RETRIEVAL,72,45,98,39,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Keep Alive Time:",IDC_STATIC,7,66,58,10
+    CONTROL         "",IDC_GROUP_VALID_KEEP_ALIVE_TIME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,72,65,12,12
+    EDITTEXT        IDC_GROUP_KEEP_ALIVE_TIME,87,64,43,12,ES_AUTOHSCROLL
+    LTEXT           "ms",IDC_STATIC,135,66,18,10
+    LTEXT           "Update Rate:",IDC_STATIC,198,9,48,10
+    CONTROL         "",IDC_GROUP_VALID_UPDATE_RATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,250,7,12,12
+    EDITTEXT        IDC_GROUP_UPDATE_RATE,267,7,43,12,ES_AUTOHSCROLL
+    LTEXT           "ms",IDC_STATIC,314,9,14,10
+    LTEXT           "Time Bias",IDC_STATIC,198,28,35,10
+    CONTROL         "",IDC_GROUP_VALID_TIME_BIAS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,250,26,12,12
+    EDITTEXT        IDC_GROUP_TIME_BIAS,267,26,43,12,ES_AUTOHSCROLL
+    LTEXT           "min",IDC_STATIC,314,28,14,10
+    LTEXT           "Deadband:",IDC_STATIC,198,47,40,10
+    CONTROL         "",IDC_GROUP_VALID_DEADBAND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,250,45,12,12
+    EDITTEXT        IDC_GROUP_DEADBAND,267,45,43,12,ES_AUTOHSCROLL
+    LTEXT           "Locale ID:",IDC_STATIC,198,66,39,10
+    CONTROL         "",IDC_GROUP_VALID_LOCALE_ID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,250,65,12,11
+    COMBOBOX        IDC_GROUP_LOCALE_ID,267,64,131,43,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Public:",IDC_STATIC,340,47,39,10
+    CONTROL         "",IDC_PUBLIC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,402,45,12,11
+    LTEXT           "Server Handle:",IDC_STATIC,340,9,49,10
+    LTEXT           "Client Handle:",IDC_STATIC,340,28,49,10
+    EDITTEXT        IDC_GROUP_SERVER_HANDLE,402,7,50,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_GROUP_CLIENT_HANDLE,402,26,50,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_PP_ITEM_ATTRIBUTES DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Item"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Item ID:",IDC_STATIC,7,9,29,10
+    EDITTEXT        IDC_ITEM_ID,59,7,127,12,ES_AUTOHSCROLL
+    LTEXT           "Req. Datatype:",IDC_STATIC,7,27,49,10
+    COMBOBOX        IDC_ITEM_DATATYPE,59,25,127,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Deadband:",IDC_STATIC,7,45,39,10
+    CONTROL         "",IDC_ITEM_VALID_DEADBAND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,59,44,12,12
+    EDITTEXT        IDC_ITEM_DEADBAND,72,43,43,12,ES_AUTOHSCROLL
+    LTEXT           "Item Path:",IDC_STATIC,7,63,45,10
+    EDITTEXT        IDC_ITEM_ACCESS_PATH,59,61,127,12,ES_AUTOHSCROLL
+    CONTROL         "List1",IDC_ITEM_ACCESS_PATH_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,59,76,127,14
+    LTEXT           "Native Datatype:",IDC_STATIC,196,9,56,10
+    EDITTEXT        IDC_TAG_NATIVE_DATATYPE,260,7,80,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Access Rights:",IDC_STATIC,196,27,52,10
+    EDITTEXT        IDC_TAG_ACCESS_RIGHTS,260,25,80,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Engineering Units:",IDC_STATIC,196,45,58,10
+    EDITTEXT        IDC_TAG_EU_TYPE,260,43,80,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "List1",IDC_TAG_EU_INFO,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,260,60,200,28
+    LTEXT           "Server Handle:",IDC_STATIC,349,9,49,10
+    LTEXT           "Client Handle:",IDC_STATIC,349,27,46,10
+    EDITTEXT        IDC_ITEM_SERVER_HANDLE,402,7,57,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_ITEM_CLIENT_HANDLE,402,25,57,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_PP_ITEM_WRITE DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Write"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Value:",-1,7,9,22,10
+    EDITTEXT        IDC_ITEM_WRITE_VALUE,55,7,222,12,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Start Index:",-1,7,49,38,10
+    EDITTEXT        IDC_ITEM_WRITE_START_IDX,55,45,35,14,ES_NUMBER
+    CONTROL         "Generic9",IDC_ITEM_WRITE_START_IDX_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,85,45,11,14
+    LTEXT           "Datatype:",-1,7,28,33,10
+    COMBOBOX        IDC_ITEM_WRITE_DATATYPE,55,26,127,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PP_TAG DIALOG  0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_PROPERTY_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,7,7,453,81
+END
+
+IDD_PP_PROPERTY DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Property"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_PROPERTY_ITEM_ID,68,7,312,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_PROPERTY_PROP_ID,68,26,44,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_PROPERTY_PROP_NAME,193,26,186,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_PROPERTY_DESCRIPTION,68,45,312,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_PROPERTY_VALUE,68,64,154,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_PROPERTY_DATATYPE,283,64,97,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Item ID:",-1,7,9,48,10
+    LTEXT           "Property ID:",-1,7,28,48,10
+    LTEXT           "Property Name:",-1,135,29,51,10
+    LTEXT           "Description:",-1,7,47,48,10
+    LTEXT           "Value:",-1,7,66,48,10
+    LTEXT           "Datatype:",-1,237,66,35,10
+END
+
+IDD_PP_SERVERAE_STATUS DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Status"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Vendor Info:",-1,8,10,47,10
+    EDITTEXT        IDC_SERVER_VENDOR_INFO,79,8,377,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Start Time:",-1,7,29,38,10
+    EDITTEXT        IDC_SERVER_START_TIME,79,27,126,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Current Time:",-1,7,48,45,10
+    EDITTEXT        IDC_SERVER_CURRENT_TIME,79,46,126,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Last Update Time:",-1,7,67,62,10
+    EDITTEXT        IDC_SERVER_UPDATE_TIME,79,65,126,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Version:",-1,235,28,45,10
+    EDITTEXT        IDC_SERVER_VERSION,300,26,106,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Server State:",-1,235,47,47,10
+    EDITTEXT        IDC_SERVER_STATE,301,45,106,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_PP_SERVERAE_BROWSE DIALOG  0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Browse filter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "String Filter:",-1,7,9,54,10
+    EDITTEXT        IDC_ITEM_FILTER,85,7,120,12,ES_AUTOHSCROLL
+END
+
+IDD_PP_SERVERAE_ATTRIBUTES DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Server"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "URL:",IDC_STATIC,7,9,49,10
+    EDITTEXT        IDC_SERVER_URL,76,7,384,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Client Name:",IDC_STATIC,8,26,43,10
+    CONTROL         "",IDC_SERVER_VALID_CLIENT_NAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,76,25,12,11
+    EDITTEXT        IDC_SERVER_CLIENT_NAME,93,24,131,12,ES_AUTOHSCROLL
+    LTEXT           "Locale ID:",IDC_STATIC,8,44,39,10
+    CONTROL         "",IDC_SERVER_VALID_LOCALE_ID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,76,43,12,11
+    COMBOBOX        IDC_SERVER_LOCALE_ID,93,42,131,43,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Available Filter\nCriterias:",IDC_STATIC,8,63,55,17
+    CONTROL         "List1",IDC_SERVERAE_AVAILABLE_FILTERS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,76,61,148,29
+END
+
+IDD_PP_SUBSCRIPTION_ATTRIBUTES DIALOG  0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Subscription"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Buffer Time:",-1,7,9,44,10
+    EDITTEXT        IDC_SUBSCRIPTION_BUFFER_TIME,59,7,57,12,ES_AUTOHSCROLL
+    LTEXT           "Max Size:",-1,7,28,45,10
+    EDITTEXT        IDC_SUBSCRIPTION_MAX_SIZE,59,26,57,12,ES_AUTOHSCROLL
+    LTEXT           "Client Handle:",-1,7,46,46,10
+    EDITTEXT        IDC_SUBSCRIPTION_CLIENT_HANDLE,59,45,57,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DLG_OPTIONS DIALOGEX 0, 0, 230, 149
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Only",IDC_OPT_TIME_ONLY,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,16,19,31,13
+    CONTROL         "With Date",IDC_OPT_TIME_DATE,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,48,19,51,13
+    GROUPBOX        "Show Time",IDC_STATIC,7,10,103,25,WS_GROUP
+    CONTROL         "On",IDC_OPT_CM_ON,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,16,49,34,13
+    CONTROL         "Off",IDC_OPT_CM_OFF,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,48,49,34,13
+    GROUPBOX        "Connection Monitor",IDC_STATIC,7,39,103,25,WS_GROUP
+    CONTROL         "On",IDC_OPT_TRC_ON,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,16,77,34,13
+    CONTROL         "Off",IDC_OPT_TRC_OFF,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,48,77,34,13
+    GROUPBOX        "Trace OPC Calls",IDC_STATIC,7,67,103,25,WS_GROUP
+    CONTROL         "On",IDC_OPT_ALPHAITEM_ON,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,16,105,34,13
+    CONTROL         "Off",IDC_OPT_ALPHAITEM_OFF,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,48,105,34,13
+    GROUPBOX        "Alphabetical DA Item Sorting",IDC_STATIC,7,96,103,25,WS_GROUP
+    CONTROL         "Pure",IDC_OPT_VALUE_PURE,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,129,19,34,13
+    CONTROL         "With VT",IDC_OPT_VALUE_VT,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,173,19,42,13
+    GROUPBOX        "Show Item Values (1)",IDC_STATIC,119,10,102,25,WS_GROUP
+    CONTROL         "Decimal",IDC_OPT_VALUE_DEC,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,129,49,39,13
+    CONTROL         "Hex",IDC_OPT_VALUE_HEX,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,173,49,42,13
+    GROUPBOX        "Show Item Values (2)",IDC_STATIC,120,39,102,25,WS_GROUP
+    CONTROL         "On",IDC_OPT_IO_ERRORS_ON,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,129,77,34,13
+    CONTROL         "Off",IDC_OPT_IO_ERRORS_OFF,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,173,77,42,13
+    GROUPBOX        "Show I/O Errors",IDC_STATIC,120,67,102,25,WS_GROUP
+    CONTROL         "On",IDC_OPT_ALPHAAE_ON,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,129,105,34,13
+    CONTROL         "Off",IDC_OPT_ALPHAAE_OFF,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,173,105,34,13
+    GROUPBOX        "Alphabetical AE Item Sorting",IDC_STATIC,118,96,103,25,WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,91,127,50,15
+END
+
+IDD_PP_TAG_WRITE DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Write"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Current Value:",-1,7,10,45,10
+    EDITTEXT        IDC_TAG_READ_VALUE,74,9,147,12,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN
+    LTEXT           "Current Quality:",-1,7,30,56,10
+    EDITTEXT        IDC_TAG_READ_QUALITY,74,29,147,12,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN
+    LTEXT           "Current Timestamp:",-1,7,51,64,10
+    EDITTEXT        IDC_TAG_READ_TIMESTAMP,74,50,147,12,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN
+    LTEXT           "Write Value:",-1,232,10,41,10
+    EDITTEXT        IDC_TAG_WRITE_VALUE,284,8,147,12,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN
+END
+
+IDD_PP_SERVER_SECURITY DIALOGEX 0, 0, 467, 95
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Security"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "User Name:",-1,7,9,38,10
+    LTEXT           "Password:",-1,7,28,45,10
+    EDITTEXT        IDC_SERVER_USER_NAME,97,7,89,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SERVER_PASSWORD,97,26,89,12,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Store Security Information:",-1,7,47,85,10
+    CONTROL         "",IDC_SERVER_STORE_SEC_INFO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,97,46,12,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLG_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+        HORZGUIDE, 19
+        HORZGUIDE, 32
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SOClient.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_MAIN_IMAGE          BITMAP                  "res\\mainImg.bmp"
+IDB_OBJECT_IMAGE        BITMAP                  "res\\objectImg.bmp"
+IDR_PROPERTYFRAME       BITMAP                  "res\\propfram.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  48, 34
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_PROPERTIES
+    SEPARATOR
+    BUTTON      ID_DELETEOBJECT
+    SEPARATOR
+    BUTTON      ID_SESSION_STOP
+    BUTTON      ID_SESSION_CONNECT
+    BUTTON      ID_SESSION_START
+END
+
+IDR_PROPERTYFRAME TOOLBAR  48, 34
+BEGIN
+    BUTTON      ID_PROPERTY_OK
+    BUTTON      ID_PROPERTY_APPLY
+    SEPARATOR
+    BUTTON      ID_PROPERTY_RESET
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        POPUP "&Add"
+        BEGIN
+            MENUITEM "&Group",                      ID_EDIT_ADDGROUP
+            MENUITEM "&Item",                       ID_EDIT_ADDITEM
+            MENUITEM SEPARATOR
+            MENUITEM "&Subscription",               ID_EDIT_ADDSUBSCRIPTION
+        END
+        MENUITEM "&Delete\tDel",                ID_DELETEOBJECT
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties\tF7",             ID_EDIT_PROPERTIES
+        MENUITEM "&Options",                    ID_EDIT_OPTIONS
+    END
+    POPUP "&Session"
+    BEGIN
+        MENUITEM "&Start\tF9",                  ID_SESSION_START
+        MENUITEM "&Connect\tF10",               ID_SESSION_CONNECT
+        MENUITEM "Sto&p\tF11",                  ID_SESSION_STOP
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "DA &Write Bar",               ID_VIEW_DAWRITE_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Refresh\tF5",                ID_VIEW_REFRESH
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Online &Help...\tF1",         ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   32831
+    END
+END
+
+IDR_OBJECT_EMPTY_POPUP MENU 
+BEGIN
+    MENUITEM " ",                           65535
+END
+
+IDR_OBJECT_SERVERDA_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "&Add Group",                  ID_EDIT_ADDGROUP
+        MENUITEM "&Delete\tDel",                ID_DELETEOBJECT
+        MENUITEM SEPARATOR
+        POPUP "&State"
+        BEGIN
+            POPUP "&Start"
+            BEGIN
+                MENUITEM "&Deep",                       ID_START_DEEP
+                MENUITEM "&Flat",                       ID_START_FLAT
+            END
+            POPUP "&Connect"
+            BEGIN
+                MENUITEM "&Deep",                       ID_CONNECT_DEEP
+                MENUITEM "&Flat",                       ID_CONNECT_FLAT
+            END
+            MENUITEM "Stop",                        ID_STOP
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties\tF7",             ID_EDIT_PROPERTIES
+    END
+END
+
+IDR_OBJECT_ITEM_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "&Delete\tDel",                ID_DELETEOBJECT
+        MENUITEM SEPARATOR
+        POPUP "&State"
+        BEGIN
+            MENUITEM "&Start",                      ID_START_FLAT
+            MENUITEM "&Connect",                    ID_CONNECT_FLAT
+            MENUITEM "Stop",                        ID_STOP
+        END
+        POPUP "Spe&cial"
+        BEGIN
+            MENUITEM "&Write from File",            ID_WRITEFROMFILE, INACTIVE
+            MENUITEM "&Read to File",               ID_READTOFILE, INACTIVE
+            MENUITEM "Log to File",                 ID_LOGTOFILE
+        END
+        MENUITEM "&Read",                       ID_ITEM_READ
+        MENUITEM "Write",                       ID_ITEM_WRITE
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties\tF7",             ID_EDIT_PROPERTIES
+    END
+END
+
+IDR_OBJECT_GROUP_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "&Add Item",                   ID_EDIT_ADDITEM
+        MENUITEM "&Delete\tDel",                ID_DELETEOBJECT
+        MENUITEM SEPARATOR
+        POPUP "&State"
+        BEGIN
+            POPUP "&Start"
+            BEGIN
+                MENUITEM "&Deep",                       ID_START_DEEP
+                MENUITEM "&Flat",                       ID_START_FLAT
+            END
+            POPUP "&Connect"
+            BEGIN
+                MENUITEM "&Deep",                       ID_CONNECT_DEEP
+                MENUITEM "&Flat",                       ID_CONNECT_FLAT
+            END
+            MENUITEM "Stop",                        ID_STOP
+        END
+        MENUITEM "&Refresh",                    ID_GROUP_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties\tF7",             ID_EDIT_PROPERTIES
+    END
+END
+
+IDR_OBJECT_SERVERAE_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "&Add Subscription",           ID_EDIT_ADDSUBSCRIPTION
+        MENUITEM "&Delete\tDel",                ID_DELETEOBJECT
+        MENUITEM SEPARATOR
+        POPUP "&State"
+        BEGIN
+            POPUP "&Start"
+            BEGIN
+                MENUITEM "&Deep",                       ID_START_DEEP
+                MENUITEM "&Flat",                       ID_START_FLAT
+            END
+            POPUP "&Connect"
+            BEGIN
+                MENUITEM "&Deep",                       ID_CONNECT_DEEP
+                MENUITEM "&Flat",                       ID_CONNECT_FLAT
+            END
+            MENUITEM "Stop",                        IDC_STOP
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties\tF7",             ID_EDIT_PROPERTIES
+    END
+END
+
+IDR_OBJECT_SUBSCRIPTION_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "&Delete\tDel",                ID_DELETEOBJECT
+        MENUITEM SEPARATOR
+        POPUP "&State"
+        BEGIN
+            MENUITEM "&Start",                      ID_START_FLAT
+            MENUITEM "&Connect",                    ID_CONNECT_FLAT
+            MENUITEM "Stop",                        ID_STOP
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties\tF7",             ID_EDIT_PROPERTIES
+    END
+END
+
+IDR_OBJECT_NODE_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "&Add Items for all Tags",     ID_ADDTAGSOFNODE
+        MENUITEM "Write All ItemIDs To file",   ID_BROWSEALLTAGSOFNODE2FILE
+        MENUITEM "Add as Group with all Tags",  ID_ADDNEWGROUPWITHALLTAGS
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties\tF7",             ID_EDIT_PROPERTIES
+    END
+END
+
+IDR_OBJECT_TAG_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "&Add Item",                   ID_EDIT_ADDITEM
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties\tF7",             ID_EDIT_PROPERTIES
+    END
+END
+
+IDR_OBJECT_PROPERTY_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "&Add Item",                   ID_EDIT_ADDITEM
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties\tF7",             ID_EDIT_PROPERTIES
+    END
+END
+
+IDR_OBJECT_NAMESPACEBROWSER_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "&Add Items for all Tags",     ID_ADDTAGSOFNODE
+        MENUITEM "Write All ItemIDs To file",   32833
+        MENUITEM "Add as Group with all Tags",  ID_ADDNEWGROUPWITHALLTAGS
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties\tF7",             ID_EDIT_PROPERTIES
+    END
+END
+
+IDR_OBJECT_OPCSERVER_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "&Add Server",                 ID_EDIT_ADDSERVER
+    END
+END
+
+IDR_OBJECT_EVENTCOND_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "&Acknowledge",                ID_EVENT_ACK
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties\tF7",             ID_EDIT_PROPERTIES
+    END
+END
+
+IDR_ERRORLST_POPUP MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "Delete &All Entries",         ID_ERROR_DELETEALL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PP_GROUP DLGINIT
+BEGIN
+    IDC_GROUP_CONNECTION_TYPE, 0x403, 9, 0
+0x6441, 0x4764, 0x6f72, 0x7075, "\000" 
+    IDC_GROUP_CONNECTION_TYPE, 0x403, 21, 0
+0x6547, 0x5074, 0x6275, 0x696c, 0x4763, 0x6f72, 0x7075, 0x7942, 0x614e, 
+0x656d, "\000" 
+    IDC_GROUP_DATA_RETRIEVAL, 0x403, 18, 0
+0x7341, 0x6e79, 0x6863, 0x6f72, 0x206e, 0x6441, 0x6976, 0x6573, 0x0073, 
+
+    IDC_GROUP_DATA_RETRIEVAL, 0x403, 15, 0
+0x7953, 0x636e, 0x7268, 0x6e6f, 0x5220, 0x6165, 0x7364, "\000" 
+    IDC_GROUP_DATA_RETRIEVAL, 0x403, 15, 0
+0x6f50, 0x6c6c, 0x6465, 0x5220, 0x6665, 0x6572, 0x6873, "\000" 
+    0
+END
+
+IDD_PP_ITEM_ATTRIBUTES DLGINIT
+BEGIN
+    IDC_ITEM_DATATYPE, 0x403, 6, 0
+0x4d45, 0x5450, 0x0059, 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x3149, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 4, 0
+0x4955, 0x0031, 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x3249, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 4, 0
+0x4955, 0x0032, 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x3449, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 4, 0
+0x4955, 0x0034, 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x3849, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 4, 0
+0x4955, 0x0038, 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x3452, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x3852, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 5, 0
+0x4f42, 0x4c4f, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 5, 0
+0x5342, 0x5254, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 5, 0
+0x4144, 0x4554, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x5943, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x3149, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 10, 0
+0x4955, 0x2031, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x3249, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 10, 0
+0x4955, 0x2032, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x3449, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 10, 0
+0x4955, 0x2034, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x3849, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 10, 0
+0x4955, 0x2038, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x3452, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x3852, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 11, 0
+0x4f42, 0x4c4f, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 11, 0
+0x5342, 0x5254, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 11, 0
+0x4144, 0x4554, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x5943, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 14, 0
+0x4156, 0x4952, 0x4e41, 0x2054, 0x5241, 0x4152, 0x0059, 
+    0
+END
+
+IDD_PP_SERVER_BROWSE DLGINIT
+BEGIN
+    IDC_ITEM_DATATYPE, 0x403, 6, 0
+0x4d45, 0x5450, 0x0059, 
+    IDC_ITEM_DATATYPE, 0x403, 4, 0
+0x4955, 0x0031, 
+    IDC_ITEM_DATATYPE, 0x403, 4, 0
+0x4955, 0x0032, 
+    IDC_ITEM_DATATYPE, 0x403, 4, 0
+0x4955, 0x0034, 
+    IDC_ITEM_DATATYPE, 0x403, 5, 0
+0x4955, 0x544e, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x3149, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x3249, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x3449, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 4, 0
+0x4e49, 0x0054, 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x3452, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x3852, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 5, 0
+0x4f42, 0x4c4f, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 5, 0
+0x5342, 0x5254, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 5, 0
+0x4144, 0x4554, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 8, 0
+0x4544, 0x4943, 0x414d, 0x004c, 
+    IDC_ITEM_DATATYPE, 0x403, 3, 0
+0x5943, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 10, 0
+0x4955, 0x2031, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_DATATYPE, 0x403, 10, 0
+0x4955, 0x2032, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_DATATYPE, 0x403, 10, 0
+0x4955, 0x2034, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_DATATYPE, 0x403, 11, 0
+0x4955, 0x544e, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x3149, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x3249, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x3449, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 10, 0
+0x4e49, 0x2054, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x3452, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x3852, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 11, 0
+0x4f42, 0x4c4f, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 11, 0
+0x5342, 0x5254, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 11, 0
+0x4144, 0x4554, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_DATATYPE, 0x403, 14, 0
+0x4544, 0x4943, 0x414d, 0x204c, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_DATATYPE, 0x403, 9, 0
+0x5943, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_ACCESS_RIGHTS, 0x403, 18, 0
+0x4c41, 0x204c, 0x4341, 0x4543, 0x5353, 0x5220, 0x4749, 0x5448, 0x0053, 
+
+    IDC_ITEM_ACCESS_RIGHTS, 0x403, 5, 0
+0x4552, 0x4441, "\000" 
+    IDC_ITEM_ACCESS_RIGHTS, 0x403, 6, 0
+0x5257, 0x5449, 0x0045, 
+    IDC_ITEM_ACCESS_RIGHTS, 0x403, 15, 0
+0x4552, 0x4441, 0x6120, 0x646e, 0x5720, 0x4952, 0x4554, "\000" 
+    0
+END
+
+IDD_PP_ITEM_WRITE DLGINIT
+BEGIN
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 6, 0
+0x4d45, 0x5450, 0x0059, 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 4, 0
+0x4955, 0x0031, 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 3, 0
+0x3149, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 4, 0
+0x4955, 0x0032, 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 3, 0
+0x3249, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 4, 0
+0x4955, 0x0034, 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 3, 0
+0x3449, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 4, 0
+0x4955, 0x0038, 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 3, 0
+0x3849, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 3, 0
+0x3452, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 3, 0
+0x3852, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 5, 0
+0x4f42, 0x4c4f, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 5, 0
+0x5342, 0x5254, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 5, 0
+0x4144, 0x4554, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 3, 0
+0x5943, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 10, 0
+0x4955, 0x2031, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 9, 0
+0x3149, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 10, 0
+0x4955, 0x2032, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 9, 0
+0x3249, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 10, 0
+0x4955, 0x2034, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 9, 0
+0x3449, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 10, 0
+0x4955, 0x2038, 0x5241, 0x4152, 0x0059, 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 9, 0
+0x3849, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 9, 0
+0x3452, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 9, 0
+0x3852, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 11, 0
+0x4f42, 0x4c4f, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 11, 0
+0x5342, 0x5254, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 11, 0
+0x4144, 0x4554, 0x4120, 0x5252, 0x5941, "\000" 
+    IDC_ITEM_WRITE_DATATYPE, 0x403, 9, 0
+0x5943, 0x4120, 0x5252, 0x5941, "\000" 
+    0
+END
+
+IDD_PP_SERVER_ATTRIBUTES DLGINIT
+BEGIN
+    IDC_SERVER_USE_OPC_VERSION, 0x403, 8, 0
+0x6544, 0x6166, 0x6c75, 0x0074, 
+    IDC_SERVER_USE_OPC_VERSION, 0x403, 7, 0
+0x4144, 0x3120, 0x302e, "\000" 
+    IDC_SERVER_USE_OPC_VERSION, 0x403, 7, 0
+0x4144, 0x3220, 0x302e, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+ABOUT.JPG               HTML                    "res\\about.jpg"
+COMMON.CSS              HTML                    "res\\common.css"
+IDR_HTML_DLGABOUT       HTML                    "res\\about.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Softing OPC Classic Demo Client"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "OPC Toolkit Demo Client"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_DELETEOBJECT         "Deletes the object and all objects in the subtrees\nDelete"
+    ID_VIEW_DAWRITE_BAR     "Show or hide the OPC DA write bar\nToggle DAWriteBar"
+    ID_GROUPUPDATERATE_FAST "Use fast update rate for DA group\nFast Update Rate"
+    ID_GROUPUPDATERATE_STANDARD 
+                            "Use medium update rate for DA group\nMedium Update Rate"
+    ID_GROUPUPDATERATE_SLOW "Use slow update rate for DA group\nSlow Update Rate"
+    ID_ADDOBJECT            "Adds the object to the object tree\nAdd"
+    ID_ADDTAGSOFNODE        "Add items for all tags of the selected object to the group\nAdd Items for all Tags"
+    ID_WRITEFROMFILE        "Write from file\nWrite"
+    ID_READTOFILE           "Read to file\nRead"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_DAITEMVALUE         "Value to write to the item\nWrite Value"
+    IDC_DAITEMWRITE         "Write the value to the item\nWrite"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_PROPERTIES      "Show properties of the selected object.\nProperties"
+    ID_VIEW_PROPERTYVIEW    "Show or hide the property view\nToggle Property Vew."
+    ID_PROPERTY_APPLY       "Apply the property changes\nApply"
+    ID_PROPERTY_RESET       "Reset the property changes\nReset"
+    ID_SESSION_STOP         "Disconnect all objects\nStop"
+    ID_SESSION_CONNECT      "Connect all objects\nConnect"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SESSION_START        "Activate all objects\nStart"
+    ID_PROPERTY_OK          "Apply the property changes and close window\nOK"
+    ID_EDIT_ADDGROUP        "Add a group object\nAdd Group"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_ADDSUBSCRIPTION "Add a subscription object\nAdd Subscription"
+    ID_EDIT_ADDITEM         "Add an item object\nAdd Item"
+    ID_START_DEEP           "Activate object and it's childs/nStart Deep"
+    ID_START_FLAT           "Activate object/nStart Flat"
+    ID_CONNECT_DEEP         "Connect object and it's childs/nConnect Deep"
+    ID_CONNECT_FLAT         "Connect object/nConnect Flat"
+    ID_STOP                 "Disconnect object and it's childs/nStop"
+    ID_GROUP_REFRESH        "Refresh the active items of the group/nRefresh Group"
+    ID_EVENT_ACK            "Acknowledge the selected conditions\nAcknowledge"
+    ID_VIEW_REFRESH         "Refresh selected view\nRefresh"
+    ID_EDIT_OPTIONS         "Show options dialog of the client.\nOptions"
+END
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SOClient.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPERTY DIALOG  0, 0, 81, 115
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "OK",IDC_OK,"Button",BS_OWNERDRAW | WS_TABSTOP,3,17,45,27
+    CONTROL         "Reset",IDC_RESET,"Button",BS_OWNERDRAW | WS_TABSTOP,3,85,45,27
+    CONTROL         "Edit",IDC_EDIT,"Button",BS_OWNERDRAW | WS_TABSTOP,3,51,45,27
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_DELETE,      ID_DELETEOBJECT,        VIRTKEY, NOINVERT
+    VK_F7,          ID_EDIT_PROPERTIES,     VIRTKEY, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F10,         ID_SESSION_CONNECT,     VIRTKEY, NOINVERT
+    VK_F9,          ID_SESSION_START,       VIRTKEY, NOINVERT
+    VK_F11,         ID_SESSION_STOP,        VIRTKEY, NOINVERT
+    VK_F5,          ID_VIEW_REFRESH,        VIRTKEY, NOINVERT
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\SOClient.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

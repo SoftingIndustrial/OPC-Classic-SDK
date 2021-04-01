@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+	
+	<ImportFile>
+		<FilePath>System_DA2.0.xml</FilePath>
+	</ImportFile>
+	
+	<ImportFile>
+		<FilePath>System_DA3.0.xml</FilePath>
+	</ImportFile>
+	
+</TestList>

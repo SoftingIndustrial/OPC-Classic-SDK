@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+  <DaSubscriptionCreate>
+    <Session>System.Session</Session>
+    <UpdateRate>1000</UpdateRate>
+    <Property>DaItem.Subscription</Property>
+  </DaSubscriptionCreate>
+
+  <DaItemsCreate>
+    <Subscription>DaItem.Subscription</Subscription>
+    <ItemIds>
+      <string>ns*2;s*Boolean</string>
+      <!--BooleanValue-->
+      <string>ns*2;s*Int8</string>
+      <!--SByteValue-->
+      <string>ns*2;s*UInt8</string>
+      <!--ByteValue-->
+      <string>ns*2;s*Int16</string>
+      <!--Int16Value-->
+      <string>ns*2;s*UInt16</string>
+      <!--UInt16Value-->
+      <string>ns*2;s*Int32</string>
+      <!--Int32Value-->
+      <string>ns*2;s*UInt32</string>
+      <!--UInt32Value-->
+      <string>ns*2;s*Float</string>
+      <!--FloatValue-->
+      <string>ns*2;s*Double</string>
+      <!--DoubleValue-->
+      <string>ns*2;s*String</string>
+      <!--StringValue-->
+      <string>ns*2;s*DateTime</string>
+      <!--DateTimeValue-->
+      <string>ns*2;s*Guid</string>
+      <!--GuidValue-->
+      <string>ns*2;s*ByteString</string>
+      <!--ByteStringValue-->
+      <string>ns*2;s*XmlElement</string>
+      <!--XmlElementValue-->
+      <string>ns*2;s*NodeId</string>
+      <!--NodeIdValue-->
+      <string>ns*2;s*ExpandedNodeId</string>
+      <!--ExpandedNodeIdValue-->
+      <string>ns*2;s*QualifiedName</string>
+      <!--QualifiedNameValue-->
+      <string>ns*2;s*LocalizedText</string>
+      <!--LocalizedTextValue-->
+      <string>ns*2;s*StatusCode</string>
+      <!--StatusCodeValue-->
+      <!--<string>ns*3;i*10238</string> Enumeration write error-->
+      <string>ns*2;s*Structure</string>
+      <!--StructureValue-->
+      <!--<string>ns*3;i*10240</string> Number write error-->
+      <string>ns*2;s*TCAnalogItem_Item1</string>
+      <!--SimulationActive PropertyType - not writable-->
+      <string>ns*3;s*nonode</string>
+    </ItemIds>
+    <Property>DaItem.StaticItems</Property>
+  </DaItemsCreate>
+
+  <DaItemWrite>
+    <ExecutionType>SYNCHRONOUS</ExecutionType>
+    <ItemsProperty>DaItem.StaticItems</ItemsProperty>
+    <Values>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:boolean">false</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.7555963Z</TimeStamp>
+        <Data xsi:type="xsd:byte">-56</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.5825963Z</TimeStamp>
+        <Data xsi:type="xsd:unsignedByte">254</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.7555963Z</TimeStamp>
+        <Data xsi:type="xsd:short">-254</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.5825963Z</TimeStamp>
+        <Data xsi:type="xsd:unsignedShort">999</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.7555963Z</TimeStamp>
+        <Data xsi:type="xsd:int">-42</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.5825963Z</TimeStamp>
+        <Data xsi:type="xsd:unsignedInt">426589</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.7555963Z</TimeStamp>
+        <Data xsi:type="xsd:float">123.654</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:double">1</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:string">the red fox jumped over the lazy brown dog</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:dateTime">2012-06-13T11:40:44.81</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T06:57:10.8016378Z</TimeStamp>
+        <Data xsi:type="xsd:string">ea82dc9b-b56c-65e8-fc9b-71453917c87b</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:base64Binary">AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ==</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T06:57:10.8016378Z</TimeStamp>
+        <Data xsi:type="xsd:string">&lt;n0:쥐 레몬="石灰蛇" 코끼리="黄色" 원숭이="柠檬" 빨간코끼리="白色" 황색="草莓石灰" 말뱀복숭아="草莓" xmlns:n0="http://백색"&gt;&lt;n0:원숭이&gt;紫色 狗: 猪 红色. 马 马. 香蕉. 蓝莓 香蕉- 葡萄 绿色 大象 黄色_ 草莓] 鼠) 猪$ 菠萝 葡萄 猫@ 红色# 母牛 蛇] 猫} 桃子_ 草莓 柠檬 石灰 香蕉 绿色&amp;amp;&lt;/n0:원숭이&gt;&lt;n0:양코끼리&gt;红色) 绿色} 鼠 猴子 菠萝/ 菠萝 母牛 石灰@ 鼠@ 绿色` 石灰 狗[ 草莓; 蓝莓 柠檬' 绵羊 大象 猴子 芒果 葡萄 马^ 葡萄@ 黑色 大象&amp;lt; 绿色] 蓝色@ 大象&lt;/n0:양코끼리&gt;&lt;n0:딸기고양이&gt;绿色? 母牛% 绿色, 香蕉, 狗 大象 狗{ 蓝莓 蛇 猪 猴子 猴子 猴子 芒果 芒果# 草莓 大象 白色/ 芒果"&lt;/n0:딸기고양이&gt;&lt;n0:녹색석회&gt;白色 黑色 蓝莓+ 菠萝] 葡萄 蓝莓. 黄色( 黑色` 红色&amp;amp; 马 猴子 蛇# 马_ 红色? 母牛 芒果&amp;lt; 母牛 蓝莓 鼠( 红色) 猴子 大象 蓝色 猫[ 红色 大象* 马[ 大象` 芒果&lt;/n0:녹색석회&gt;&lt;n0:파인애플&gt;黑色 猪, 鼠] 马) 黑色 猫# 菠萝* 紫色' 猴子 大象 绿色&amp;lt; 香蕉^ 母牛&amp;lt; 石灰* 猪; 桃子=&lt;/n0:파인애플&gt;&lt;n0:망고&gt;芒果 蛇 黑色{ 狗# 红色} 红色; 狗 菠萝+ 鼠 柠檬` 马[ 龙 龙&amp;lt; 香蕉` 猴子 黄色&lt;/n0:망고&gt;&lt;n0:석회&gt;紫色@&lt;/n0:석회&gt;&lt;n0:코끼리&gt;菠萝 柠檬` 紫色] 红色 葡萄~ 鼠) 葡萄&amp;amp; 石灰' 母牛_ 绿色_ 狗 猴子 蛇 绵羊; 龙+ 葡萄&lt;/n0:코끼리&gt;&lt;/n0:쥐&gt;</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:string">s*a</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:string">s=a</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:string">a</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:string">a</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.5825963Z</TimeStamp>
+        <Data xsi:type="xsd:unsignedInt">1</Data>
+      </Value>
+      <!--<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2012-06-13T06:57:10.8046378Z</TimeStamp>
+				<Data xsi:type="xsd:int">1019434054</Data>
+			</Value>-->
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T06:57:10.8216378Z</TimeStamp>
+        <Data xsi:type="xsd:base64Binary">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cGhhbnRgIFB1cnBsZX4gUHVycGxlIExpbWUpIEJsYWNrIERvZyBEcmFnb24gU2hlZXAkIERyYWdvbiBQaW5lYXBwbGUjPC9uMDpIb3JzZT48bjA6RG9nPldoaXRlJyBDb3cgUGVhY2gpIExlbW9uezwvbjA6RG9nPjwvbjA6U25ha2U+AgMAADxuMDpMZW1vbiBCYW5hbmE9ItCh0LvQvtC9IiBTdHJhd2JlcnJ5PSLQodC+0LHQsNC60LAiIFNuYWtlPSLQk9C+0LvRg9Cx0L4iIEJsdWViZXJyeT0i0J/Rg9GA0L/Rg9GA0L7QstC+IiBSYXQ9ItCa0L7RgNC+0LLQsCIgR3JlZW49ItCh0L7QsdCw0LrQsCIgQmx1ZT0i0JrRgNGL0YHQsCIgUHVycGxlPSLQm9C+0YjQsNC00YwiIHhtbG5zOm4wPSJodHRwOi8vR3JlZW4iPjxuMDpDb3c+0JTRgNCw0LrQvtC9JmFtcDsg0KHQvtCx0LDQutCwJmFtcDsg0JTRgNCw0LrQvtC9LSDQntCy0YbRiycg0JTRgNCw0LrQvtC9JCDQltC10LvRgtGL0LnRhtCy0LXRgiIg0JjQt9Cy0LXRgdGC0LrQsCDQlNGA0LDQutC+0L1AINCb0LjQvNC+0L0/PC9uMDpDb3c+PG4wOkdyYXBlPtCb0LjQvNC+0L0g0JPQvtC70YPQsdC+XyDQntCy0YbRiyMg0KHQvtCx0LDQutCwJTwvbjA6R3JhcGU+PG4wOk1vbmtleT7Qk9C+0LvRg9Cx0L4g0JHQtdC70L49INCT0L7Qu9GD0LHQvi8g0JrRgNGL0YHQsCcg0KHQstC40L3RjNGPPC9uMDpNb25rZXk+PG4wOkJhbmFuYT7QodC70L7QvSDQntCx0LXQt9GM0Y/QvdCwJTwvbjA6QmFuYW5hPjxuMDpHcmVlbj7Qn9GD0YDQv9GD0YDQvtCy0L4g0JPQvtC70YPQsdC40LrQsCDQkdCw0L3QsNC9LyDQmtC+0YIg0JrRgNCw0YHQvdC+OyDRj9Cx0LvQvtC60L4g0JPQvtC70YPQsdC+WyDQk9C+0LvRg9Cx0LjQutCwINCe0LLRhtGLINCh0LLQuNC90YzRjyDQmNC30LLQtdGB0YLQutCwINCf0YPRgNC/0YPRgNC+0LLQvj88L24wOkdyZWVuPjwvbjA6TGVtb24+pwEAADxuMDrqsJwg67O17Iit7JWEPSJIb3JzZSIg7YyM7J247JWg7ZSMPSJTdHJhd2JlcnJ5IiDrk6TsrYk9IkRyYWdvbiIgeG1sbnM6bjA9Imh0dHA6Ly/rp5DrlLjquLAiPjxuMDrqs6DslpHsnbQ+RG9nIEJsdWViZXJyeSwgTGltZSBNb25rZXkgR3JhcGUqIExlbW9ueyBSZWQgWWVsbG93IEJhbmFuYSBZZWxsb3cgUmF0JSBDb3cgRHJhZ29uIE1hbmdvIFBpbmVhcHBsZTwvbjA66rOg7JaR7J20PjxuMDrrlLjquLDrlLjquLA+U3RyYXdiZXJyeSBEcmFnb24nIERyYWdvbiBIb3JzZX4gUGlnXTwvbjA665S46riw65S46riwPjxuMDrruajqsITrsLHsg4k+TGVtb24rIFN0cmF3YmVycnkoIFNoZWVwJCBIb3JzZSBMZW1vbiBMZW1vbiogU3RyYXdiZXJyeSBTaGVlcCBSZWQjIE1hbmdvIiBSYXQkIFllbGxvdzwvbjA667mo6rCE67Cx7IOJPjwvbjA66rCcPgoAAAADBgAGAAAA67Cx7IOJAwMAAwAAAFJhdAMGAAYAAADnu7/oibICCQCqItp4BAQAO6pshW6PmFtr/Rum1XhQWAIHAO5kEBIDCgADAAAA54y/BQQAUgAAAAjKBU+jfgkKq/2YmQ90D0UKNkdRA8eJGPopS279URNSpIb0UaGF1dJPFGfxzHcC6e1CEkX9ZeBBQOxVeTKaDVnpRvSIgL6khGB1Au9fmEyDJ2EFCQAMAAAAzVU+prIQtDBbn7QHBAIAhoJ5aS+djeWIY/HiqKDRUgQAAACDAAAJAAAA7JuQ7Iit7J20KwAAAGh0dHA6Ly9zYW1wbGVzLm9yZy9VQS9tZW1vcnlidWZmZXIvSW5zdGFuY2WCAACt71MELAAAAGh0dHA6Ly9vcGNmb3VuZGF0aW9uLm9yZy9VQS9Cb2lsZXIvL0luc3RhbmNlggAAUZDGACIAAABodHRwOi8vc2FtcGxlcy5vcmcvVUEvbWVtb3J5YnVmZmVygwAABgAAAOe7tee+iisAAABodHRwOi8vc2FtcGxlcy5vcmcvU2FtcGxlcy9IaXN0b3JpY2FsRXZlbnRzBQAAAAUABgAAAOqygOyglQEABgAAAEJhbmFuYQEAEAAAANCY0LfQstC10YHRgtC60LAJAAkAAADqs6DslpHsnbQAAAMAAADni5cAAAAABwAAAAAAmAAAABsAAACrAAAADgAAAAcAAACkAAAAOgAEAAAADwMAAABZmMoRBQQAOwAAAKUxNBddz253CBrEqj9ROo5k99J/irhx72ieO9JF5Kxj1jNxqJyNevjG8SoJF4O99KBmlw7fs9PswEWvEwAAUACTYQAAAAAAOwAAAJAAAACHAAAAHgAAAEAAAACVAAAAUwAAACYAAACyAAAAsgAAACkAAAB9AAAAAAAAAIcAAAAtAAAABgAAAFkAAAAAAAAAqgAAAKMAAACeAAAAAAAAAD4AAABgAAAAAAAAAAAAAACgAAAAAAAAAB8AAABiAAAAZAAAAHsAAAA5AAAAIwAAAF4AAABQAAAAtAAAAAwAAAAAAAAAmwAAAEAAAAB/AAAAAAAAAAAAAACjAAAAAAAAAJwAAAAAAAAAVAAAAFAAAAAtAAAAgAAAAHgAAACsAAAAAwAAAAAAAACPAAAAYgAAAAAAAABGAAAAAAAAAEsAAACLAAAAAAAAAIgAAAB4AAAAXwAAAA0AAAAAAAAAXwAAAAAAAABNAAAAUwAAAGQAAABaAAAAMwAAAKkAAACVAAAAmQAAAIEAAAB3AAAAZgAAAAAAAACDAAAAHwAAAB4AAAC3AAAAAwAAAEMAAACmAAAAbAAAAAAAAABqAAAABQAAAGAAAAA2AAAAZgAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Data>
+      </Value>
+      <!--<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2012-06-13T06:57:10.8216378Z</TimeStamp>
+				<Data xsi:type="xsd:double">-8.1780289207245E-09</Data>
+			</Value>-->
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T06:57:36.8596378Z</TimeStamp>
+        <Data xsi:type="xsd:double">5.55</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T06:57:36.8596378Z</TimeStamp>
+        <Data xsi:type="xsd:boolean">false</Data>
+      </Value>
+    </Values>
+    <ValidateAllResults>false</ValidateAllResults>
+    <ExpectedResults>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>-2147467259</int>
+    </ExpectedResults>
+  </DaItemWrite>
+
+  <DaItemRead>
+    <ItemsProperty>DaItem.StaticItems</ItemsProperty>
+    <ExecutionType>SYNCHRONOUS</ExecutionType>
+    <ExpectedValues>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:boolean">false</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.7555963Z</TimeStamp>
+        <Data xsi:type="xsd:byte">-56</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.5825963Z</TimeStamp>
+        <Data xsi:type="xsd:unsignedByte">254</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.7555963Z</TimeStamp>
+        <Data xsi:type="xsd:short">-254</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.5825963Z</TimeStamp>
+        <Data xsi:type="xsd:unsignedShort">999</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.7555963Z</TimeStamp>
+        <Data xsi:type="xsd:int">-42</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.5825963Z</TimeStamp>
+        <Data xsi:type="xsd:unsignedInt">426589</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.7555963Z</TimeStamp>
+        <Data xsi:type="xsd:float">123.654</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:double">1</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:string">the red fox jumped over the lazy brown dog</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:dateTime">2012-06-13T11:40:44.81</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T06:57:10.8016378Z</TimeStamp>
+        <Data xsi:type="xsd:string">ea82dc9b-b56c-65e8-fc9b-71453917c87b</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:base64Binary">AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ==</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T06:57:10.8016378Z</TimeStamp>
+        <Data xsi:type="xsd:string">&lt;n0:쥐 레몬="石灰蛇" 코끼리="黄色" 원숭이="柠檬" 빨간코끼리="白色" 황색="草莓石灰" 말뱀복숭아="草莓" xmlns:n0="http://백색"&gt;&lt;n0:원숭이&gt;紫色 狗: 猪 红色. 马 马. 香蕉. 蓝莓 香蕉- 葡萄 绿色 大象 黄色_ 草莓] 鼠) 猪$ 菠萝 葡萄 猫@ 红色# 母牛 蛇] 猫} 桃子_ 草莓 柠檬 石灰 香蕉 绿色&amp;amp;&lt;/n0:원숭이&gt;&lt;n0:양코끼리&gt;红色) 绿色} 鼠 猴子 菠萝/ 菠萝 母牛 石灰@ 鼠@ 绿色` 石灰 狗[ 草莓; 蓝莓 柠檬' 绵羊 大象 猴子 芒果 葡萄 马^ 葡萄@ 黑色 大象&amp;lt; 绿色] 蓝色@ 大象&lt;/n0:양코끼리&gt;&lt;n0:딸기고양이&gt;绿色? 母牛% 绿色, 香蕉, 狗 大象 狗{ 蓝莓 蛇 猪 猴子 猴子 猴子 芒果 芒果# 草莓 大象 白色/ 芒果"&lt;/n0:딸기고양이&gt;&lt;n0:녹색석회&gt;白色 黑色 蓝莓+ 菠萝] 葡萄 蓝莓. 黄色( 黑色` 红色&amp;amp; 马 猴子 蛇# 马_ 红色? 母牛 芒果&amp;lt; 母牛 蓝莓 鼠( 红色) 猴子 大象 蓝色 猫[ 红色 大象* 马[ 大象` 芒果&lt;/n0:녹색석회&gt;&lt;n0:파인애플&gt;黑色 猪, 鼠] 马) 黑色 猫# 菠萝* 紫色' 猴子 大象 绿色&amp;lt; 香蕉^ 母牛&amp;lt; 石灰* 猪; 桃子=&lt;/n0:파인애플&gt;&lt;n0:망고&gt;芒果 蛇 黑色{ 狗# 红色} 红色; 狗 菠萝+ 鼠 柠檬` 马[ 龙 龙&amp;lt; 香蕉` 猴子 黄色&lt;/n0:망고&gt;&lt;n0:석회&gt;紫色@&lt;/n0:석회&gt;&lt;n0:코끼리&gt;菠萝 柠檬` 紫色] 红色 葡萄~ 鼠) 葡萄&amp;amp; 石灰' 母牛_ 绿色_ 狗 猴子 蛇 绵羊; 龙+ 葡萄&lt;/n0:코끼리&gt;&lt;/n0:쥐&gt;</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:string">s*a</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:string">s=a</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:string">a</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+        <Data xsi:type="xsd:string">a</Data>
+      </Value>
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T11:40:44.5825963Z</TimeStamp>
+        <Data xsi:type="xsd:unsignedInt">1</Data>
+      </Value>
+      <!--<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2012-06-13T06:57:10.8046378Z</TimeStamp>
+				<Data xsi:type="xsd:int">1019434054</Data>
+			</Value>-->
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T06:57:10.8216378Z</TimeStamp>
+        <Data xsi:type="xsd:base64Binary">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cGhhbnRgIFB1cnBsZX4gUHVycGxlIExpbWUpIEJsYWNrIERvZyBEcmFnb24gU2hlZXAkIERyYWdvbiBQaW5lYXBwbGUjPC9uMDpIb3JzZT48bjA6RG9nPldoaXRlJyBDb3cgUGVhY2gpIExlbW9uezwvbjA6RG9nPjwvbjA6U25ha2U+AgMAADxuMDpMZW1vbiBCYW5hbmE9ItCh0LvQvtC9IiBTdHJhd2JlcnJ5PSLQodC+0LHQsNC60LAiIFNuYWtlPSLQk9C+0LvRg9Cx0L4iIEJsdWViZXJyeT0i0J/Rg9GA0L/Rg9GA0L7QstC+IiBSYXQ9ItCa0L7RgNC+0LLQsCIgR3JlZW49ItCh0L7QsdCw0LrQsCIgQmx1ZT0i0JrRgNGL0YHQsCIgUHVycGxlPSLQm9C+0YjQsNC00YwiIHhtbG5zOm4wPSJodHRwOi8vR3JlZW4iPjxuMDpDb3c+0JTRgNCw0LrQvtC9JmFtcDsg0KHQvtCx0LDQutCwJmFtcDsg0JTRgNCw0LrQvtC9LSDQntCy0YbRiycg0JTRgNCw0LrQvtC9JCDQltC10LvRgtGL0LnRhtCy0LXRgiIg0JjQt9Cy0LXRgdGC0LrQsCDQlNGA0LDQutC+0L1AINCb0LjQvNC+0L0/PC9uMDpDb3c+PG4wOkdyYXBlPtCb0LjQvNC+0L0g0JPQvtC70YPQsdC+XyDQntCy0YbRiyMg0KHQvtCx0LDQutCwJTwvbjA6R3JhcGU+PG4wOk1vbmtleT7Qk9C+0LvRg9Cx0L4g0JHQtdC70L49INCT0L7Qu9GD0LHQvi8g0JrRgNGL0YHQsCcg0KHQstC40L3RjNGPPC9uMDpNb25rZXk+PG4wOkJhbmFuYT7QodC70L7QvSDQntCx0LXQt9GM0Y/QvdCwJTwvbjA6QmFuYW5hPjxuMDpHcmVlbj7Qn9GD0YDQv9GD0YDQvtCy0L4g0JPQvtC70YPQsdC40LrQsCDQkdCw0L3QsNC9LyDQmtC+0YIg0JrRgNCw0YHQvdC+OyDRj9Cx0LvQvtC60L4g0JPQvtC70YPQsdC+WyDQk9C+0LvRg9Cx0LjQutCwINCe0LLRhtGLINCh0LLQuNC90YzRjyDQmNC30LLQtdGB0YLQutCwINCf0YPRgNC/0YPRgNC+0LLQvj88L24wOkdyZWVuPjwvbjA6TGVtb24+pwEAADxuMDrqsJwg67O17Iit7JWEPSJIb3JzZSIg7YyM7J247JWg7ZSMPSJTdHJhd2JlcnJ5IiDrk6TsrYk9IkRyYWdvbiIgeG1sbnM6bjA9Imh0dHA6Ly/rp5DrlLjquLAiPjxuMDrqs6DslpHsnbQ+RG9nIEJsdWViZXJyeSwgTGltZSBNb25rZXkgR3JhcGUqIExlbW9ueyBSZWQgWWVsbG93IEJhbmFuYSBZZWxsb3cgUmF0JSBDb3cgRHJhZ29uIE1hbmdvIFBpbmVhcHBsZTwvbjA66rOg7JaR7J20PjxuMDrrlLjquLDrlLjquLA+U3RyYXdiZXJyeSBEcmFnb24nIERyYWdvbiBIb3JzZX4gUGlnXTwvbjA665S46riw65S46riwPjxuMDrruajqsITrsLHsg4k+TGVtb24rIFN0cmF3YmVycnkoIFNoZWVwJCBIb3JzZSBMZW1vbiBMZW1vbiogU3RyYXdiZXJyeSBTaGVlcCBSZWQjIE1hbmdvIiBSYXQkIFllbGxvdzwvbjA667mo6rCE67Cx7IOJPjwvbjA66rCcPgoAAAADBgAGAAAA67Cx7IOJAwMAAwAAAFJhdAMGAAYAAADnu7/oibICCQCqItp4BAQAO6pshW6PmFtr/Rum1XhQWAIHAO5kEBIDCgADAAAA54y/BQQAUgAAAAjKBU+jfgkKq/2YmQ90D0UKNkdRA8eJGPopS279URNSpIb0UaGF1dJPFGfxzHcC6e1CEkX9ZeBBQOxVeTKaDVnpRvSIgL6khGB1Au9fmEyDJ2EFCQAMAAAAzVU+prIQtDBbn7QHBAIAhoJ5aS+djeWIY/HiqKDRUgQAAACDAAAJAAAA7JuQ7Iit7J20KwAAAGh0dHA6Ly9zYW1wbGVzLm9yZy9VQS9tZW1vcnlidWZmZXIvSW5zdGFuY2WCAACt71MELAAAAGh0dHA6Ly9vcGNmb3VuZGF0aW9uLm9yZy9VQS9Cb2lsZXIvL0luc3RhbmNlggAAUZDGACIAAABodHRwOi8vc2FtcGxlcy5vcmcvVUEvbWVtb3J5YnVmZmVygwAABgAAAOe7tee+iisAAABodHRwOi8vc2FtcGxlcy5vcmcvU2FtcGxlcy9IaXN0b3JpY2FsRXZlbnRzBQAAAAUABgAAAOqygOyglQEABgAAAEJhbmFuYQEAEAAAANCY0LfQstC10YHRgtC60LAJAAkAAADqs6DslpHsnbQAAAMAAADni5cAAAAABwAAAAAAmAAAABsAAACrAAAADgAAAAcAAACkAAAAOgAEAAAADwMAAABZmMoRBQQAOwAAAKUxNBddz253CBrEqj9ROo5k99J/irhx72ieO9JF5Kxj1jNxqJyNevjG8SoJF4O99KBmlw7fs9PswEWvEwAAUACTYQAAAAAAOwAAAJAAAACHAAAAHgAAAEAAAACVAAAAUwAAACYAAACyAAAAsgAAACkAAAB9AAAAAAAAAIcAAAAtAAAABgAAAFkAAAAAAAAAqgAAAKMAAACeAAAAAAAAAD4AAABgAAAAAAAAAAAAAACgAAAAAAAAAB8AAABiAAAAZAAAAHsAAAA5AAAAIwAAAF4AAABQAAAAtAAAAAwAAAAAAAAAmwAAAEAAAAB/AAAAAAAAAAAAAACjAAAAAAAAAJwAAAAAAAAAVAAAAFAAAAAtAAAAgAAAAHgAAACsAAAAAwAAAAAAAACPAAAAYgAAAAAAAABGAAAAAAAAAEsAAACLAAAAAAAAAIgAAAB4AAAAXwAAAA0AAAAAAAAAXwAAAAAAAABNAAAAUwAAAGQAAABaAAAAMwAAAKkAAACVAAAAmQAAAIEAAAB3AAAAZgAAAAAAAACDAAAAHwAAAB4AAAC3AAAAAwAAAEMAAACmAAAAbAAAAAAAAABqAAAABQAAAGAAAAA2AAAAZgAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Data>
+      </Value>
+      <!--<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2012-06-13T06:57:10.8216378Z</TimeStamp>
+				<Data xsi:type="xsd:double">-8.1780289207245E-09</Data>
+			</Value>-->
+      <Value>
+        <Quality>GOOD</Quality>
+        <TimeStamp>2012-06-13T06:57:36.8596378Z</TimeStamp>
+        <Data xsi:type="xsd:double">5.55</Data>
+      </Value>
+      <Value>
+        <Quality>BAD</Quality>
+      </Value>
+    </ExpectedValues>
+  </DaItemRead>
+</TestList>

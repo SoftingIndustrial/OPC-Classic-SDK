@@ -1,0 +1,954 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugU|Win32">
+      <Configuration>DebugU</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugU|x64">
+      <Configuration>DebugU</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseU|Win32">
+      <Configuration>ReleaseU</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseU|x64">
+      <Configuration>ReleaseU</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>OTB_VS2017</ProjectName>
+    <ProjectGuid>{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}</ProjectGuid>
+    <RootNamespace>OTB</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">.\bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">.\bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">./bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">./bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">./bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">./bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">OTBuD</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">OTBuDx64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">OTBD</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">OTBDx64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">OTB</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">OTBx64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">OTBu</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">OTBux64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;..\..\include;..\include;..\common;..\SOClt;..\SODaC;..\SOSrv;..\SODaS;..\SOAeS;..\opc;..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_WIN32_DCOM;STRICT;SOFLAG_NO_FORCE_LIBS;SOFLAG_NO_DLLS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTB.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;SYSBUILD="""$(COMPUTERNAME)""";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+      <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTB.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTB.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTB.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" ..\..\..\bin
+copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;..\..\include;..\include;..\common;..\SOClt;..\SODaC;..\SOSrv;..\SODaS;..\SOAeS;..\opc;..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_WIN32_DCOM;STRICT;SOFLAG_NO_FORCE_LIBS;SOFLAG_NO_DLLS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBx64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;SYSBUILD="""$(COMPUTERNAME)""";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+      <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBx64.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBx64.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBx64.lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" ..\..\..\bin
+copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\include;..\include;..\common;..\SOClt;..\SODaC;..\SOSrv;..\SODaS;..\SOAeS;..\opc;..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_DCOM;STRICT;SOFLAG_NO_FORCE_LIBS;SOFLAG_NO_DLLS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTB.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;SYSBUILD="""$(COMPUTERNAME)""";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+      <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBD.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBD.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBD.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" ..\..\..\bin
+copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\include;..\include;..\common;..\SOClt;..\SODaC;..\SOSrv;..\SODaS;..\SOAeS;..\opc;..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_WIN32_DCOM;STRICT;SOFLAG_NO_FORCE_LIBS;SOFLAG_NO_DLLS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBDx64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;SYSBUILD="""$(COMPUTERNAME)""";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+      <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBDx64.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBDx64.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBDx64.lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" ..\..\..\bin
+copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\include;..\include;..\common;..\SOClt;..\SODaC;..\SOSrv;..\SODaS;..\SOAeS;..\opc;..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_DCOM;STRICT;SOFLAG_NO_FORCE_LIBS;SOFLAG_NO_DLLS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTB.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;SYSBUILD="""$(COMPUTERNAME)""";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+      <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBuD.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBuD.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBuD.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" ..\..\..\bin
+copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\include;..\include;..\common;..\SOClt;..\SODaC;..\SOSrv;..\SODaS;..\SOAeS;..\opc;..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_WIN32_DCOM;STRICT;SOFLAG_NO_FORCE_LIBS;SOFLAG_NO_DLLS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBuDx64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;SYSBUILD="""$(COMPUTERNAME)""";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+      <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBuDx64.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBuDx64.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBuDx64.lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" ..\..\..\bin
+copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;..\..\include;..\include;..\common;..\SOClt;..\SODaC;..\SOSrv;..\SODaS;..\SOAeS;..\opc;..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_WIN32_DCOM;STRICT;SOFLAG_NO_FORCE_LIBS;SOFLAG_NO_DLLS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTB.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;SYSBUILD="""$(COMPUTERNAME)""";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+      <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBu.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBu.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBu.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" ..\..\..\bin
+copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;..\..\include;..\include;..\common;..\SOClt;..\SODaC;..\SOSrv;..\SODaS;..\SOAeS;..\opc;..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_WIN32_DCOM;STRICT;SOFLAG_NO_FORCE_LIBS;SOFLAG_NO_DLLS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBx64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;SYSBUILD="""$(COMPUTERNAME)""";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+      <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBux64.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBux64.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBux64.lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" ..\..\..\bin
+copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SOCmn\SOCmnHandleManager.cpp" />
+    <ClCompile Include="Extimpl.cpp" />
+    <ClCompile Include="OTB.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ClientJob.cpp" />
+    <ClCompile Include="OTC.cpp" />
+    <ClCompile Include="ClientDACreator.cpp" />
+    <ClCompile Include="ClientDAItem.cpp" />
+    <ClCompile Include="ClientDASession.cpp" />
+    <ClCompile Include="ClientDASubscription.cpp" />
+    <ClCompile Include="ClientAECreator.cpp" />
+    <ClCompile Include="ClientAESession.cpp" />
+    <ClCompile Include="ClientAESubscription.cpp" />
+    <ClCompile Include="OTS.cpp" />
+    <ClCompile Include="SrvApp.cpp" />
+    <ClCompile Include="WebServer.cpp" />
+    <ClCompile Include="ServerAEAddressSpaceElement.cpp" />
+    <ClCompile Include="ServerAECondition.cpp" />
+    <ClCompile Include="ServerAEConditionClass.cpp" />
+    <ClCompile Include="ServerAECreator.cpp" />
+    <ClCompile Include="ServerAEServer.cpp" />
+    <ClCompile Include="ServerDAAddressSpaceElement.cpp" />
+    <ClCompile Include="ServerDACache.cpp" />
+    <ClCompile Include="ServerDACreator.cpp" />
+    <ClCompile Include="ServerDAGroup.cpp" />
+    <ClCompile Include="ServerDAItem.cpp" />
+    <ClCompile Include="ServerDANode.cpp" />
+    <ClCompile Include="ServerDAProperty.cpp" />
+    <ClCompile Include="ServerDAServer.cpp" />
+    <ClCompile Include="ServerDATag.cpp" />
+    <ClCompile Include="ServerDATransaction.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnData.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnElement.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnEvent.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnEventPool.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnException.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnExpat.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnFunctions.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnHttp.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnList.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnObject.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnSocket.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnSocketClt.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnSocketSrv.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnString.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnSync.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnThread.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnTime.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnTP.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnTrace.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnVariant.cpp" />
+    <ClCompile Include="..\SOCmn\SOCmnXML.cpp" />
+    <ClCompile Include="..\SOClt\SOCltBrowse.cpp" />
+    <ClCompile Include="..\SOClt\SOCltComServer.cpp" />
+    <ClCompile Include="..\SOClt\SOCltElement.cpp" />
+    <ClCompile Include="..\SOClt\SOCltEntry.cpp" />
+    <ClCompile Include="..\SOClt\SOCltHttp.cpp" />
+    <ClCompile Include="..\SOClt\SOCltServer.cpp" />
+    <ClCompile Include="..\SOClt\SOCltServerBrowser.cpp" />
+    <ClCompile Include="..\SOClt\SOCltShutdown.cpp" />
+    <ClCompile Include="..\SOClt\SOCltStorage.cpp" />
+    <ClCompile Include="..\SOClt\SOCltTask.cpp" />
+    <ClCompile Include="..\SOClt\SOCltThread.cpp" />
+    <ClCompile Include="..\SOClt\SOCltTP.cpp" />
+    <ClCompile Include="..\SODaC\SODaCBrowse.cpp" />
+    <ClCompile Include="..\SODaC\SODaCCallback.cpp" />
+    <ClCompile Include="..\SODaC\SODaCComBrowse.cpp" />
+    <ClCompile Include="..\SODaC\SODaCComGroup.cpp" />
+    <ClCompile Include="..\SODaC\SODaCComServer.cpp" />
+    <ClCompile Include="..\SODaC\SODaCEntry.cpp" />
+    <ClCompile Include="..\SODaC\SODaCGroup.cpp" />
+    <ClCompile Include="..\SODaC\SODaCItem.cpp" />
+    <ClCompile Include="..\SODaC\SODaCServer.cpp" />
+    <ClCompile Include="..\SODaC\SODaCTPBrowse.cpp" />
+    <ClCompile Include="..\SODaC\SODaCTPCall.cpp" />
+    <ClCompile Include="..\SODaC\SODaCTPGroup.cpp" />
+    <ClCompile Include="..\SODaC\SODaCTPServer.cpp" />
+    <ClCompile Include="..\SODaC\SODaCXmlBrowse.cpp" />
+    <ClCompile Include="..\SODaC\SODaCXmlCall.cpp" />
+    <ClCompile Include="..\SODaC\SODaCXmlGroup.cpp" />
+    <ClCompile Include="..\SODaC\SODaCXmlServer.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvBrowser.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvComEnum.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvComObject.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvEntry.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvHttp.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvHttpEx.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvServer.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvTP.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvTrace.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvTraceEx.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvWatch.cpp" />
+    <ClCompile Include="..\SOSrv\SOSrvXML.cpp" />
+    <ClCompile Include="..\SODaS\SODaSCache.cpp" />
+    <ClCompile Include="..\SODaS\SODaSComEnum.cpp" />
+    <ClCompile Include="..\SODaS\SODaSComGroup.cpp" />
+    <ClCompile Include="..\SODaS\SODaSComServer.cpp" />
+    <ClCompile Include="..\SODaS\SODaSEntry.cpp" />
+    <ClCompile Include="..\SODaS\SODaSGroup.cpp" />
+    <ClCompile Include="..\SODaS\SODaSItem.cpp" />
+    <ClCompile Include="..\SODaS\SODaSItemTag.cpp" />
+    <ClCompile Include="..\SODaS\SODaSNode.cpp" />
+    <ClCompile Include="..\SODaS\SODaSProperty.cpp" />
+    <ClCompile Include="..\SODaS\SODaSRequest.cpp" />
+    <ClCompile Include="..\SODaS\SODaSServer.cpp" />
+    <ClCompile Include="..\SODaS\SODaSTag.cpp" />
+    <ClCompile Include="..\SODaS\SODaSTPGroup.cpp" />
+    <ClCompile Include="..\SODaS\SODaSTPServer.cpp" />
+    <ClCompile Include="..\SODaS\SODaSTransaction.cpp" />
+    <ClCompile Include="..\SODaS\SODaSWatch.cpp" />
+    <ClCompile Include="..\SODaS\SODaSXmlServer.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSArea.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSAreaBrowser.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSAttribute.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSCategory.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSComAreaBrowser.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSComServer.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSComSubscription.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSCondition.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSEntry.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSEvent.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSServer.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSSource.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSSubCondition.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSSubscription.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSTPAreaBrowser.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSTPServer.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSTPSubscription.cpp" />
+    <ClCompile Include="..\SOAeS\SOAeSWatch.cpp" />
+    <ClCompile Include="..\SOAsS\SOAsSAttribute.cpp" />
+    <ClCompile Include="..\SOAsS\SOAsSCondition.cpp" />
+    <ClCompile Include="..\SOAsS\SOAsSEntry.cpp" />
+    <ClCompile Include="..\SOAsS\SOAsSItemTag.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCBrowse.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCCallback.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCComBrowse.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCComServer.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCComSubscription.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCEntry.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCEvent.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCServer.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCSubscription.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCTPBrowse.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCTPCall.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCTPServer.cpp" />
+    <ClCompile Include="..\SOAeC\SOAeCTPSubscription.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OTB.def" />
+    <CustomBuild Include="..\SOSrv\SOSrvmc.mc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">Compiling MC file</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">Compiling MC file</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">mc -u -U "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">mc -u -U "%(FullPath)"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">SOSrv409.bin;SOSrv407.bin;SOSrv41D.bin;%(Filename).rc;%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">SOSrv409.bin;SOSrv407.bin;SOSrv41D.bin;%(Filename).rc;%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compiling MC file</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compiling MC file</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mc -u -U "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mc -u -U "%(FullPath)"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SOSrv409.bin;SOSrv407.bin;SOSrv41D.bin;%(Filename).rc;%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SOSrv409.bin;SOSrv407.bin;SOSrv41D.bin;%(Filename).rc;%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">Compiling MC file</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">Compiling MC file</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">mc -u -U "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">mc -u -U "%(FullPath)"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">SOSrv409.bin;SOSrv407.bin;SOSrv41D.bin;%(Filename).rc;%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">SOSrv409.bin;SOSrv407.bin;SOSrv41D.bin;%(Filename).rc;%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compiling MC file</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compiling MC file</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mc -u -U "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mc -u -U "%(FullPath)"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SOSrv409.bin;SOSrv407.bin;SOSrv41D.bin;%(Filename).rc;%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SOSrv409.bin;SOSrv407.bin;SOSrv41D.bin;%(Filename).rc;%(Filename).h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\SOCmnHandleManager.h" />
+    <ClInclude Include="OTB.h" />
+    <ClInclude Include="OTBCfg.h" />
+    <ClInclude Include="..\..\include\OTcommon.h" />
+    <ClInclude Include="SOModule.h" />
+    <ClInclude Include="..\..\common\SOVersion.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="ClientJob.h" />
+    <ClInclude Include="OTC.h" />
+    <ClInclude Include="..\..\include\OTClient.h" />
+    <ClInclude Include="ClientDACreator.h" />
+    <ClInclude Include="ClientDAItem.h" />
+    <ClInclude Include="ClientDASession.h" />
+    <ClInclude Include="ClientDASubscription.h" />
+    <ClInclude Include="ClientAECreator.h" />
+    <ClInclude Include="ClientAESession.h" />
+    <ClInclude Include="ClientAESubscription.h" />
+    <ClInclude Include="..\..\include\OTServer.h" />
+    <ClInclude Include="SrvApp.h" />
+    <ClInclude Include="WebServer.h" />
+    <ClInclude Include="ServerAEAddressSpaceElement.h" />
+    <ClInclude Include="ServerAEArea.h" />
+    <ClInclude Include="ServerAECondition.h" />
+    <ClInclude Include="ServerAEConditionClass.h" />
+    <ClInclude Include="ServerAECreator.h" />
+    <ClInclude Include="ServerAEServer.h" />
+    <ClInclude Include="ServerAESource.h" />
+    <ClInclude Include="ServerDAAddressSpaceElement.h" />
+    <ClInclude Include="ServerDACache.h" />
+    <ClInclude Include="ServerDACreator.h" />
+    <ClInclude Include="ServerDAGroup.h" />
+    <ClInclude Include="ServerDAItem.h" />
+    <ClInclude Include="ServerDANode.h" />
+    <ClInclude Include="ServerDAProperty.h" />
+    <ClInclude Include="ServerDAServer.h" />
+    <ClInclude Include="ServerDATag.h" />
+    <ClInclude Include="ServerDATransaction.h" />
+    <ClInclude Include="..\include\SOCmn.h" />
+    <ClInclude Include="..\include\SOCmnCfg.h" />
+    <ClInclude Include="..\include\SOCmnData.h" />
+    <ClInclude Include="..\include\SOCmnElement.h" />
+    <ClInclude Include="..\include\SOCmnEvent.h" />
+    <ClInclude Include="..\include\SOCmnEventPool.h" />
+    <ClInclude Include="..\include\SOCmnException.h" />
+    <ClInclude Include="..\include\SOCmnFunctions.h" />
+    <ClInclude Include="..\include\SOCmnHttp.h" />
+    <ClInclude Include="..\include\SOCmnList.h" />
+    <ClInclude Include="..\include\SOCmnObject.h" />
+    <ClInclude Include="..\include\SOCmnOsCompat.h" />
+    <ClInclude Include="..\include\SOCmnSocket.h" />
+    <ClInclude Include="..\include\SOCmnString.h" />
+    <ClInclude Include="..\include\SOCmnSync.h" />
+    <ClInclude Include="..\include\SOCmnThread.h" />
+    <ClInclude Include="..\include\SOCmnTime.h" />
+    <ClInclude Include="..\include\SOCmnTP.h" />
+    <ClInclude Include="..\include\SOCmnTrace.h" />
+    <ClInclude Include="..\include\SOCmnVariant.h" />
+    <ClInclude Include="..\include\SOCmnXML.h" />
+    <ClInclude Include="..\include\SOClt.h" />
+    <ClInclude Include="..\include\SOCltBrowse.h" />
+    <ClInclude Include="..\include\SOCltComServer.h" />
+    <ClInclude Include="..\include\SOCltElement.h" />
+    <ClInclude Include="..\include\SOCltEntry.h" />
+    <ClInclude Include="..\include\SOCltError.h" />
+    <ClInclude Include="..\include\SOCltHttp.h" />
+    <ClInclude Include="..\include\SOCltServer.h" />
+    <ClInclude Include="..\include\SOCltServerBrowser.h" />
+    <ClInclude Include="..\include\SOCltShutdown.h" />
+    <ClInclude Include="..\include\SOCltStorage.h" />
+    <ClInclude Include="..\include\SOCltTask.h" />
+    <ClInclude Include="..\include\SOCltThread.h" />
+    <ClInclude Include="..\include\SOCltTP.h" />
+    <ClInclude Include="..\include\SODaC.h" />
+    <ClInclude Include="..\include\SODaCBrowse.h" />
+    <ClInclude Include="..\include\SODaCCallback.h" />
+    <ClInclude Include="..\include\SODaCComBrowse.h" />
+    <ClInclude Include="..\include\SODaCComGroup.h" />
+    <ClInclude Include="..\include\SODaCComServer.h" />
+    <ClInclude Include="..\include\SODaCEntry.h" />
+    <ClInclude Include="..\include\SODaCGroup.h" />
+    <ClInclude Include="..\include\SODaCItem.h" />
+    <ClInclude Include="..\include\SODaCServer.h" />
+    <ClInclude Include="..\include\SODaCTPBrowse.h" />
+    <ClInclude Include="..\SODaC\SODaCTPCall.h" />
+    <ClInclude Include="..\include\SODaCTPGroup.h" />
+    <ClInclude Include="..\include\SODaCTPServer.h" />
+    <ClInclude Include="..\include\SODaCXmlBrowse.h" />
+    <ClInclude Include="..\SODaC\SODaCXmlCall.h" />
+    <ClInclude Include="..\include\SODaCXmlGroup.h" />
+    <ClInclude Include="..\include\SODaCXmlServer.h" />
+    <ClInclude Include="..\include\SOSrv.h" />
+    <ClInclude Include="..\include\SOSrvBrowser.h" />
+    <ClInclude Include="..\SOSrv\SOSrvComEnum.h" />
+    <ClInclude Include="..\SOSrv\SOSrvComObject.h" />
+    <ClInclude Include="..\include\SOSrvEntry.h" />
+    <ClInclude Include="..\include\SOSrvHttp.h" />
+    <ClInclude Include="..\SOSrv\SOSrvHttpEx.h" />
+    <ClInclude Include="..\include\SOSrvServer.h" />
+    <ClInclude Include="..\include\SOSrvTP.h" />
+    <ClInclude Include="..\include\SOSrvTrace.h" />
+    <ClInclude Include="..\SOSrv\SOSrvTraceEx.h" />
+    <ClInclude Include="..\include\SOSrvWatch.h" />
+    <ClInclude Include="..\include\SOSrvXML.h" />
+    <ClInclude Include="..\include\SODaS.h" />
+    <ClInclude Include="..\include\SODaSCache.h" />
+    <ClInclude Include="..\SODaS\SODaSComEnum.h" />
+    <ClInclude Include="..\SODaS\SODaSComGroup.h" />
+    <ClInclude Include="..\SODaS\SODaSComServer.h" />
+    <ClInclude Include="..\include\SODaSEntry.h" />
+    <ClInclude Include="..\include\SODaSGroup.h" />
+    <ClInclude Include="..\include\SODaSItem.h" />
+    <ClInclude Include="..\include\SODaSItemTag.h" />
+    <ClInclude Include="..\include\SODaSNode.h" />
+    <ClInclude Include="..\include\SODaSProperty.h" />
+    <ClInclude Include="..\include\SODaSRequest.h" />
+    <ClInclude Include="..\include\SODaSServer.h" />
+    <ClInclude Include="..\include\SODaSTag.h" />
+    <ClInclude Include="..\SODaS\SODaSTPGroup.h" />
+    <ClInclude Include="..\SODaS\SODaSTPServer.h" />
+    <ClInclude Include="..\include\SODaSTransaction.h" />
+    <ClInclude Include="..\include\SODaSWatch.h" />
+    <ClInclude Include="..\SODaS\SODaSXmlServer.h" />
+    <ClInclude Include="..\include\SOAeS.h" />
+    <ClInclude Include="..\include\SOAeSArea.h" />
+    <ClInclude Include="..\include\SOAeSAreaBrowser.h" />
+    <ClInclude Include="..\include\SOAeSAttribute.h" />
+    <ClInclude Include="..\include\SOAeSCategory.h" />
+    <ClInclude Include="..\SOAeS\SOAeSComAreaBrowser.h" />
+    <ClInclude Include="..\SOAeS\SOAeSComServer.h" />
+    <ClInclude Include="..\SOAeS\SOAeSComSubscription.h" />
+    <ClInclude Include="..\include\SOAeSCondition.h" />
+    <ClInclude Include="..\include\SOAeSEntry.h" />
+    <ClInclude Include="..\include\SOAeSEvent.h" />
+    <ClInclude Include="..\include\SOAeSServer.h" />
+    <ClInclude Include="..\include\SOAeSSource.h" />
+    <ClInclude Include="..\include\SOAeSSubCondition.h" />
+    <ClInclude Include="..\include\SOAeSSubscription.h" />
+    <ClInclude Include="..\SOAeS\SOAeSTPAreaBrowser.h" />
+    <ClInclude Include="..\SOAeS\SOAeSTPServer.h" />
+    <ClInclude Include="..\SOAeS\SOAeSTPSubscription.h" />
+    <ClInclude Include="..\include\SOAeSWatch.h" />
+    <ClInclude Include="..\include\SOAsS.h" />
+    <ClInclude Include="..\include\SOAsSAttribute.h" />
+    <ClInclude Include="..\include\SOAsSCondition.h" />
+    <ClInclude Include="..\include\SOAsSEntry.h" />
+    <ClInclude Include="..\include\SOAsSItemTag.h" />
+    <ClInclude Include="..\include\SOAeC.h" />
+    <ClInclude Include="..\include\SOAeCBrowse.h" />
+    <ClInclude Include="..\include\SOAeCCallback.h" />
+    <ClInclude Include="..\include\SOAeCComBrowse.h" />
+    <ClInclude Include="..\include\SOAeCComServer.h" />
+    <ClInclude Include="..\include\SOAeCComSubscription.h" />
+    <ClInclude Include="..\include\SOAeCEntry.h" />
+    <ClInclude Include="..\include\SOAeCEvent.h" />
+    <ClInclude Include="..\include\SOAeCServer.h" />
+    <ClInclude Include="..\include\SOAeCSubscription.h" />
+    <ClInclude Include="..\include\SOAeCTPBrowse.h" />
+    <ClInclude Include="..\SOAeC\SOAeCTPCall.h" />
+    <ClInclude Include="..\include\SOAeCTPServer.h" />
+    <ClInclude Include="..\include\SOAeCTPSubscription.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\SOSrv\SOSrv.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

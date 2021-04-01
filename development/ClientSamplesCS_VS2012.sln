@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEBrowse_VS2012", "NET\samples\client\AEBrowse\CS\AEBrowse_VS2012.csproj", "{D8AE4C36-8364-424C-ACDB-ED5EF05B57CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AECondition_VS2012", "NET\samples\client\AECondition\CS\AECondition_VS2012.csproj", "{44BE6724-A593-4460-9C08-B318FB2CCED8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEConsole_VS2012", "NET\samples\client\AEConsole\CS\AEConsole_VS2012.csproj", "{041F891C-7669-4CFF-BD05-E30FC8EB9BA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEEventTypes_VS2012", "NET\samples\client\AEEventTypes\CS\AEEventTypes_VS2012.csproj", "{AB750833-C624-4DDE-91F9-4B5852319164}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEObjectAttributes_VS2012", "NET\samples\client\AEObjectAttributes\CS\AEObjectAttributes_VS2012.csproj", "{FCF9E331-EF75-48D6-9CA6-1C184D7A9514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEQuerySourceConditions_VS2012", "NET\samples\client\AEQuerySourceConditions\CS\AEQuerySourceConditions_VS2012.csproj", "{9AA9062A-862F-4E2D-B5BB-8BEEEAA49FB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDll_VS2012", "NET\samples\client\ClientDLL\CS\TestDll\TestDll_VS2012.csproj", "{C9E271A9-80AA-44B4-9FD6-B532A5C1D78B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AAC3F934-B2BC-4998-A452-3A3C895987BD} = {AAC3F934-B2BC-4998-A452-3A3C895987BD}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpcProject_Dll_VS2012", "NET\samples\client\ClientDLL\CS\OpcProject\OpcProject_Dll_VS2012.csproj", "{AAC3F934-B2BC-4998-A452-3A3C895987BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DABrowse_VS2012", "NET\samples\client\DABrowse\CS\DABrowse_VS2012.csproj", "{85095D30-E15F-4A18-B9CF-B10A902B9F5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DABrowseDA20_VS2012", "NET\samples\client\DABrowse_DA20\CS\DABrowseDA20_VS2012.csproj", "{95F00852-9117-4A15-8762-261D8D3BFB13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaConsole_VS2012", "NET\samples\client\DAConsole\CS\DaConsole_VS2012.csproj", "{B88A275F-218E-4F3A-9F6F-036B39130A8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAConsole_Service_VS2012", "NET\samples\client\DAConsole_Service\CS\DAConsole_Service_VS2012.csproj", "{A23875DA-BB97-40AF-B86E-378B217682FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAGetProperties_VS2012", "NET\samples\client\DAGetProperties\CS\DAGetProperties_VS2012.csproj", "{3A385FCD-38A7-4B29-BC5E-CC1B6F2155BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAObjectAttributes_VS2012", "NET\samples\client\DAObjectAttributes\CS\DAObjectAttributes_VS2012.csproj", "{2F2BAA61-5782-48E0-BF15-E88767695802}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataControl_VS2012", "NET\samples\client\DataControl\CS\DataControl_VS2012.csproj", "{F4B491F2-4804-4363-87FB-E5F78346D0E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPCEnumerate_VS2012", "NET\samples\client\OPCEnumerate\CS\OPCEnumerate_VS2012.csproj", "{99E55825-4F98-4383-B591-A069EC65E0CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8AE4C36-8364-424C-ACDB-ED5EF05B57CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8AE4C36-8364-424C-ACDB-ED5EF05B57CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44BE6724-A593-4460-9C08-B318FB2CCED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44BE6724-A593-4460-9C08-B318FB2CCED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041F891C-7669-4CFF-BD05-E30FC8EB9BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041F891C-7669-4CFF-BD05-E30FC8EB9BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB750833-C624-4DDE-91F9-4B5852319164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB750833-C624-4DDE-91F9-4B5852319164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF9E331-EF75-48D6-9CA6-1C184D7A9514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF9E331-EF75-48D6-9CA6-1C184D7A9514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA9062A-862F-4E2D-B5BB-8BEEEAA49FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA9062A-862F-4E2D-B5BB-8BEEEAA49FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E271A9-80AA-44B4-9FD6-B532A5C1D78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E271A9-80AA-44B4-9FD6-B532A5C1D78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAC3F934-B2BC-4998-A452-3A3C895987BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC3F934-B2BC-4998-A452-3A3C895987BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85095D30-E15F-4A18-B9CF-B10A902B9F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85095D30-E15F-4A18-B9CF-B10A902B9F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F00852-9117-4A15-8762-261D8D3BFB13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F00852-9117-4A15-8762-261D8D3BFB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B88A275F-218E-4F3A-9F6F-036B39130A8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B88A275F-218E-4F3A-9F6F-036B39130A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A23875DA-BB97-40AF-B86E-378B217682FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A23875DA-BB97-40AF-B86E-378B217682FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A385FCD-38A7-4B29-BC5E-CC1B6F2155BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A385FCD-38A7-4B29-BC5E-CC1B6F2155BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2BAA61-5782-48E0-BF15-E88767695802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2BAA61-5782-48E0-BF15-E88767695802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B491F2-4804-4363-87FB-E5F78346D0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B491F2-4804-4363-87FB-E5F78346D0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E55825-4F98-4383-B591-A069EC65E0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E55825-4F98-4383-B591-A069EC65E0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

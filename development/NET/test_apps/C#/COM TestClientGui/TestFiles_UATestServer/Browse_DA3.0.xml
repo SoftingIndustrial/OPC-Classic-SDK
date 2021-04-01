@@ -1,0 +1,868 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd"> 
+  
+	<TestList DisplayName="Browse DA3.0 IOPCBrowse:Browse">
+	
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>false</Active>
+    </Connect>
+	
+	<DaSessionBrowse DisplayName="Browse on Root">
+		<Description>
+			pszContinuationPoint: 
+			szElementNameFilter: 
+			pdwPropertyIDs: 
+			bReturnAllProperties: FALSE
+			szItemID: 
+			dwPropertyCount: 0
+			bReturnPropertyValues: FALSE
+			dwMaxElementsReturned: 0
+			szVendorFilter: 
+			dwBrowseFilter: OPC_BROWSE_FILTER_ALL 
+		</Description>
+		
+		
+		<Session>System.Session</Session>
+		<RootID></RootID> <!--Returns all branches under root-->
+		<BrowseOptions>
+			
+			<!--<ElementTypeFilter>ALL</ElementTypeFilter>
+			<MaxElements>0</MaxElements>
+			<RetrieveItemId>true</RetrieveItemId>
+			<ReturnProperties>false</ReturnProperties>
+			<ReturnPropertyValues>false</ReturnPropertyValues>
+			<ForceBrowseUp>false</ForceBrowseUp> -->
+			<ElementTypeFilter>ALL</ElementTypeFilter>
+		</BrowseOptions>
+		
+		<ExpectedElements>
+				<DaAddressSpaceElement>
+					<ItemId>Test Folder</ItemId>
+					<IsItem>false</IsItem>
+					<IsBranch>true</IsBranch>
+					<IsLeaf>false</IsLeaf>
+				</DaAddressSpaceElement>
+				<DaAddressSpaceElement>
+					<ItemId>CTT</ItemId>
+					<IsItem>false</IsItem>
+					<IsBranch>true</IsBranch>
+					<IsLeaf>false</IsLeaf>
+				</DaAddressSpaceElement>
+		</ExpectedElements>
+	</DaSessionBrowse>
+	
+	<Connect DisplayName="Active state">
+      <Object>System.Session</Object>
+      <Active>true</Active>
+    </Connect>
+	
+	<DaSessionBrowse DisplayName="BrowseFilter = All; branches to return">
+		<Session>System.Session</Session>
+		<RootID>CTT</RootID> <!--Returns all branches of CTT node-->
+		<BrowseOptions>
+			<ElementTypeFilter>ALL</ElementTypeFilter>
+		</BrowseOptions>
+		
+		<ExpectedElements>
+				<DaAddressSpaceElement>
+					<ItemId>CTT.Static</ItemId>
+					<IsItem>false</IsItem>
+					<IsBranch>true</IsBranch>
+					<IsLeaf>false</IsLeaf>
+				</DaAddressSpaceElement>
+		</ExpectedElements>
+	</DaSessionBrowse>
+	
+	
+	<DaSessionBrowse DisplayName="BrowseFilter = All; leafs(Items) to return">
+	<Session>System.Session</Session>
+		<RootID>CTT.Static.All Profiles.Scalar</RootID> <!--Returns all items under Scalar node-->
+		<BrowseOptions>
+			<ElementTypeFilter>ALL</ElementTypeFilter>
+		</BrowseOptions>
+		
+		<ExpectedElements>			
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Guid</ItemId>
+              <ItemPath />
+              <Name>Guid</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Byte</ItemId>
+              <ItemPath />
+              <Name>Byte</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.XmlElement</ItemId>
+              <ItemPath />
+              <Name>XmlElement</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement> 
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Int64</ItemId>
+              <ItemPath />
+              <Name>Int64</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Int32</ItemId>
+              <ItemPath />
+              <Name>Int32</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.String</ItemId>
+              <ItemPath />
+              <Name>String</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.ByteString</ItemId>
+              <ItemPath />
+              <Name>ByteString</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>	
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Double</ItemId>
+              <ItemPath />
+              <Name>Double</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Float</ItemId>
+              <ItemPath />
+              <Name>Float</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.UInt64</ItemId>
+              <ItemPath />
+              <Name>UInt64</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.UInt32</ItemId>
+              <ItemPath />
+              <Name>UInt32</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+            <DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Int16</ItemId>
+              <ItemPath />
+              <Name>Int16</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Date Time</ItemId>
+              <ItemPath />
+              <Name>Date Time</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Sbyte</ItemId>
+              <ItemPath />
+              <Name>Sbyte</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.UInt16</ItemId>
+              <ItemPath />
+              <Name>UInt16</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>		
+            <DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Boolean</ItemId>
+              <ItemPath />
+              <Name>Boolean</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+		</ExpectedElements>
+	</DaSessionBrowse>
+	
+	
+	<DaSessionBrowse DisplayName="BrowseFilter = Branches; branches to return">
+		<Session>System.Session</Session>
+		<RootID>CTT.Static</RootID> <!--Returns all nodes under CTT.Static-->
+		<BrowseOptions>
+			<ElementTypeFilter>BRANCH</ElementTypeFilter>
+		</BrowseOptions>
+		
+		<ExpectedElements>
+				<DaAddressSpaceElement>
+					<ItemId>CTT.Static.DA Profile</ItemId>
+					<IsItem>false</IsItem>
+					<IsBranch>true</IsBranch>
+					<IsLeaf>false</IsLeaf>
+				</DaAddressSpaceElement>
+					<DaAddressSpaceElement>
+					<ItemId>CTT.Static.All Profiles</ItemId>
+					<IsItem>false</IsItem>
+					<IsBranch>true</IsBranch>
+					<IsLeaf>false</IsLeaf>
+				</DaAddressSpaceElement>
+		</ExpectedElements>
+	</DaSessionBrowse>
+	
+	
+	<DaSessionBrowse DisplayName="BrowseFilter = Branches; no branches to return">
+		<Description>
+			pszContinuationPoint: 
+			szElementNameFilter: 
+			pdwPropertyIDs: 
+			bReturnAllProperties: FALSE
+			szItemID: CTT.Static.All Profiles.Scalar
+			dwPropertyCount: 0
+			bReturnPropertyValues: TRUE
+			dwMaxElementsReturned: 0
+			szVendorFilter: 
+			dwBrowseFilter: OPC_BROWSE_FILTER_BRANCHES
+		</Description>
+
+		<Session>System.Session</Session>
+		<RootID>CTT.Static.All Profiles.Scalar</RootID> <!--Nothing to return since no Branch available-->
+		<BrowseOptions>
+			<ElementTypeFilter>BRANCH</ElementTypeFilter>
+		</BrowseOptions>
+		
+		<ExpectedElements>
+		</ExpectedElements>
+	</DaSessionBrowse>
+	
+
+	<DaSessionBrowse DisplayName="BrowseFilter = Items; leafs(Items) to return">
+	<Description>
+		pszContinuationPoint: 
+		szElementNameFilter: 
+		pdwPropertyIDs: 
+		bReturnAllProperties: FALSE
+		szItemID: CTT.Static.All Profiles.Scalar
+		dwPropertyCount: 0
+		bReturnPropertyValues: FALSE
+		dwMaxElementsReturned: 0
+		szVendorFilter: 
+		dwBrowseFilter: OPC_BROWSE_FILTER_ITEMS
+	</Description>
+	<Session>System.Session</Session>
+		<RootID>CTT.Static.All Profiles.Scalar</RootID> <!--Returns all items under Scalar node-->
+		<BrowseOptions>
+			<ElementTypeFilter>LEAF</ElementTypeFilter>
+		</BrowseOptions>
+		
+		<ExpectedElements>			
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Guid</ItemId>
+              <ItemPath />
+              <Name>Guid</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Byte</ItemId>
+              <ItemPath />
+              <Name>Byte</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.XmlElement</ItemId>
+              <ItemPath />
+              <Name>XmlElement</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement> 
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Int64</ItemId>
+              <ItemPath />
+              <Name>Int64</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Int32</ItemId>
+              <ItemPath />
+              <Name>Int32</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.String</ItemId>
+              <ItemPath />
+              <Name>String</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.ByteString</ItemId>
+              <ItemPath />
+              <Name>ByteString</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>	
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Double</ItemId>
+              <ItemPath />
+              <Name>Double</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Float</ItemId>
+              <ItemPath />
+              <Name>Float</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.UInt64</ItemId>
+              <ItemPath />
+              <Name>UInt64</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.UInt32</ItemId>
+              <ItemPath />
+              <Name>UInt32</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+            <DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Int16</ItemId>
+              <ItemPath />
+              <Name>Int16</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Date Time</ItemId>
+              <ItemPath />
+              <Name>Date Time</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Sbyte</ItemId>
+              <ItemPath />
+              <Name>Sbyte</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.UInt16</ItemId>
+              <ItemPath />
+              <Name>UInt16</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>		
+            <DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Boolean</ItemId>
+              <ItemPath />
+              <Name>Boolean</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+		</ExpectedElements>
+		
+	</DaSessionBrowse>
+	
+	
+	<DaSessionBrowse DisplayName="MaxElementsReturned is set">
+	<Description>
+		pszContinuationPoint: 
+		szElementNameFilter: 
+		pdwPropertyIDs: 
+		bReturnAllProperties: FALSE
+		szItemID: CTT.Static.All Profiles.Scalar
+		dwPropertyCount: 0
+		bReturnPropertyValues: FALSE
+		dwMaxElementsReturned: 2
+		szVendorFilter: 
+		dwBrowseFilter: OPC_BROWSE_FILTER_ALL
+	</Description>
+	<Session>System.Session</Session>
+		<RootID>CTT.Static.All Profiles.Scalar</RootID> <!--Returns all items under Scalar node-->
+		<BrowseOptions>
+			<ElementTypeFilter>ALL</ElementTypeFilter>
+			<MaxElements>2</MaxElements>
+		</BrowseOptions>
+		
+		<ExpectedElements>			
+            <DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Guid</ItemId>
+              <ItemPath />
+              <Name>Guid</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+            <DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Byte</ItemId>
+              <ItemPath />
+              <Name>Byte</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+		</ExpectedElements>	
+		</DaSessionBrowse>
+
+	
+	
+	<DaSessionBrowse DisplayName="ReturnAllProperties: false">
+		<Session>System.Session</Session>
+		<RootID>Test Folder</RootID> <!--Nothing to return since no Items available-->
+		<BrowseOptions>
+			<ElementTypeFilter>ALL</ElementTypeFilter>
+			<ReturnProperties>false</ReturnProperties>
+		</BrowseOptions>
+		
+		<ExpectedElements>
+			<DaAddressSpaceElement>
+              <ItemId>Test Folder.CreateItemsCommand</ItemId>
+			</DaAddressSpaceElement>
+			
+			<DaAddressSpaceElement>
+              <ItemId>Test Folder.AnalogItem_1</ItemId>
+			</DaAddressSpaceElement>
+			
+			<DaAddressSpaceElement>
+              <ItemId>Test Folder.AnalogItem_2</ItemId>
+			</DaAddressSpaceElement>
+			
+		</ExpectedElements>
+	</DaSessionBrowse>
+	
+	
+	<DaSessionBrowse DisplayName="ReturnAllProperties: true">
+		<Session>System.Session</Session>
+		<RootID>Test Folder</RootID> <!--Nothing to return since no Items available-->
+		<BrowseOptions>
+			<ElementTypeFilter>ALL</ElementTypeFilter>
+			<ReturnProperties>true</ReturnProperties>
+		</BrowseOptions>
+		
+		<ExpectedElements>
+			<DaAddressSpaceElement>
+              <ItemId>Test Folder.CreateItemsCommand</ItemId>
+			</DaAddressSpaceElement>
+			<DaProperty>
+				<Description>Property</Description>
+					<ValueQT>
+						<Data xsi:type="xsd:string">2:TestModule</Data>
+					</ValueQT>
+			</DaProperty>
+
+			<DaAddressSpaceElement>
+              <ItemId>Test Folder.AnalogItem_1</ItemId>
+			</DaAddressSpaceElement>
+			
+			<DaAddressSpaceElement>
+              <ItemId>Test Folder.AnalogItem_2</ItemId>
+			</DaAddressSpaceElement>
+			
+		</ExpectedElements>
+	</DaSessionBrowse>
+
+
+
+    <DaSessionBrowse DisplayName="ElementName Filter is set">
+      <Session>System.Session</Session>
+      <RootID>CTT.Static.All Profiles.Scalar</RootID>
+      <Description>
+        pszContinuationPoint:
+        szElementNameFilter: Byte
+        pdwPropertyIDs:
+        bReturnAllProperties: FALSE
+        szItemID: CTT.Static.All Profiles.Scalar
+        dwPropertyCount: 0
+        bReturnPropertyValues: FALSE
+        dwMaxElementsReturned: 0
+        szVendorFilter:
+        dwBrowseFilter: OPC_BROWSE_FILTER_ALL
+      </Description>
+      <!--Returns all items under Scalar node that contain Byte as ElementName-->
+      <BrowseOptions>
+        <ElementTypeFilter>ALL</ElementTypeFilter>
+        <ElementNameFilter>Byte</ElementNameFilter>
+      </BrowseOptions>
+
+      <ExpectedElements>
+        <DaAddressSpaceElement>
+          <ItemId>CTT.Static.All Profiles.Scalar.Byte</ItemId>
+          <ItemPath />
+          <Name>Byte</Name>
+          <IsItem>true</IsItem>
+          <IsBranch>false</IsBranch>
+          <IsLeaf>true</IsLeaf>
+        </DaAddressSpaceElement>
+      </ExpectedElements>
+    </DaSessionBrowse>
+
+    <DaSessionBrowse DisplayName="RetrieveItemID = true; not validated">
+      <Session>System.Session</Session>
+      <RootID>CTT.Static.All Profiles.Scalar.Double</RootID>
+      <Description>
+        pszContinuationPoint:
+        szElementNameFilter:
+        pdwPropertyIDs:
+        bReturnAllProperties: FALSE
+        szItemID: CTT.Static.All Profiles.Scalar.Double
+        dwPropertyCount: 0
+        bReturnPropertyValues: FALSE
+        dwMaxElementsReturned: 0
+        szVendorFilter:
+        dwBrowseFilter: OPC_BROWSE_FILTER_ALL
+      </Description>
+      <BrowseOptions>
+        <ElementTypeFilter>ALL</ElementTypeFilter>
+        <RetrieveItemId>true</RetrieveItemId>
+      </BrowseOptions>
+
+      <ExpectedElements>
+      </ExpectedElements>
+    </DaSessionBrowse>
+
+
+
+    <DaSessionBrowse DisplayName="VendorFilter set; not validated">
+      <Session>System.Session</Session>
+      <RootID>CTT.Static.All Profiles.Scalar</RootID>
+      <Description>
+        pszContinuationPoint:
+        szElementNameFilter:
+        pdwPropertyIDs:
+        bReturnAllProperties: FALSE
+        szItemID: CTT.Static.All Profiles.Scalar
+        dwPropertyCount: 0
+        bReturnPropertyValues: FALSE
+        dwMaxElementsReturned: 0
+        szVendorFilter: Softing
+        dwBrowseFilter: OPC_BROWSE_FILTER_ALL
+      </Description>
+      <BrowseOptions>
+        <ElementTypeFilter>ALL</ElementTypeFilter>
+        <VendorFilter>Softing</VendorFilter>
+      </BrowseOptions>
+
+      <ExpectedElements>
+      </ExpectedElements>
+    </DaSessionBrowse>
+
+
+
+    <DaSessionBrowse DisplayName="ForceBrowseUp set; not validated">
+      <Session>System.Session</Session>
+      <RootID>CTT.Static.All Profiles.Scalar.Double</RootID>
+      <Description>
+        pszContinuationPoint:
+        szElementNameFilter:
+        pdwPropertyIDs:
+        bReturnAllProperties: FALSE
+        szItemID: CTT.Static.All Profiles.Scalar.Double
+        dwPropertyCount: 0
+        bReturnPropertyValues: FALSE
+        dwMaxElementsReturned: 0
+        szVendorFilter:
+        dwBrowseFilter: OPC_BROWSE_FILTER_ALL
+      </Description>
+      <BrowseOptions>
+        <ElementTypeFilter>ALL</ElementTypeFilter>
+        <ForceBrowseUp>true</ForceBrowseUp>
+      </BrowseOptions>
+
+      <ExpectedElements>
+      </ExpectedElements>
+    </DaSessionBrowse>
+
+
+
+
+    <DaSessionBrowse DisplayName="ReturnAllProperties = true; ReturnPropertyValues = true">
+      <Session>System.Session</Session>
+      <RootID>CTT.Static.All Profiles.Scalar</RootID>
+      <Description>
+        pszContinuationPoint:
+        szElementNameFilter:
+        pdwPropertyIDs:
+        bReturnAllProperties: TRUE
+        szItemID: CTT.Static.All Profiles.Scalar
+        dwPropertyCount: 0
+        bReturnPropertyValues: TRUE
+        dwMaxElementsReturned: 0
+        szVendorFilter:
+        dwBrowseFilter: OPC_BROWSE_FILTER_ALL
+      </Description>
+      <BrowseOptions>
+        <ElementTypeFilter>ALL</ElementTypeFilter>
+        <ReturnProperties>true</ReturnProperties>
+        <ReturnPropertyValues>true</ReturnPropertyValues>
+      </BrowseOptions>
+
+  		<ExpectedElements>			
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Guid</ItemId>
+              <ItemPath />
+              <Name>Guid</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Byte</ItemId>
+              <ItemPath />
+              <Name>Byte</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.XmlElement</ItemId>
+              <ItemPath />
+              <Name>XmlElement</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement> 
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Int64</ItemId>
+              <ItemPath />
+              <Name>Int64</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Int32</ItemId>
+              <ItemPath />
+              <Name>Int32</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.String</ItemId>
+              <ItemPath />
+              <Name>String</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.ByteString</ItemId>
+              <ItemPath />
+              <Name>ByteString</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>	
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Double</ItemId>
+              <ItemPath />
+              <Name>Double</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Float</ItemId>
+              <ItemPath />
+              <Name>Float</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.UInt64</ItemId>
+              <ItemPath />
+              <Name>UInt64</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.UInt32</ItemId>
+              <ItemPath />
+              <Name>UInt32</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+            <DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Int16</ItemId>
+              <ItemPath />
+              <Name>Int16</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Date Time</ItemId>
+              <ItemPath />
+              <Name>Date Time</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Sbyte</ItemId>
+              <ItemPath />
+              <Name>Sbyte</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+			<DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.UInt16</ItemId>
+              <ItemPath />
+              <Name>UInt16</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>		
+            <DaAddressSpaceElement>
+              <ItemId>CTT.Static.All Profiles.Scalar.Boolean</ItemId>
+              <ItemPath />
+              <Name>Boolean</Name>
+              <IsItem>true</IsItem>
+              <IsBranch>false</IsBranch>
+              <IsLeaf>true</IsLeaf>
+            </DaAddressSpaceElement>
+		</ExpectedElements>
+    </DaSessionBrowse>
+
+
+
+
+    <DaSessionBrowse DisplayName="ReturnAllProperties = true; ReturnPropertyValues = true; Nothing to return">
+      <Session>System.Session</Session>
+      <RootID>CTT.Static.DA Profile.AnalogType.Double</RootID>
+      <Description>
+        pszContinuationPoint:
+        szElementNameFilter:
+        pdwPropertyIDs:
+        bReturnAllProperties: TRUE
+        szItemID: CTT.Static.DA Profile.AnalogType.Double
+        dwPropertyCount: 0
+        bReturnPropertyValues: TRUE
+        dwMaxElementsReturned: 0
+        szVendorFilter:
+        dwBrowseFilter: OPC_BROWSE_FILTER_ALL
+      </Description>
+      <BrowseOptions>
+        <ElementTypeFilter>ALL</ElementTypeFilter>
+        <ReturnProperties>true</ReturnProperties>
+        <ReturnPropertyValues>true</ReturnPropertyValues>
+      </BrowseOptions>
+
+      <ExpectedElements>
+      </ExpectedElements>
+    </DaSessionBrowse>
+
+
+
+
+    <DaSessionBrowse DisplayName="ReturnAllProperties = false; ReturnPropertyValues = false; Should not pass">
+      <Session>System.Session</Session>
+      <RootID>CTT.Static.All Profiles.Scalar</RootID>
+      <Description>
+        pszContinuationPoint:
+        szElementNameFilter:
+        pdwPropertyIDs:
+        bReturnAllProperties: FALSE
+        szItemID: CTT.Static.All Profiles.Scalar
+        dwPropertyCount: 0
+        bReturnPropertyValues: FALSE
+        dwMaxElementsReturned: 0
+        szVendorFilter:
+        dwBrowseFilter: OPC_BROWSE_FILTER_ALL
+      </Description>
+      <BrowseOptions>
+        <ElementTypeFilter>ALL</ElementTypeFilter>
+        <ReturnProperties>false</ReturnProperties>
+      </BrowseOptions>
+
+      <ExpectedElements>
+      </ExpectedElements>
+    </DaSessionBrowse>
+
+
+    <DaSessionBrowse DisplayName="ReturnAllProperties = true; ReturnPropertyValues = false; Should not pass">
+      <Session>System.Session</Session>
+      <RootID>CTT.Static.All Profiles.Scalar</RootID>
+      <Description>
+        pszContinuationPoint:
+        szElementNameFilter:
+        pdwPropertyIDs:
+        bReturnAllProperties: TRUE
+        szItemID: CTT.Static.All Profiles.Scalar
+        dwPropertyCount: 0
+        bReturnPropertyValues: FALSE
+        dwMaxElementsReturned: 0
+        szVendorFilter:
+        dwBrowseFilter: OPC_BROWSE_FILTER_ALL
+      </Description>
+      <BrowseOptions>
+        <ElementTypeFilter>ALL</ElementTypeFilter>
+        <ReturnProperties>true</ReturnProperties>
+        <ReturnPropertyValues>false</ReturnPropertyValues>
+      </BrowseOptions>
+
+      <ExpectedElements>
+      </ExpectedElements>
+    </DaSessionBrowse>
+
+
+
+  </TestList>
+</TestList>

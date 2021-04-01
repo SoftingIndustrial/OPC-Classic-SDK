@@ -1,0 +1,109 @@
+#!/bin/sh
+#
+# opcserverdaemon:   OPC-Server daemon
+#
+# chkconfig: 345 98 02
+# description:  This is a daemon - OPC Demo Server
+#
+
+daemon() {
+   $* >/dev/null 2>&1
+   if [ $? -eq 0 ]; then
+      echo -ne "                                           [  OK  ]\r"
+   else
+      echo -ne "                                           [FAILED]\r"
+   fi
+}
+
+killproc() {
+   pid=`su - root -c "pidof -s $1"`
+   pidfile=/var/run/${1}.pid
+   if [ -z $pid ]; then
+      if [ -f $pidfile ]; then
+         read pid < $pidfile
+         kill $pid
+      fi
+   else
+      kill $pid
+   fi
+   retval=$?
+   if [ -f $pidfile ]; then
+      rm $pidfile
+   fi
+   if [ $retval -eq 0 ]; then
+      echo -ne "                                           [  OK  ]\r"
+   else
+      echo -ne "                                           [FAILED]\r"
+   fi
+}
+
+status() {
+   pid=`su - root -c "pidof -s $1"`
+   if [ -z $pid ]; then
+      pidfile=/var/run/${1}.pid
+      if [ -f $pidfile ]; then
+         read pid < $pidfile
+      fi
+   fi
+
+   if [ -n "$pid" ]; then
+      echo $"$1 (pid $pid) is running..."
+      return 0
+   fi
+
+   echo $"$1 is stopped"
+   return 3
+}
+
+#TODO: change your path here
+#NOTE: the libOTB.so and libTBCD.so
+processpath=/home/softing/OPCToolboxV4.22/Linux/dev/C++/samples/server/AddressSpace/bin/Suse/x86/GCC4/2.6/Debug
+processname=AddressSpaceD
+servicename=opcserverdaemon
+lockfile=/var/lock/subsys/$servicename
+RETVAL=0
+
+start() {
+	if [ ! -f $lockfile ];then
+		echo -n $"Starting OPC Server daemon..."
+		export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$processpath
+		daemon $processpath/$processname &
+		RETVAL=$?
+		echo
+		[ $RETVAL = 0 ] && [ -d /var/lock/subsys ] && touch $lockfile
+		return $RETVAL
+	else
+		echo -n $"OPC Server daemon is already running. It wil not be started."
+		return 0
+	fi
+}
+
+stop() {
+	echo -n $"Stopping OPC Server daemon..."
+	killproc $processpath/$processname
+	RETVAL=$?
+	echo
+	[ $RETVAL = 0 ] && rm -f $lockfile
+	return $RETVAL
+}
+
+case "$1" in
+	start)
+		start
+	;;
+	stop)
+		stop
+	;;
+	status)
+		status $processname
+        ;;
+	restart)
+		stop
+		sleep 3
+		start
+	;;
+	*)
+	echo $"Usage: $0 {start|stop|status|restart}"
+	;;
+esac
+exit $RETVAL

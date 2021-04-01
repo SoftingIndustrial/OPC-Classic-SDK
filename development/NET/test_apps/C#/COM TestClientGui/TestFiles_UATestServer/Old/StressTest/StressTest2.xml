@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<TestList StopIfOneFailed="false" DisplayName="SystemV30">
+
+		<DaSessionCreate DisplayName="Default OPC specification">
+			<Url>{::DaSessionUrl}</Url>
+			<Property>System.Session</Property>
+		</DaSessionCreate>
+	
+	<ImportFile>
+      <FilePath>DaCreateVariableNodes.xml</FilePath>
+    </ImportFile>
+	
+
+	<DaSessionRemove>
+		<Session>System.Session</Session>
+	</DaSessionRemove>
+	
+	</TestList>	
+</TestList>

@@ -1,0 +1,9 @@
+LIBRARY			SOXpSCfg.dll
+DESCRIPTION		'Softing XPress OPC Server Tool Configuration DLL'
+
+EXPORTS			SOXpSInitialize
+				SOXpSStart
+				SOXpSStop
+				SOXpSBuildAEAreaSpace
+				SOXpSBuildAEEventSpace
+               

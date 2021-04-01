@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Login</title></head>
+	<link rel="stylesheet" type="text/css" href="styles/www.css">
+		<body>
+			<form method="POST" action="login.html" target="_top">
+				<table width="590">
+					<tr>
+						<td><img src="pics/space.gif" width="1" height="8" border="0" alt=""></td>
+					</tr>
+					<tr>
+						<td bgcolor="#e4ebee" class="headerLine"><b>Login / Change User</b></td>
+					</tr>
+					<tr>
+						<td><img src="pics/space.gif" width="1" height="8" border="0" alt=""></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td bgColor="#cccccc">
+							<input type="image" src="pics/write.jpg" title="Login" width="25" height="25" ID="CMD##LOGIN##ENGLISH"
+								NAME="CMD##LOGIN##ENGLISH">
+						</td>
+					</tr>
+				</table>
+				<table width="590">
+					<tr>
+						<td width="80"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+						<td width="510"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+					</tr>
+					<tr>
+						<td>User:</td>
+						<td><input class="editField" type="text" name="USER" size="20" value="<%#POSTARG##USER##DEFAULT##Operator#%>"></td>
+					</tr>
+					<tr>
+						<td>Password:</td>
+						<td><input class="editField" type="password" name="PASSWORD" size="20" value=""></td>
+					</tr>
+				</table>
+				<table width="590">
+					<tr>
+						<td><img src="pics/space.gif" width="1" height="20" border="0" alt=""></td>
+					</tr>
+					<tr>
+						<td><%#MESSAGE###%></td>
+					</tr>
+				</table>
+			</form>
+		</body>
+</html>

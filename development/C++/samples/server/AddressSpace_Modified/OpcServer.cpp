@@ -1,0 +1,356 @@
+#include "stdafx.h"
+#include "OpcServer.h"
+#include "ServerCommon.h"
+
+OpcServer* instance = NULL;
+
+#ifdef TBC_OS_WINDOWS
+extern HANDLE g_endEvent;
+#endif
+
+#ifdef TBC_OS_LINUX
+extern PosixEvents g_events;
+#endif
+
+long API_CALL handleShutdownRequest(void)
+{
+#ifdef TBC_OS_WINDOWS
+	::SetEvent(g_endEvent);
+#endif
+#ifdef TBC_OS_LINUX
+	g_events.signal(0);
+#endif
+	return S_OK;
+}   //  end HandleShutdownRequest
+
+OpcServer* getOpcServer(void)
+{
+	return instance;
+}   //  end getOpcServer
+
+
+void createOpcServer(void)
+{
+	if (instance == NULL)
+	{
+		instance = new OpcServer();
+	}   //  end if
+}   //  end createOpcServer
+
+
+void destroyOpcServer(void)
+{
+	if (instance != NULL)
+	{
+		delete instance;
+		instance = NULL;
+	}   //  end if
+}   //  end destroyOpcServer
+
+
+long API_CALL HandleShutdownRequest(void)
+{
+	return S_OK;
+}   //end HandleShutdownRequest
+
+
+OpcServer::OpcServer(void)
+{
+}   //  end constructor
+
+
+OpcServer::~OpcServer(void)
+{
+}   //  end destructor
+
+
+long OpcServer::initialize(void)
+{
+	getApp()->setVersionOtb(447);
+	getApp()->setAppType(EnumApplicationType_EXECUTABLE);
+	//  add your dcom settings here
+	getApp()->setClsidDa(_T("{ED06F266-4FD0-4DA3-BB1A-8F906D2B85B2}"));
+	getApp()->setProgIdDa(_T("Softing.OPCToolbox.Sample.AddressSpace.Modified.DA.1"));
+	getApp()->setVerIndProgIdDa(_T("Softing.OPCToolbox.Sample.AddressSpace.Modified.DA"));
+	getApp()->setDescription(_T("Softing OPC Toolkit AddressSpace Modified Sample Server"));
+	getApp()->setServiceName(tstring());
+	getApp()->setIpPortHTTP(8078);
+	getApp()->setUrlDa(_T("/OPC/DA"));
+	getApp()->setMajorVersion(4);
+	getApp()->setMinorVersion(47);
+	getApp()->setPatchVersion(1);
+	getApp()->setBuildNumber(0);
+	getApp()->setVendorInfo(tstring(_T("Softing Industrial Automation GmbH")));
+	getApp()->setMinUpdateRateDa(1);
+	getApp()->setClientCheckPeriod(30000);
+	g_namespaceDelimiter[0] = _T('.');
+	getApp()->setAddressSpaceDelimiter(g_namespaceDelimiter[0]);
+	getApp()->setPropertyDelimiter(_T('#'));
+	getApp()->setSupportDisableConditions(true);
+	getApp()->ShutdownRequest = handleShutdownRequest;
+	getApp()->setStringBasedObjectDataExpiry(10000);
+	getApp()->setOptimizeForSpeed(TRUE);
+	//  proceed with initializing of the Toolkit tracing mechanism
+	getApp()->enableTracing(
+		(EnumTraceGroup) 0x3000130F,
+		(EnumTraceGroup) 0x3000130F,
+		(EnumTraceGroup) 0x3000130F,
+		(EnumTraceGroup) 0x3000130F,
+		_T("Trace.txt"),
+		500000000,
+		5);
+	return S_OK;
+}   //  end initialize
+
+void OpcServer::setServiceName(tstring serviceName)
+{
+	getApp()->setServiceName(serviceName);
+}   //  end setServiceName
+
+long OpcServer::prepare(MyCreator* creator)
+{
+	long result = S_OK;
+
+	//  TODO - binary license activation
+	//  Fill in your binary license activation keys here
+	//
+	//  NOTE: you can activate one or all of the features at the same time
+	//  firstly activate the COM-DA Server feature
+	result = getApp()->activate(EnumFeature_DA_SERVER, _T("0f00-0000-0000-f97a-21d8"));
+
+	if (!SUCCEEDED(result))
+	{
+		return result;
+	}
+
+	//  activate the XML-DA Server Feature
+	result = getApp()->activate(EnumFeature_XMLDA_SERVER, _T("0f20-0000-0000-07ea-d600"));
+
+	if (!SUCCEEDED(result))
+	{
+		return result;
+	}
+
+	//  END TODO - binary license activation
+	//  a valid creator must be provided to the initialize
+	result = getApp()->initialize(creator);
+
+	if (!SUCCEEDED(result))
+	{
+		return result;
+	}
+
+	return result;
+}   //  end prepare
+
+long OpcServer::start(void)
+{
+	return getApp()->start();
+}   //  end start
+
+long OpcServer::ready(void)
+{
+	return getApp()->ready();
+}   //  end ready
+
+long OpcServer::stop(void)
+{
+	return getApp()->stop();
+}   //  end stop
+
+void OpcServer::freeElement(MyDaAddressSpaceElement* element)
+{
+	std::vector<AddressSpaceElement*> elems = element->getChildren();
+	for (std::vector<AddressSpaceElement*>::iterator it = elems.begin(); it != elems.end(); ++it)
+	{
+		freeElement((MyDaAddressSpaceElement*)*it);
+		delete *it;
+	}
+}
+
+long OpcServer::terminate(void)
+{
+	MyDaAddressSpaceElement* rootNode = (MyDaAddressSpaceElement*)getApp()->getDaAddressSpaceRoot();
+	std::vector<AddressSpaceElement*> elems = rootNode->getChildren();
+	for (std::vector<AddressSpaceElement*>::iterator it = elems.begin(); it != elems.end(); ++it)
+	{
+		freeElement((MyDaAddressSpaceElement*)*it);
+		delete *it;
+	}
+
+	long result = getApp()->terminate();
+	releaseApp();
+	return result;
+}   //  end terminate
+
+long OpcServer::processCommandLine(tstring command)
+{
+	return getApp()->processCommandLine(command);
+}   //  end processCommandLine
+
+long OpcServer::buildAddressSpace(void)
+{
+	getApp()->setDaServerState(EnumServerState_COMM_FAULT);
+	_tprintf(_T("Creating object-based namespace...\n"));
+	TCHAR node[] = {0};
+	const TCHAR *currPos = NULL;
+	const TCHAR *lastPos = NULL;
+	int position = 0;
+	int length = 0;
+	TCHAR buffer[256] = {0};
+	MyDaAddressSpaceElement* objectBasedNode = NULL;
+	MyDaAddressSpaceElement* stringBasedNode = NULL;
+	MyDaAddressSpaceElement* rootNode = (MyDaAddressSpaceElement*)getApp()->getDaAddressSpaceRoot();
+	MyDaAddressSpaceElement* generalParentTag = rootNode;
+	lastPos = g_stringBasedItemFullPath;
+	currPos = _tcsstr(g_stringBasedItemFullPath, g_namespaceDelimiter);
+	while (currPos != NULL)
+	{
+		length = currPos - g_stringBasedItemFullPath - position;
+		_tcscpy_s(buffer, g_stringBasedItemFullPath + position);
+		buffer[length] = 0;
+		stringBasedNode = new MyDaAddressSpaceElement();
+		stringBasedNode->setName(tstring(buffer));
+		stringBasedNode->setIoMode(EnumIoMode_NONE);
+		stringBasedNode->setHasChildren(TRUE);
+		generalParentTag->addChild(stringBasedNode);
+		generalParentTag = stringBasedNode;
+		lastPos = currPos + 1;
+		position = currPos - g_stringBasedItemFullPath + 1;
+		currPos = _tcsstr(g_stringBasedItemFullPath + position, g_namespaceDelimiter);
+	}
+	_tcscpy_s(buffer, lastPos);
+	stringBasedNode = new MyDaAddressSpaceElement();
+	stringBasedNode->setName(tstring(buffer));
+	stringBasedNode->setIoMode(EnumIoMode_NONE);
+	stringBasedNode->setHasChildren(TRUE);
+	generalParentTag->addChild(stringBasedNode);
+	generalParentTag = stringBasedNode;
+	m_stringBasedParentElement = generalParentTag;
+	position = 0;
+	lastPos = g_itemFullPath;
+	currPos = _tcsstr(g_itemFullPath, g_namespaceDelimiter);
+	generalParentTag = rootNode;
+	while (currPos != NULL)
+	{
+		length = currPos - g_itemFullPath - position;
+		_tcscpy_s(buffer, g_itemFullPath + position);
+		buffer[length] = 0;
+		objectBasedNode = new MyDaAddressSpaceElement();
+		objectBasedNode->setName(tstring(buffer));
+		objectBasedNode->setIoMode(EnumIoMode_NONE);
+		objectBasedNode->setHasChildren(TRUE);
+		generalParentTag->addChild(objectBasedNode);
+		generalParentTag = objectBasedNode;
+		lastPos = currPos + 1;
+		position = currPos - g_itemFullPath + 1;
+		currPos = _tcsstr(g_itemFullPath + position, g_namespaceDelimiter);
+	}
+	_tcscpy_s(buffer, lastPos);
+	objectBasedNode = new MyDaAddressSpaceElement();
+	objectBasedNode->setName(tstring(buffer));
+	objectBasedNode->setIoMode(EnumIoMode_REPORT_CYCLIC);
+	objectBasedNode->setHasChildren(TRUE);
+	generalParentTag->addChild(objectBasedNode);
+	generalParentTag = objectBasedNode;
+	m_objectBasedParentElement = generalParentTag;
+
+	VARENUM itemDataType = VT_EMPTY;
+	TCHAR l_format[256] = {0};
+	_stprintf_s(l_format, _T("%s%s%s"), _T("%s"), g_namespaceDelimiter, g_itemNameFormat);
+	for (unsigned int i = 0; i < g_itemsTotalCount; ++i)
+	{
+		if (i % 100 == 0)
+		{
+			_tprintf(_T("\r"));
+			_tprintf(_T("%3.2f%%"), ((double)(i * 100) / g_itemsTotalCount));
+		}
+		objectBasedNode = new MyDaAddressSpaceElement();
+		_stprintf_s(buffer, g_itemNameFormat, g_itemName, i);
+		objectBasedNode->setName(tstring(buffer));
+		_stprintf_s(buffer, l_format, g_itemFullPath, g_itemName, i);
+		objectBasedNode->setItemId(tstring(buffer));
+		objectBasedNode->setAccessRights(EnumAccessRights_READWRITEABLE);
+		objectBasedNode->setRandomDatatype(i);
+		switch (i % 4)
+		{
+		case 0:
+			objectBasedNode->setIoMode(EnumIoMode_POLL);
+			break;
+		case 1:
+			objectBasedNode->setIoMode(EnumIoMode_REPORT);
+			break;
+		case 2:
+			objectBasedNode->setIoMode(EnumIoMode_REPORT_CYCLIC);
+			break;
+		case 3:
+			objectBasedNode->setIoMode(EnumIoMode_POLL_OWNCACHE);
+			break;
+		case 4:
+			// not used
+			objectBasedNode->setIoMode(EnumIoMode_NONE);
+			break;
+		}
+		objectBasedNode->setHasChildren(FALSE);
+		generalParentTag->addChild(objectBasedNode);
+	}
+	
+	_tprintf(_T("\r 100%%"));
+
+	//Sleep(20000);
+
+	//  set the initial cache value. This must only be done after the element is
+	//  added to the addresss space via the addChild() method
+	_tprintf(_T("\n...object-based namespace created.\n"));
+	getApp()->setDaServerState(EnumServerState_RUNNING);
+	return EnumResultCode_S_OK;
+}   //  end buildAddressSpace
+
+void OpcServer::trace(
+	EnumTraceLevel aLevel,
+	EnumTraceGroup aMask,
+	const TCHAR* anObjectID,
+	const TCHAR* aMessage,
+	...)
+{
+	getApp()->trace(aLevel, aMask, anObjectID, aMessage);
+}   //  end trace
+
+void OpcServer::fireDataChanges(void)
+{
+	std::vector<AddressSpaceElement*> elements = m_objectBasedParentElement->getChildren();
+	std::vector<AddressSpaceElement*>::iterator it;
+	int rnd = rand();
+	DateTime dateTime;
+	dateTime.now();
+	for (it = elements.begin(); it != elements.end(); ++it)
+	{
+		++rnd;
+		((MyDaAddressSpaceElement*)*it)->randomValue(dateTime, rnd);
+	}
+	elements = m_stringBasedParentElement->getChildren();
+	rnd = rand();
+	for (it = elements.begin(); it != elements.end(); ++it)
+	{
+		++rnd;
+		((MyDaAddressSpaceElement*)*it)->randomValue(dateTime, rnd);
+	}
+}
+
+void OpcServer::emptyValues(void)
+{
+	std::vector<AddressSpaceElement*> elements = m_objectBasedParentElement->getChildren();
+	std::vector<AddressSpaceElement*>::iterator it;
+	DateTime dateTime;
+	dateTime.now();
+	for (it = elements.begin(); it != elements.end(); ++it)
+	{
+		((MyDaAddressSpaceElement*)*it)->emptyValue(dateTime);
+	}
+	elements = m_stringBasedParentElement->getChildren();
+	for (it = elements.begin(); it != elements.end(); ++it)
+	{
+		((MyDaAddressSpaceElement*)*it)->emptyValue(dateTime);
+	}
+}
+

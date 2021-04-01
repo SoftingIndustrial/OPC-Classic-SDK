@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<lib>
+	<namespace name="Softing.OPCToolbox">
+		<doc>
+			<summary>
+				<para>
+					The <B>Softing.OPCToolbox</B> namespace contains very generic, yet Softing 
+					specific, common types (value types, interfaces, classes, etcetera).
+				</para>
+			</summary>
+		</doc>	
+		<enum name="EnumQuality">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumQuality&#123;</line>
+					<line>&#125;EnumQuality;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<enum name="EnumFeature">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumFeature&#123;</line>
+					<line>&#125;EnumFeature;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<enum name="EnumQualityLimit">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumQualityLimit&#123;</line>
+					<line>&#125;EnumQualityLimit;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<enum name="EnumEUType">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumEUType&#123;</line>
+					<line>&#125;EnumEUType;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<enum name="EnumOPCSpecification">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumOPCSpecification&#123;</line>
+					<line>&#125;EnumOPCSpecification;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<enum name="EnumPropertyId">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumPropertyId&#123;</line>
+					<line>&#125;EnumPropertyId;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<enum name="EnumAccessRights">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumAccessRights&#123;</line>
+					<line>&#125;EnumAccessRights;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<enum name="EnumResultCode">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumResultCode&#123;</line>
+					<line>&#125;EnumResultCode;</line>
+				</unmanaged>	
+			</doc>
+		</enum>		
+		<enum name="EnumEventType">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumEventType&#123;</line>
+					<line>&#125;EnumEventType;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<enum name="EnumConditionState">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumConditionState&#123;</line>
+					<line>&#125;EnumConditionState;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<enum name="EnumConditionChange">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumExecutionType&#123;</line>
+					<line>&#125;EnumConditionChange;</line>
+				</unmanaged>	
+			</doc>
+		</enum>		
+		<class name="ResultCode">
+			<doc>
+				<unmanaged>
+					<line>Not available!</line>					
+				</unmanaged>	
+			</doc>	
+			<constructor name="ResultCode">
+				<doc>
+					<unmanaged>
+						<line>Not available!</line>				
+					</unmanaged>	
+				</doc>
+			</constructor>
+			<method name="SUCCEEDED_1">
+				<doc>
+					<unmanaged>
+						<line>#define SUCCEEDED(Status) ((long)(void *)(Status) >= 0)</line>				
+					</unmanaged>	
+				</doc>
+			</method>
+			<method name="SUCCEEDED_2">
+				<doc>
+					<unmanaged>
+						<line>#define SUCCEEDED(Status) ((long)(void *)(Status) >= 0)</line>				
+					</unmanaged>	
+				</doc>
+			</method>
+			<method name="FAILED_1">
+				<doc>
+					<unmanaged>
+						<line>#define FAILED(Status) ((long)(void *)(Status)&#60;0)</line>				
+					</unmanaged>	
+				</doc>
+			</method>
+			<method name="FAILED_2">
+				<doc>
+					<unmanaged>
+						<line>#define FAILED(Status) ((long)(void *)(Status)&#60;0)</line>				
+					</unmanaged>	
+				</doc>
+			</method>
+		</class>
+		<class name="ValueData">
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT ValueData </line>					
+				</unmanaged>	
+			</doc>	
+			<constructor name="ValueData">
+				<doc>
+					<unmanaged>
+						<line>public: ValueData(VARIANT* aData):</line>	
+						<line>			m_data(aData);</line>	
+						<line>public: ValueData(VARIANT&#38; aData):</line>	
+						<line>			m_data(aData);</line>					
+					</unmanaged>	
+				</doc>
+			</constructor>
+			<method name="ValueData">
+				<doc>
+					<unmanaged>
+							<line>public: ValueData( )</line>								
+					</unmanaged>	
+				</doc>
+			</method>
+			<field name="m_data">
+				<doc>
+					<unmanaged>
+						<line>protected: Variant m_data;</line>
+					</unmanaged>	
+				</doc>
+			</field>
+			<property name="Data">
+				<doc>
+					<unmanaged>
+						<line>public: Variant&#38; getData( );</line>
+					</unmanaged>	
+					<value>
+						<para><b>Unmanaged C++</b></para><para>A <b>Variant</b> that represents the value of a process variable.</para>
+						<para><b>C#, Visual Basic, C++</b></para><para>A System.Object that represents the value of a process variable.</para>
+					</value>
+				</doc>
+			</property>
+			<method name="ToString">
+				<doc>
+					<unmanaged>
+						<line>public: tstring toString( );</line>
+					</unmanaged>
+				</doc>
+			</method>
+		</class>
+		<class name="ValueQT">
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT ValueQT : public ValueData </line>
+				</unmanaged>	
+			</doc>	
+			<constructor name="ValueQT">
+				<doc>
+					<unmanaged>
+						<line>public: ValueQT(</line>	
+						<line>			VARIANT&#38; aData,</line>
+						<line>			EnumQuality aQuality,</line>
+						<line>			DateTime aTimeStamp); </line>	
+						<line>		   ); </line>								
+					</unmanaged>	
+				</doc>
+			</constructor>
+			<method name="ValueQT_1">
+				<doc>
+					<unmanaged>
+						<line>public: ValueQT( );</line>													
+					</unmanaged>	
+				</doc>
+			</method>			
+			<field name="m_quality">
+				<doc>
+					<unmanaged>
+						<line>protected: EnumQuality m_quality;</line>							
+					</unmanaged>	
+				</doc>
+			</field>
+			<field name="m_timeStamp">
+				<doc>
+					<unmanaged>
+						<line>protected: DateTime m_timeStamp;</line>							
+					</unmanaged>	
+				</doc>
+			</field>
+			<property name="Quality">
+				<doc>
+					<unmanaged>
+						<line>public: EnumQuality getQuality( );</line>							
+					</unmanaged>	
+					<value>
+						One of the <b>EnumQuality</b> values.
+					</value>
+				</doc>
+			</property>
+			<property name="TimeStamp">
+				<doc>
+					<unmanaged>
+						<line>public: DateTime getTimeStamp( );</line>							
+					</unmanaged>	
+					<value>
+						A <b>DateTime</b> object that represents the time the value and its quality were obtained by the device (if this is available) or the time the server updated or validated the value and quality in its CACHE. 
+					</value>
+				</doc>
+			</property>
+			<method name="SetData">
+				<doc>
+					<unmanaged>
+						<line>public: void setData(</line>							
+						<line>	VARIANT&#38; aData,</line>	
+						<line>	EnumQuality aQuality,</line>	
+						<line>	DateTime aTimeStamp</line>	
+						<line>);</line>	
+					</unmanaged>	
+				</doc>
+			</method>
+			<method name="IsQualitySet">
+				<doc>
+					<unmanaged>
+						<line>public: int isQualitySet( );</line>							
+					</unmanaged>	
+				</doc>
+			</method>
+			<method name="IsTimeStampSet">
+				<doc>
+					<unmanaged>
+						<line>public: int isTimeStampSet( );</line>							
+					</unmanaged>	
+				</doc>
+			</method>
+			<method name="ToString">
+				<doc>
+					<unmanaged>
+						<line>public: tstring toString( );</line>							
+					</unmanaged>	
+				</doc>
+			</method>
+		</class>
+		<delegate name="TraceEventHandler">
+			<doc>
+				<unmanaged>					
+				</unmanaged>	
+			</doc>	
+		</delegate>
+		<enum name="EnumTraceGroup">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumTraceGroup&#123;</line>
+					<line>&#125;EnumTraceGroup;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<enum name="EnumTraceData">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagTraceData&#123;</line>
+					<line>&#125;EnumTraceData;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<enum name="EnumTraceLevel">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumTraceLevel&#123;</line>
+					<line>&#125;EnumTraceLevel;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+		<class name="Trace">
+			<doc>
+				<unmanaged>
+					<line>class Trace</line>					
+				</unmanaged>
+			</doc>
+			<property name="SecondFileName">
+					<doc>
+						<unmanaged>
+							<line>public: static tstring&#38; getSecondFileName();</line>
+							<line>public: static void setSecondFileName(</line>
+							<line>	tstring&#38; aSecondFileName</line>
+							<line>);</line>
+						</unmanaged>	
+						<value>	
+							A string that represents the name of the second file that contains the trace outputs.
+						</value>
+					</doc>	
+				</property>
+				<property name="WarningLevelMask">
+					<doc>
+						<unmanaged>
+							<line>public: static unsigned long getWarningLevelMask( );</line>
+							<line>public: static void setWarningLevelMask(</line>
+							<line>	unsigned long aMask</line>
+							<line>);</line>						
+						</unmanaged>	
+						<value>	
+							An integer that represents the level of warning output traced.
+						</value>
+					</doc>	
+				</property>
+				<property name="DebugLevelMask">
+					<doc>
+						<unmanaged>
+							<line>public: static unsigned long getDebugLevelMask( );</line>
+							<line>public: static void setDebugLevelMask(</line>
+							<line>	unsigned long aMask</line>
+							<line>);</line>							
+						</unmanaged>	
+						<value>	
+							An integer that represents the level of debug output traced. 
+						</value>
+					</doc>	
+				</property>
+				<property name="ErrorLevelMask">
+					<doc>
+						<unmanaged>
+							<line>public: static unsigned long getErrorLevelMask( );</line>
+							<line>public: static void setErrorLevelMask(</line>
+							<line>	unsigned long aMask</line>
+							<line>);</line>							
+						</unmanaged>	
+						<value>	
+							An integer that represents the level of error output traced. 
+						</value>
+					</doc>	
+				</property>
+				<property name="InfoLevelMask">
+					<doc>
+						<unmanaged>
+							<line>public: static unsigned long getInfoLevelMask( );</line>
+							<line>public: static void setInfoLevelMask(</line>
+							<line>	unsigned long aMask</line>
+							<line>);</line>							
+						</unmanaged>	
+						<value>		
+							An integer that represents the level of informative output traced.
+						</value>
+					</doc>	
+				</property>
+				<property name="EnableTraceToFile">
+					<doc>
+						<unmanaged>
+							<line>public: staticbool getEnableTraceToFile( );</line>
+							<line>public: static void setEnableTraceToFile(</line>
+							<line>	bool isEnabled</line>
+							<line>);</line>							
+						</unmanaged>	
+						<value>		
+							A boolean that shows whether the tracing to file(s) is enabled.
+						</value>
+					</doc>	
+				</property>
+				<property name="FileMaxSize">
+					<doc>
+						<unmanaged>
+							<line>public: static long getFileMaxSize( );</line>
+							<line>public: static void setFileMaxSize(</line>
+							<line>	int aMaxSize</line>
+							<line>);</line>							
+						</unmanaged>	
+						<value>	
+							An integer that represents the maximum size of the file in which the tracing messages will be written.
+						</value>
+					</doc>	
+				</property>
+				<property name="FileName">
+					<doc>
+						<unmanaged>
+							<line>public: static tstring&#38; getFileName( );</line>
+							<line>public: static void setFileName(</line>
+							<line>	tstring&#38; aFileName</line>
+							<line>);</line>
+						</unmanaged>
+						<value>	
+							A string that represents the name of the first file in which the tracing will be made.
+						</value>
+					</doc>
+				</property>
+				<property name="MaximumBackups">
+					<doc>
+						<unmanaged>
+							<line>public: static unsigned long getMaxBackups();</line>
+							<line>public: static void setMaxBackups(</line>
+							<line>	unsigned long maxBackups</line>
+							<line>	);</line>
+						</unmanaged>
+						<value>	
+							The value of the maximuimum files that will be backed-up on application's startup
+						</value>
+					</doc>
+				</property>
+				<method name="WriteLine_1">
+					<doc>
+						<unmanaged>
+							<line>public: static void writeline(</line>
+							<line>	unsigned char aLevel,</line>
+							<line>	unsigned long aMask,</line>
+							<line>	tstring&#38; anObjectID</line>
+							<line>	tstring&#38; aMessage</line>
+							<line>);</line>							
+						</unmanaged>							
+					</doc>	
+				</method>
+				<method name="WriteLine_2">
+					<doc>
+						<unmanaged>
+							<line>Not available!</line>										
+						</unmanaged>							
+					</doc>	
+				</method>		
+		</class>	
+		<class name="UnmanagedDateTime">
+			<doc>
+				<unmanaged>
+					<line>class UnmanagedDateTime</line>					
+				</unmanaged>
+			</doc>
+		</class>
+		<enum name="EnumServerState">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumServerState&#123;</line>
+					<line>&#125;EnumServerState;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+	</namespace>
+</lib>

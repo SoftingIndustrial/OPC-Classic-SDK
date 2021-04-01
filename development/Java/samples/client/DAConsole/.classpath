@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding=".svn/|daConsole/.svn/" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.6.0_16"/>
+	<classpathentry kind="lib" path="D:/OPCToolbox/V4-22-xx/dev/Java/lib/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="D:/OPCToolbox/V4-22-xx/dev/Java/lib/slf4j-simple-1.5.8.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/OPCToolboxJava"/>
+	<classpathentry kind="lib" path="D:/OPCToolbox/V4-22-xx/dev/Java/lib/jna.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

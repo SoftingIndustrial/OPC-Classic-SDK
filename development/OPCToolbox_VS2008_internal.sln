@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OTB_internal", "core\src\OTB\OTB_VS2008_internal.vcproj", "{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TBC_internal", "C++\src\OPCToolboxC++_VS2008_internal.vcproj", "{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OTB_core", "core\src\OTB\OTB_VS2008_core.vcproj", "{C887FB3B-8B2A-48A2-882D-9ABC011A93FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		ABB|Win32 = ABB|Win32
+		Softing_D|Win32 = Softing_D|Win32
+		Softing|Win32 = Softing|Win32
+		SoftingASCII_D|Win32 = SoftingASCII_D|Win32
+		SoftingASCII|Win32 = SoftingASCII|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}.ABB|Win32.ActiveCfg = ABB|Win32
+		{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}.ABB|Win32.Build.0 = ABB|Win32
+		{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}.Softing_D|Win32.ActiveCfg = Softing_D|Win32
+		{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}.Softing_D|Win32.Build.0 = Softing_D|Win32
+		{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}.Softing|Win32.ActiveCfg = Softing|Win32
+		{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}.Softing|Win32.Build.0 = Softing|Win32
+		{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}.SoftingASCII_D|Win32.ActiveCfg = SoftingASCII_D|Win32
+		{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}.SoftingASCII_D|Win32.Build.0 = SoftingASCII_D|Win32
+		{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}.SoftingASCII|Win32.ActiveCfg = SoftingASCII|Win32
+		{9DBAC0E2-FF56-4C4B-A337-07FE1DEBCCF2}.SoftingASCII|Win32.Build.0 = SoftingASCII|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ABB|Win32.ActiveCfg = ABB|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ABB|Win32.Build.0 = ABB|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Softing_D|Win32.ActiveCfg = Softing_D|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Softing_D|Win32.Build.0 = Softing_D|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Softing|Win32.ActiveCfg = Softing|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Softing|Win32.Build.0 = Softing|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.SoftingASCII_D|Win32.ActiveCfg = SoftingASCII_D|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.SoftingASCII_D|Win32.Build.0 = SoftingASCII_D|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.SoftingASCII|Win32.ActiveCfg = SoftingASCII|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.SoftingASCII|Win32.Build.0 = SoftingASCII|Win32
+		{C887FB3B-8B2A-48A2-882D-9ABC011A93FD}.ABB|Win32.ActiveCfg = ABB|Win32
+		{C887FB3B-8B2A-48A2-882D-9ABC011A93FD}.ABB|Win32.Build.0 = ABB|Win32
+		{C887FB3B-8B2A-48A2-882D-9ABC011A93FD}.Softing_D|Win32.ActiveCfg = Softing_D|Win32
+		{C887FB3B-8B2A-48A2-882D-9ABC011A93FD}.Softing_D|Win32.Build.0 = Softing_D|Win32
+		{C887FB3B-8B2A-48A2-882D-9ABC011A93FD}.Softing|Win32.ActiveCfg = Softing|Win32
+		{C887FB3B-8B2A-48A2-882D-9ABC011A93FD}.Softing|Win32.Build.0 = Softing|Win32
+		{C887FB3B-8B2A-48A2-882D-9ABC011A93FD}.SoftingASCII_D|Win32.ActiveCfg = SoftingASCII_D|Win32
+		{C887FB3B-8B2A-48A2-882D-9ABC011A93FD}.SoftingASCII_D|Win32.Build.0 = SoftingASCII_D|Win32
+		{C887FB3B-8B2A-48A2-882D-9ABC011A93FD}.SoftingASCII|Win32.ActiveCfg = SoftingASCII|Win32
+		{C887FB3B-8B2A-48A2-882D-9ABC011A93FD}.SoftingASCII|Win32.Build.0 = SoftingASCII|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

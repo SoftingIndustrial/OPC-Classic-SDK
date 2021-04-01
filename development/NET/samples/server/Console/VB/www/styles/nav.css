@@ -1,0 +1,14 @@
+	a:visited		{color: #000000; text-decoration: none}
+	a:hover 		{color: #222222; text-decoration: underline}
+	a:link			{color: #000000; text-decoration: none}
+	ul 				{list-style-type:square;}
+	.block			{text-align:justify;}
+	.text01			{font-family: verdana,helvetica,arial,sans-serif; font-size: 10px; color: #000000}
+	.tableheader			{font-family: verdana,helvetica,arial,sans-serif; font-size: 10px; color: #DDDDDD; font-weight: bold}
+	.text02 		{font-family: verdana,helvetica,arial,sans-serif; font-size: 12px; color: #000000}
+	.text02b 		{font-family: helvetica,arial,verdana,helvetica,sans-serif; font-size: 12px; color: #000000; font-weight: bold}
+	.text02h 		{font-family: verdana,helvetica,arial,sans-serif; font-size: 12px; color: #000000; line-height: 17px}
+	.headline		{font-family: verdana,helvetica,arial,sans-serif; font-size: 14px; color: #000000; font-weight: bold}
+	.subheadline	{font-family: verdana,helvetica,arial,sans-serif; font-size: 12px; color: #009999; font-weight: bold}
+
+	

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SOServer", "SOServer\SOServer_VS2008.vcproj", "{4470059C-89F3-4F89-BD6C-C55AF86C0215}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SOClient", "SOClient\SOClient_VS2008.vcproj", "{872AF19D-9DC4-4C20-A867-A33C5FD92550}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Softing_D|Win32 = Softing_D|Win32
+		Softing|Win32 = Softing|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4470059C-89F3-4F89-BD6C-C55AF86C0215}.Softing_D|Win32.ActiveCfg = Softing_D|Win32
+		{4470059C-89F3-4F89-BD6C-C55AF86C0215}.Softing_D|Win32.Build.0 = Softing_D|Win32
+		{4470059C-89F3-4F89-BD6C-C55AF86C0215}.Softing|Win32.ActiveCfg = Softing|Win32
+		{4470059C-89F3-4F89-BD6C-C55AF86C0215}.Softing|Win32.Build.0 = Softing|Win32
+		{872AF19D-9DC4-4C20-A867-A33C5FD92550}.Softing_D|Win32.ActiveCfg = Softing_D|Win32
+		{872AF19D-9DC4-4C20-A867-A33C5FD92550}.Softing_D|Win32.Build.0 = Softing_D|Win32
+		{872AF19D-9DC4-4C20-A867-A33C5FD92550}.Softing|Win32.ActiveCfg = Softing|Win32
+		{872AF19D-9DC4-4C20-A867-A33C5FD92550}.Softing|Win32.Build.0 = Softing|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

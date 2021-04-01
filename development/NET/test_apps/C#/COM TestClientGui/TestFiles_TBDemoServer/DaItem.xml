@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<DaSubscriptionCreate>
+		<Session>System.Session</Session>
+		<UpdateRate>1000</UpdateRate>
+		<Property>System.Subscription</Property>
+	</DaSubscriptionCreate>
+	
+	<DaItemsCreate>
+		<Subscription>System.Subscription</Subscription>
+		<ItemIds>
+			<string>IOP.static.I4</string>
+			<string>IOP.static.R8</string>
+			<string>IOP.static.BSTR</string>
+		</ItemIds>
+		<Property>System.StaticItems</Property>
+	</DaItemsCreate>
+	
+	<DaItemWrite>
+		<ItemsProperty>System.StaticItems</ItemsProperty>
+		<Values>
+			<Value>
+				<Data xsi:type="xsd:int">-57271</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:double">5.7271</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:string">Lemonade</Data>
+			</Value>
+		</Values>
+	</DaItemWrite>
+	
+	<DaItemRead>
+		<ItemsProperty>System.StaticItems</ItemsProperty>
+		<ExpectedValues>
+			<Value>
+				<Data xsi:type="xsd:int">-57271</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:double">5.7271</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:string">Lemonade</Data>
+			</Value>
+		</ExpectedValues>
+	</DaItemRead>
+
+</TestList>

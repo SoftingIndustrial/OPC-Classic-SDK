@@ -1,0 +1,3476 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<lib>
+	
+	<namespace name="Softing.OPCToolbox.Server">
+
+		<doc>
+
+			<summary>
+				<para>
+					The <B>Softing.OPCToolbox.Server</B> namespace provides the complete 
+					functionality to develop OPC servers. OPC DA, XML-DA and AE are available.
+				</para>
+			</summary>
+		</doc>
+		<class name="Application">
+			
+			<doc>
+			
+				<unmanaged>
+					<line>class TBC_EXPORT Application;</line>
+				</unmanaged>
+				<remarks>
+				This class is the entry point for the OPC server
+				</remarks>
+			</doc>
+			<method name="Instance">
+				<doc>
+					<unmanaged>
+						<line>TBC_EXPORT SoftingOPCToolboxServer::Application* API_CALL getApp( );</line>
+					</unmanaged>
+					<remarks>
+						<para>If an instance of the <b>Application</b> class already exists then this instance is returned. Otherwise it is created and returned.
+						</para>
+						<para><b>Unmanaged C++</b></para><para>
+						The function <b>getApp()</b> should be used to get the instance of the <b>Application</b> class.
+						After terminating the application the <b>releaseApp()</b> method must be called.
+						</para>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="Release">
+				<doc>
+					<unmanaged>
+						<line>TBC_EXPORT void API_CALL releaseApp();</line>
+					</unmanaged>
+					<remarks>
+					<para><b>Unmanaged C++</b></para><para>
+					The <b>releaseApp()</b> function must be called as the final call of the Toolkit closedown procedure. 
+					No Toolkit objects or functions should be used after this call.
+					</para>
+					</remarks>
+				</doc>
+			</method>
+
+			<event name="ShutdownRequest">
+				<doc>
+					<unmanaged>
+						<line>public: ShutdownRequestHandler ShutdownRequest;</line>
+					</unmanaged>
+					<remarks>
+					Default value for this event is NULL. In this case no action will be triggrted.
+					</remarks>
+				</doc>
+			</event>
+
+			<event name="TraceOutput">
+				<doc>
+					<unmanaged>
+						<line>public: TraceEventHandler TraceCompleted;</line>
+					</unmanaged>
+					<remarks>
+					Default value for this event is NULL. In this case no action will be triggrted.
+					</remarks>
+				</doc>
+			</event>
+
+			<method name="Activate">
+				<doc>
+					<unmanaged>
+					<line>public: long activate(EnumFeature aFeature, tstring aKey);</line>
+					</unmanaged>
+					<remarks>
+						If several Softing OPC features are activated via Binary licenses, the Activate method must be called for each active functionality with the appropriate license key.
+						If one feature gets activated, the the rest of the features will be completely disabled. The Demo version - 90 minutes is also completely disabled for all not licensed
+						features as soon as the first feature gets activated.
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="ForceDemoVersion">
+				<doc>
+					<unmanaged>
+					<line>public: long forceDemoVersion();</line>
+					</unmanaged>
+					<remarks>
+					Forcing demo version is ireversible. All previously avtivated features are discarded and the cannot be reactivated.
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="Initialize">
+				<doc>
+					<unmanaged>
+					<line>public: long initialize(Creator* aCreator);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="Terminate">
+				<doc>
+					<unmanaged>
+					<line>public: long terminate(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="ProcessCommandLine">
+				<doc>
+					<unmanaged>
+					<line>public: long processCommandLine(tstring&amp; aCommandLine);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="Start">
+				<doc>
+					<unmanaged>
+					<line>long start(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="Ready">
+				<doc>
+					<unmanaged>
+					<line>long ready(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="Stop">
+				<doc>
+					<unmanaged>
+					<line>long stop(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>			
+
+			<method name="AddAeCategory">
+				<doc>
+					<unmanaged>
+						<line>public: long addAeCategory(AeCategory* aCategory);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="ChangeCondition">
+				<doc>
+					<unmanaged>
+						<line>public: long changeCondition(AeCondition* aCondition);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="ChangeConditions">
+				<doc>
+					<unmanaged>
+						<line>public: long changeConditions(std::vector&#60;AeCondition*&#62;&amp; aConditionList);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="ReleaseCondition">
+				<doc>
+					<unmanaged>
+						<line>public: void releaseCondition(unsigned long aConditionHandle);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="FireEvents">
+				<doc>
+					<unmanaged>
+						<line>public: long fireEvents(std::vector&#60;AeEvent*&#62;&amp; anEventList);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="Trace">
+				<doc>
+					<unmanaged>
+						<line>public: void trace(</line>
+						<line>	EnumTraceLevel traceLevel,</line>
+						<line>	EnumTraceGroup traceMask,</line>
+						<line>	const TCHAR* objectID,</line>
+						<line>	const TCHAR* message,</line>
+						<line>	...);</line>
+					</unmanaged>
+					<remarks>
+						The <b>objectId</b> and <b>message</b> parameters are strings without a fixed format. Any text can be written there.
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="EnableTracing">
+				<doc>
+					<unmanaged>
+						<line>public: void enableTracing(</line>
+						<line>	EnumTraceGroup errorLevelMask,</line>
+						<line>	EnumTraceGroup warningLevelMask,</line>
+						<line>	EnumTraceGroup infoLevelMask,</line>
+						<line>	EnumTraceGroup debugLevelMask,</line>
+						<line>	tstring fileName,</line>						
+						<line>	unsigned long fileMaxSize,</line>
+						<line>	unsigned long maxBackups </line>
+						<line>);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="AddTpCredentials">
+				<doc>
+					<unmanaged>
+					
+						<line>public: long addTpCredentials(</line>
+						<line>	std::vector&lt;tstring&gt;&amp; users,</line>
+						<line>	std::vector&lt;tstring&gt;&amp; paswords</line>
+						<line>);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>			
+
+			<property name="VersionOtb">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned short getVersionOtb(void);</line>
+						<line>public: void setVersionOtb(unsigned short aValue);</line>
+					</unmanaged>
+					<remarks>
+					Sets the version of the OPC Toolkit internal DLL to be used. The current value is 441.
+					This value is passed to the OPC Toolkit internal dll and validated. If not valid, the 
+					OPC server initialization will fail.
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="AppType">
+				<doc>
+					<unmanaged>
+						<line>public: EnumApplicationType getAppType(void);</line>
+						<line>public: void setAppType(EnumApplicationType aValue);</line>
+					</unmanaged>
+					<remarks>
+					The server instance application type: OutProc Executable or service and inproc library - dll
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="ServiceName">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getServiceName(void);</line>
+						<line>public: void setServiceName(tstring aValue);</line>
+					</unmanaged>
+					The name of NT service. This identifies the service
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="ClsidDa">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getClsidDa(void);</line>
+						<line>public: void setClsidDa(tstring aValue);</line>
+					</unmanaged>
+					<remarks>
+					The DA server component class ID. If the application 
+					does not implement a DA server, an empty string will be set to this property
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="ProgIdDa">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getProgIdDa(void);</line>
+						<line>public: void setProgIdDa(tstring aValue);</line>
+					</unmanaged>
+					<remarks>					
+					The OPC-DA server component Program ID. If the application 
+					does not implement a DA server, an empty string will be set to this property
+					</remarks>
+				</doc>
+			</property>	
+
+			<property name="VerIndProgIdDa">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getVerIndProgIdDa(void);</line>
+						<line>public: void setVerIndProgIdDa(tstring aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="Description">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getDescription(void);</line>
+						<line>public: void setDescription(tstring aValue);</line>
+					</unmanaged>
+					<remarks>
+					Human readable description of the OPC Server application.
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="ClsidAe">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getClsidAe(void);</line>
+						<line>public: void setClsidAe(tstring aValue);</line>
+					</unmanaged>
+					<remarks>
+					The OPC-AE server component class ID. If the application 
+					does not implement an AE server, an empty string will be set to this property
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="ProgIdAe">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getProgIdAe(void);</line>
+						<line>public: void setProgIdAe(tstring aValue);</line>
+					</unmanaged>
+					<remarks>
+					The OPC-AE server component Program ID. If the application 
+					does not implement an AE server, an empty string will be set to this property
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="AeCategoryList">
+				<doc>
+					<unmanaged>
+						<line>public: std::vector&#60;AeCondition*&#62; getAeConditionList(void);</line>
+					</unmanaged>
+				</doc>
+			</property>
+
+			<property name="VerIndProgIdAe">
+
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getVerIndProgIdAe(void);</line>
+						<line>public: void setVerIndProgIdAe(tstring aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			<property name="IpPortHTTP">
+
+				<doc>
+					<unmanaged>
+						<line>public: int getIpPortHTTP(void);</line>
+						<line>public: void setIpPortHTTP(int aValue);</line>
+					</unmanaged>
+					<remarks>
+					<para>
+					This port is used for the HTTP server embedded in the OPC server and for the XML-DA communication if this is enabled
+					</para>
+					<para>
+					E.g.: If we specify UrlDa = "XMLDA" and IpPortHttp=8079, the url will be: http://localhost:8079/XMLDA
+					</para>
+					</remarks>
+				</doc>
+			</property>
+			<property name="UrlDa">
+
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getUrlDa(void);</line>
+						<line>public: void setUrlDa(tstring aValue);</line>
+					</unmanaged>
+					<remarks>
+					The URL extention for the XML-DA connection point.
+					<para>
+					E.g.: If we specify UrlDa = "XMLDA" and IpPortHttp=8079, the url will be: http://localhost:8079/XMLDA
+					</para>
+					</remarks>
+				</doc>
+			</property>
+			<property name="MajorVersion">
+
+				<doc>
+					<unmanaged>
+						<line>public: short getMajorVersion(void);</line>
+						<line>public: void setMajorVersion(short aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			<property name="MinorVersion">
+				<doc>
+					<unmanaged>
+						<line>public: short getMinorVersion(void);</line>
+						<line>public: void setMinorVersion(short aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="PatchVersion">
+				<doc>
+					<unmanaged>
+						<line>public: short getPatchVersion(void);</line>
+						<line>public: void setPatchVersion(short aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="BuildNumber">
+				<doc>
+					<unmanaged>
+						<line>public: short getBuildNumber(void);</line>
+						<line>public: void setBuildNumber(short aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			<property name="VendorInfo">
+
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getVendorInfo(void);</line>
+						<line>public: void setVendorInfo(tstring aValue);</line>
+					</unmanaged>
+					<remarks>
+					This could contain the vendor name.
+					</remarks>
+				</doc>
+			</property>
+			<property name="AeConditionList">
+
+				<doc>
+					<unmanaged>
+						<line>public: std::vector&#60;AeCondition*&#62; getAeConditionList(void);</line>
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="AddressSpaceDelimiter">
+
+				<doc>
+					<unmanaged>
+						<line>public: TCHAR getAddressSpaceDelimiter(void);</line>
+						<line>public: void setAddressSpaceDelimiter(TCHAR aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			<property name="ClientCheckPeriod">
+				<doc>
+					<unmanaged>
+						<line>public: long getClientCheckPeriod(void);</line>
+						<line>public: void setClientCheckPeriod(long aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="PropertyDelimiter">
+				<doc>
+					<unmanaged>
+						<line>public: TCHAR getPropertyDelimiter(void);</line>
+						<line>public: void setPropertyDelimiter(TCHAR aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="StringBasedObjectDataExpiry">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned long getStringBasedObjectDataExpiry();</line>
+						<line>public: void setStringBasedObjectDataExpiry(unsigned long expiryTimeoutMilliseconds);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="MinUpdateRateDa">
+				<doc>
+					<unmanaged>
+						<line>public: long getMinUpdateRateDa(void);</line>
+						<line>public: void setMinUpdateRateDa(long aValue);</line>
+					</unmanaged>
+					<remarks>
+					This is the minimum update rate accepted by the server.
+					No OPC client can setup a session with an updaterate less than this value
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="SupportDisableConditions">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned char getSupportDisableConditions(void); </line>
+						<line>public: void setSupportDisableConditions(unsigned char aValue);</line>
+					</unmanaged>
+					<remarks>
+					
+					</remarks>
+				</doc>
+			</property>
+			
+			<property name="WebRootDirectory">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getWebRootDirectory(void);</line>
+						<line>public: void setWebRootDirectory(tstring aValue)</line>
+					</unmanaged>
+					<remarks>
+					Sets the folder that contains the Web server resource files.
+					<note>
+					The value should contain the path of the web server resource folder relative to the OPC server's executable path.
+					</note>
+					
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="WebRootFile">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getWebRootFile(void); </line>
+						<line>public: void setWebRootFile(tstring aValue);</line>
+					</unmanaged>
+					<remarks>
+					The file name string of the entry for the server's web page. E.g. "index.html"
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="WebAdministratorPassword">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getWebAdministratorPassword(void);</line>
+						<line>public: void setWebAdministratorPassword(tstring aValue);</line>
+					</unmanaged>
+					<remarks>
+					Sets the Web server's "Administrator" user password. Default password is "ad".
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="WebOperatorPassword">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getWebOperatorPassword(void);</line>
+						<line>public: void setWebOperatorPassword(tstring aValue);</line>
+					</unmanaged>
+					<remarks>
+					Sets the Web server's "Operator" user password. Default password is "op".
+					</remarks>
+				</doc>
+			</property>
+
+				<property name="TpPort">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned short getTpPort(void);</line>
+						<line>public: void setTpPort(unsigned short aValue);</line>
+					</unmanaged>
+					<remarks>
+					Default value is 0.
+					</remarks>
+				</doc>
+			</property>
+			
+			<property name="DaAddressSpaceRoot">
+				<doc>
+					<unmanaged>
+						<line>public: DaAddressSpaceRoot* getDaAddressSpaceRoot(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			
+			<property name="AeAddressSpaceRoot">
+				<doc>
+					<unmanaged>
+						<line>public: AeAddressSpaceRoot* getAeAddressSpaceRoot(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="Creator">
+				<doc>
+					<unmanaged>
+						<line>public: Creator* getCreator(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="WebTemplate">
+				<doc>
+					<unmanaged>
+						<line>public: WebTemplate* getWebTemplate(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>	
+
+		</class>		
+
+		<class name="AeAddressSpaceElement">
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT AeAddressSpaceElement : public AddressSpaceElement</line>
+				</unmanaged>
+				<remarks>
+					AeAddressSpaceElement class extends <see cref="AddressSpaceElement"/> class. 
+					The user should never instantiate this class directly, only via the 
+					<see cref="Creator"/> class. 
+					
+					The rule is that the OPCToolbox is responsible both creation and release of
+					<B>AeAddressSpaceElement</B> objects.
+					
+					<note>
+						When the address space element could not be added to the namespace, via
+						<see cref="AddressSpaceElement.AddChild"/> (returns false) the user is responsible 
+					</note>
+				</remarks>
+			</doc>	
+			<ctor name="AeAddressSpaceElement.default">
+				<doc>
+					<unmanaged>
+						<line>AeAddressSpaceElement(void);</line>
+					</unmanaged>
+					<remarks>					
+						The user should never instantiate this class directly, only via the 
+						<see cref="Creator"/> class. 										
+					</remarks>		
+				</doc>			
+			</ctor>
+			<ctor name="AeAddressSpaceElement.all">
+				<doc>
+					<unmanaged>
+						<line>AeAddressSpaceElement(</line>
+						<line>	tstring aName,</line>
+						<line>	unsigned long anUserData,</line>
+						<line>	unsigned long anObjectHandle, </line>
+						<line>	unsigned long aParentHandle);</line>
+					</unmanaged>
+					<remarks>
+						The user should never instantiate this class directly, only via the 
+						<see cref="Creator"/> class. 
+						This constructor is only used for the dinamical Address Space so it 
+						will be called by the <see cref = "Creator"/> when an okc client 
+						adds a new item.
+					</remarks>
+				</doc>
+			</ctor>
+			<method name="AddChild">
+				<doc>
+					<unmanaged>
+						<line>virtual BOOL addChild(AddressSpaceElement* aChild);</line>
+					</unmanaged>
+					<remarks>
+						Fails if the aChild parameter is not an AeAddressSpaceElement.							
+						Fails if the current instance does not allow children. This can be set with 
+						<see cref="AddressSpaceElement.HasChildren"/> property. 
+					</remarks>
+				</doc>
+			</method>
+			<method name="RemoveChild">
+				<doc>
+					<unmanaged>
+						<line>virtual BOOL removeChild(AddressSpaceElement* aChild);</line>
+					</unmanaged>
+					<remarks>														
+						Removes the entire tree branch form the AE address space.							
+						Fails if the aChild parameter is not an AeAddressSpaceElement.							
+					</remarks>
+				</doc>				
+			</method>
+			<method name="GetParent">
+				<doc>
+					<unmanaged>
+						<line>virtual AddressSpaceElement* getParent(void);</line>
+					</unmanaged>
+					<remarks>					
+						Returns a reference to the parent object of the element
+						<para>
+							 for the first node levels, the root element will be returned
+						</para>
+					</remarks>
+				</doc>
+			</method>			
+			<method name="GetChildren">
+				<doc>
+					<unmanaged>
+						<line>virtual std::vector &lt;AddressSpaceElement*&gt; getChildren(void);</line>
+					</unmanaged>
+					<remarks>											
+					<para>
+						 used to retrieve the children list of the element. When no children, 
+						 an empty array list will be returned
+					</para>
+					</remarks>
+				</doc>
+			</method>
+			<method name="QueryConditions">
+				<doc>
+					<unmanaged>
+						<line>virtual long queryConditions(</line>
+						<line>		tstring&amp; aSourcePath, </line>
+						<line>		std::vector&lt;tstring&gt;&amp; aConditionNames);</line>
+					</unmanaged>
+					<remarks>											
+					<para>
+						Must be overriden by the customer
+					</para>
+					</remarks>
+				</doc>
+			</method>
+		</class>
+
+		<class name="AeAddressSpaceRoot">
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT AeAddressSpaceRoot : public AddressSpaceRoot</line>
+				</unmanaged>
+				<remarks>
+					<para>
+					AeAddressSpaceRoot class extends <see cref="AddressSpaceRoot"/> class. 
+					The user should never instantiate this class directly. The Toolkit core 
+					application is responsible to instantiate this class.  					
+					</para>
+					<para>
+					The user may extend this class with custom functionality. In this case 
+					the <see cref="Creator"/> must be overriden and the method <see cref="Creator.CreateAeAddressSpaceRoot()"/> 
+					must be overriden.
+					</para>
+				</remarks>
+			</doc>	
+			<ctor name="AeAddressSpaceRoot.type">
+				<doc>
+					<unmanaged>
+						<line>AeAddressSpaceRoot(EnumAddressSpaceType anAddressSpaceType);</line>
+					</unmanaged>
+					<remarks>					
+						The user should never instantiate this class directly, only via the 
+						<see cref="Creator"/> class. 										
+					</remarks>		
+				</doc>
+			</ctor>
+			<ctor name="AeAddressSpaceRoot.default">
+				<doc>
+					<unmanaged>
+						<line>AeAddressSpaceElement(void);</line>
+					</unmanaged>
+					<remarks>					
+						The user should never instantiate this class directly, only via the 
+						<see cref="Creator"/> class. 										
+					</remarks>		
+				</doc>
+			</ctor>			
+		  	<method name="QueryAddressSpaceElementData">
+				<doc>
+					<unmanaged>
+						<line>virtual long queryAddressSpaceElementData(</line>
+						<line>		tstring&amp; anElementId, </line>
+						<line>		AddressSpaceElement*&amp; anElement);</line>
+					</unmanaged>
+					<remarks>
+					<para>
+						this method must be overriden
+					</para>
+					</remarks>
+				</doc>
+			</method>
+		  	<method name="QueryAddressSpaceElementChildren">
+				<doc>
+					<unmanaged>
+						<line>virtual long queryAddressSpaceElementChildren(</line>
+						<line>		tstring&amp; anElementId, </line>
+						<line>		std::vector&lt;AddressSpaceElement*&gt;&amp; aChildrenList); </line>
+					</unmanaged>
+					<remarks>
+					<para>
+						this method must be overriden
+					</para>
+					</remarks>
+				</doc>
+			</method>
+		  	<method name="QueryConditions">
+				<doc>
+					<unmanaged>
+						<line>virtual long queryConditions(</line>
+						<line>		unsigned long anElementUserData, </line>
+						<line>		tstring&amp; aSourcePath, </line>
+						<line>		std::vector&lt;tstring&gt;&amp; aConditionNames); </line>
+					</unmanaged>
+					<remarks>											
+					<para>
+						finds the AeAddresssSpaceElement from associated to the anElementUserData and retreives
+						it's conditions
+					</para>
+					</remarks>
+				</doc>
+			</method>
+		</class>
+
+		<class name="AeAttribute">
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT AeAttribute</line>
+				</unmanaged>
+				<remarks>
+					<para>
+						Each event category can have a series of attributes describing an event in detail. 
+						These attributes are stored in the <see cref="AeCategory"/> class
+					</para>
+					<para><b>C#</b></para><para>
+						Each attribute can be uniquely identified within its category by means of a <I>uint</I> identifier.
+					</para>
+					<para><b>Unmanaged C++</b></para><para>
+						Each attribute can be uniquely identified within its category by means of a <I>unsigned long</I> identifier.
+					</para>
+				</remarks>
+			</doc>	
+			<ctor name="AeAttribute">
+				<doc>
+					<unmanaged>
+						<line>public: AeAttribute( </line>
+						<line>    unsigned long anId, </line>
+						<line>    tstring&amp; aName, </line>
+						<line>    VARENUM aDataType); </line>
+					</unmanaged>
+					<remarks>
+					there are no default values for the AeAttribute protected attributes
+					</remarks>
+				</doc>
+			</ctor>
+		  	<property name="Id">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned long getId(void);</line>
+						<line>public: void setId(unsigned long aValue);</line>
+					</unmanaged>
+				</doc>
+			</property>
+		  	<property name="Name">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getName(void);</line>
+						<line>public: void setName(tstring&amp; aValue);</line>
+					</unmanaged>
+				</doc>
+			</property>
+		  	<property name="DataType">
+				<doc>
+					<unmanaged>
+						<line>public: VARENUM getDataType(void);</line>
+						<line>public: void setDataType(VARENUM  aValue)</line>
+					</unmanaged>
+				</doc>
+			</property>			
+		</class>
+
+		<class name="AeCategory">
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT AeCategory;</line>
+				</unmanaged>
+				<remarks>
+					<para>
+						Each event category can have a series of attributes <see cref="AeAttribute"/> describing an event in detail.
+					</para>
+					<para>
+						In addition to the attribute list, AeCategory contains a list of the condition classes: <see cref="AeCondition"/>. 
+						With event categories referring to conditions, this list contains the description of these conditions.
+					</para>
+				</remarks>
+			</doc>	
+			<ctor name="AeCategory">
+				<doc>
+					<unmanaged>
+						<line>public: AeCategory(</line>
+						<line>    EnumEventType anEventType, </line>
+						<line>    unsigned long anId, </line>
+						<line>    tstring&amp; aName);</line>
+					</unmanaged>
+					<remarks>
+						the specified ID must be unique for the OPC server
+					</remarks>
+				</doc>
+			</ctor>
+			<property name="EventType">
+				<doc>
+					<unmanaged>
+						<line>public: EnumEventType getEventType(void);</line>
+						<line>public: void getEventType(EnumEventType aValue);</line>
+					</unmanaged>
+					<value>
+						an <see cref="EnumEventType"/> value type
+					</value>
+				</doc>
+			</property>	
+			<property name="Name">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getName(void);</line>
+						<line>public: void setName(tstring&amp; aValue);</line>
+					</unmanaged>
+				</doc>				
+			</property>
+			<property name="Id">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned long getId(void);</line>
+						<line>public: void setId(unsigned long aValue);</line>
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="AeAttributeList">
+				<doc>
+					<unmanaged>
+						<line>public: virtual std::map&lt;unsigned long, AeAttribute*&gt;&amp; getAeAttributeList(void);</line>
+					</unmanaged>
+					<value>
+						<para><b>C#, Visual Basic, C++</b></para><para>
+							Returns the hashtable having as index the attribute ID. 
+						</para>
+						<para><b>Unmanaged C++</b></para><para>
+							returns a reffernece to the internal map containing the attributes having as index the attribute ID.
+						</para>
+					</value>
+				</doc>
+			</property>
+			<method name="AddAttribute.create">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long addAttribute(</line>
+						<line>    unsigned long anId,</line>
+						<line>    tstring&amp; aName,</line>
+						<line>    VARENUM aDataType);</line>
+					</unmanaged>
+					<remarks>
+						the user must assure the unique IDs to the aded attributes. Otherwise the add will fail.
+						<note>
+							the AeAttribute created may be retrieved from the the AeAattributes list, but may not be released
+						</note>
+					</remarks>
+				</doc>
+			</method>			
+			<method name="AddConditionDefinition">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long addConditionDefinition(tstring&amp; aConditionName);</line>						
+					</unmanaged>
+					<remarks>
+						The user must assure the unique condition names. The name acts as a key for the ConditionDefinition internal list.
+						<note>
+							AeConditionDefinition created may be retrieved from the internal list and used accordingly but may not be released.
+						</note>						
+					</remarks>
+				</doc>
+			</method>
+			<method name="GetConditionDefinition">
+				<doc>
+					<unmanaged>
+						<line>public: virtual AeConditionDefinition* getConditionDefinition(tstring&amp; aConditionName);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>			
+			
+			<method name="AddSubConditionDefinition">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long addSubConditionDefinition( </line>
+						<line>    tstring&amp; aConditionName, </line>
+						<line>    tstring&amp; aSubconditionName);</line>
+					</unmanaged>
+					<remarks>
+						The user must assure the unique condition names. The name acts as a key for the ConditionDefinition internal list.
+						<note>
+							AeConditionDefinition created may be retrieved from the internal list and used accordingly but may not be released.
+						</note>
+					</remarks>
+				</doc>
+			</method>
+			<method name="GetSubConditionDefinition">
+				<doc>
+					<unmanaged>
+						<line>public: virtual AeSubConditionDefinition* getSubConditionDefinition(</line>
+						<line>    tstring&amp; aConditionName,</line>
+						<line>    tstring&amp; aSubconditionName);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>			
+			
+			<method name="AddAttribute.existing">
+				<doc>
+					<unmanaged>
+						<line>protected: virtual long addAttribute(AeAttribute* anAttribute);</line>
+					</unmanaged>
+					<remarks>
+						The user must not release the attribute provided as parameter. The destructor of the object will do this.
+					</remarks>
+				</doc>
+			</method>	
+			<attribute name="m_eventType">
+				<doc>
+					<unmanaged>
+						<line>protected: EnumEventType m_eventType;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_name">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_name;</line>
+					</unmanaged>
+				</doc>
+			</attribute>			
+			<attribute name="m_id">
+				<doc>
+					<unmanaged>
+						<line>protected: unsigned long m_id;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_handle">
+				<doc>
+					<unmanaged>
+						<line>protected: unsigned long m_handle;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			
+			<attribute name="m_attributes">
+				<doc>
+					<unmanaged>
+						<line>protected: std::map&lt;unsigned long, AeAttribute*&gt; m_attributes;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_conditions">
+				<doc>
+					<unmanaged>
+						<line>protected: std::map&lt;tstring, AeConditionDefinition*&gt; m_conditions;</line>
+					</unmanaged>
+				</doc>
+			</attribute>				
+		</class>
+
+		<class name="AeCondition">
+
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT AeCondition;</line>
+				</unmanaged>
+				<remarks>				
+				</remarks>
+			</doc>	
+			<ctor name="AeCondition">
+				<doc>
+					<unmanaged>
+						<line>public: AeCondition(); </line>
+					</unmanaged>
+					<remarks>
+						The attributes of the instance will have the default values. 
+						The user must set the appropriate values using the available properties.
+					</remarks>					
+				</doc>
+			</ctor>
+			<dtor name="AeCondition">
+				<doc>
+					<unmanaged>
+						<line>public: virtual ~AeCondition(); </line>
+					</unmanaged>
+					<remarks>
+						The attributes of the instance will have the default values. 
+						The destructor will not 
+					</remarks>					
+				</doc>				
+			</dtor>
+			<property name="StateChange">
+				<doc>
+					<unmanaged>
+						<line>public: EnumConditionState getStateChange(void);</line>
+						<line>public: void setStateChange(EnumConditionState aValue);</line>						
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="ChangeMask">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned short getChangeMask(void);</line>
+						<line>public: void setChangeMask(unsigned short aValue);</line>
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="Category">
+				<doc>
+					<unmanaged>
+						<line>public: AeCategory* getCategory(void);</line>
+						<line>public: void setCategory(AeCategory* aValue);</line>
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="Severity">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned long getSeverity(void);</line>
+						<line>public: void setSeverity(unsigned long aValue);</line>
+					</unmanaged>
+				</doc>
+			</property>			
+			<property name="SourcePath">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getSourcePath(void);</line>
+						<line>public: void setSourcePath(tstring&amp; aValue);</line>						
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="Message">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getMessage(void);</line>
+						<line>public: void setMessage(tstring&amp; aValue);</line>						
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="OccurenceTime">
+				<doc>
+					<unmanaged>
+						<line>public: DateTime getOccurenceTime(void);</line>
+						<line>public: void setOccurenceTime(DateTime aValue);</line>
+					</unmanaged>
+				</doc>
+			</property>			
+			<property name="Name">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getName(void);</line>
+						<line>public: void setName(tstring&amp; aValue);</line>
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="ActiveSubConditionName">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getActiveSubConditionName(void);</line>
+						<line>public: void setActiveSubConditionName(tstring&amp; aValue);</line>						
+					</unmanaged>
+				</doc>
+			</property>			
+			<property name="Quality">
+				<doc>
+					<unmanaged>
+						<line>public: EnumQuality getQuality(void);</line>
+						<line>public: void setQuality(EnumQuality aValue);</line>
+					</unmanaged>
+				</doc>
+			</property>			
+			<property name="AckRequired">
+				<doc>
+					<unmanaged>
+						<line>public: BOOL getAckRequired(void);</line>
+						<line>public: void setAckRequired(BOOL aValue);</line>						
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="AckId">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getAckId(void);</line>
+						<line>public: void setAckId(tstring&amp; aValue);</line>						
+					</unmanaged>
+				</doc>
+			</property>			
+			<property name="AckComment">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getAckComment(void);</line>
+						<line>public: void setAckComment(tstring&amp; aValue);</line>						
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="AckTime">
+				<doc>
+					<unmanaged>
+						<line>public: DateTime getAckTime(void);</line>
+						<line>public: void setAckTime(DateTime aValue);</line>
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="EventAttributes">
+				<doc>
+					<unmanaged>
+						<line>public: std::vector&lt;Variant&gt;&amp; getEventAttributes(void);</line>
+						<line>public: void setEventAttributes(std::vector&lt;Variant&gt;&amp; aValue);</line>						
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="UserData">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned long getUserData(void);</line>
+						<line>public: void setUserData(unsigned long aValue);</line>						
+					</unmanaged>
+				</doc>
+			</property>			
+			<property name="Handle">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned long getHandle(void);</line>
+						<line>public: void setHandle(unsigned long aValue);</line>
+					</unmanaged>
+				</doc>
+			</property>
+			<property name="Definition">
+				<doc>
+					<unmanaged>
+						<line>AeConditionDefinition* getDefinition(void);</line>
+						<line>void setDefinition(AeConditionDefinition* aValue);</line>
+					</unmanaged>
+					<remarks>
+						<para><b>Unmanaged C++</b></para><para>
+							The user must create and destroy the value of this property
+						</para>
+					</remarks>
+				</doc>
+			</property>
+			<method name="Activate">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long activate(</line>
+						<line>    tstring&amp; aMessage,</line>
+						<line>    unsigned long aSeverity,</line>
+						<line>    tstring&amp; aSubConditionName,</line>
+						<line>    BOOL anAckRequired,</line>
+						<line>    DateTime anOccuranceTime);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			<method name="Deactivate">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long deactivate(</line>
+						<line>    tstring&amp; aMessage,</line>
+						<line>    unsigned long aSeverity,</line>
+						<line>    BOOL anAckRequired,</line>
+						<line>    DateTime anOccuranceTime);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			<method name="Acknowledge">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long acknowledge(</line>
+						<line>    tstring&amp; anAckId, </line>
+						<line>    tstring&amp; anAckComment,</line>
+						<line>    DateTime anAckTime);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			<method name="Change">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long change();</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			<method name="SetEUInfoAnalog">
+				<doc>
+					<unmanaged>
+						<line>public: long SetEUInfoAnalog(</line>
+						<line>    double lowEULimit, </line>
+						<line>    double highEULimit);</line>
+					</unmanaged>
+					<remarks>
+					
+					</remarks>
+				</doc>
+			</method>
+			<method name="SetEUInfoEnumerated">
+				<doc>
+					<unmanaged>
+						<line>public: long SetEUInfoEnumerated(</line>
+						<line>    std::vector&lt;tstring&gt; enumeratedValues);</line>
+					</unmanaged>
+					<remarks>
+					
+					</remarks>
+				</doc>
+			</method>
+			<method name="Enable">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long enable(tstring&amp; anAddressSpaceElementPath);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			<method name="Disable">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long disable(tstring&amp; anAddressSpaceElementPath);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			<attribute name="m_stateChange">
+				<doc>
+					<unmanaged>
+						<line>protected: EnumConditionState m_stateChange;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_changeMask">
+				<doc>
+					<unmanaged>
+						<line>protected: unsigned short m_changeMask;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_eventCategory">
+				<doc>
+					<unmanaged>
+						<line>protected: AeCategory* m_eventCategory;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_severity">
+				<doc>
+					<unmanaged>
+						<line>protected: unsigned long m_severity;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_sourcePath">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_sourcePath;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_message">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_message;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_occurenceTime">
+				<doc>
+					<unmanaged>
+						<line>protected: DateTime m_occurenceTime;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_name">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_name;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_activeSubConditionName">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_activeSubConditionName;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_quality">
+				<doc>
+					<unmanaged>
+						<line>protected: EnumQuality m_quality;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_ackRequired">
+				<doc>
+					<unmanaged>
+						<line>protected: BOOL m_ackRequired;</line>
+					</unmanaged>
+				</doc>
+			</attribute>			
+			<attribute name="m_ackId">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_ackId;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_ackComment">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_ackComment;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_ackTime">
+				<doc>
+					<unmanaged>
+						<line>protected: DateTime m_ackTime;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_eventAttributes">
+				<doc>
+					<unmanaged>
+						<line>protected: std::vector&lt;Variant&gt; m_eventAttributes;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_userData">
+				<doc>
+					<unmanaged>
+						<line>protected: unsigned long m_userData;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_definition">
+				<doc>
+					<unmanaged>
+						<line>protected: AeConditionDefinition* m_definition;</line>
+					</unmanaged>
+				</doc>
+			</attribute>			
+		</class>
+
+		<class name="AeConditionDefinition">
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT AeConditionDefinition</line>
+				</unmanaged>
+			</doc>
+			<ctor name="AeConditionDefinition">
+				<doc>
+					<unmanaged>
+						<line>public: AeConditionDefinition(tstring&amp; aDefinition);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+			<dtor name="AeConditionDefinition">
+				<doc>
+					<unmanaged>
+						<line>public: virtual ~AeConditionDefinition();</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</dtor>
+			<property name="Definition">
+				<doc>
+					<unmanaged>
+						<line>public: const tstring&amp; getDefinition(void);</line>
+					</unmanaged>
+					<remarks>
+						Unique identifier of the condition.
+					</remarks>
+				</doc>
+			</property>
+			<property name="SubConditions">
+				<doc>
+					<unmanaged>
+						<line>public: std::map&lt;tstring, AeSubConditionDefinition*&gt;>&amp; getSubConditions(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			<method name="AddSubConditonData_full">
+				<doc>
+					<unmanaged>
+						<line>public: long addSubConditonData(</line>
+						<line>	tstring&amp; aDefinition,</line>
+						<line>	tstring&amp; aDescription,</line>
+						<line>	unsigned long aSeverity);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			<method name="AddSubConditonData_def">
+				<doc>
+					<unmanaged>
+						<line>public: long addSubConditonData(tstring&amp; aDefinition);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			<method name="GetSubConditionDefinition">
+				<doc>
+					<unmanaged>
+						<line>public: AeSubConditionDefinition* getSubConditionDefinition(tstring&amp; aDefinition);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			<attribute name="m_definition">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_definition;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</attribute>
+			<attribute name="m_subconditions">
+				<doc>
+					<unmanaged>
+						<line>std::map&lt;tstring, AeSubConditionDefinition*&gt; m_subconditions;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</attribute>
+		</class>
+
+		<class name="AeSubConditionDefinition">
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT AeSubConditionDefinition</line>
+				</unmanaged>
+			</doc>
+			<ctor name="AeSubConditionDefinition_def">
+				<doc>
+					<unmanaged>
+						<line>public: AeSubConditionDefinition(tstring&amp; aDefinition);</line>
+					</unmanaged>
+					<remarks>
+						<note>
+						if this constructor is used, the description and severity should be added later on using the properties 
+						</note>
+					</remarks>
+				</doc>
+			</ctor>
+			<ctor name="AeSubConditionDefinition_all">
+				<doc>
+					<unmanaged>
+						<line>public: AeSubConditionDefinition( </line>
+						<line>   tstring&amp; aDefinition, </line>
+						<line>   tstring&amp; aDescription, </line>
+						<line>   unsigned long aSeverity);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+			<dtor name="AeSubConditionDefinition">
+				<doc>
+					<unmanaged>
+						<line>public: virtual ~AeSubConditionDefinition();</line>
+					</unmanaged>
+					<remarks>
+						resets the attributes to default (empty) values 
+					</remarks>					
+				</doc>
+			</dtor>
+			<property name="Definition">
+				<doc>
+					<unmanaged>
+						<line>public: const tstring&amp; getDefinition(void);</line>
+					</unmanaged>
+					<remarks>
+						Unique identifier of the subconditions in an <see cref="AeConditionDefinition"/>
+					</remarks>
+				</doc>
+			</property>
+			<property name="Description">
+				<doc>
+					<unmanaged>
+						<line>public: const tstring&amp; getDescription(void); </line>
+						<line>public: void setDescription(tstring&amp; aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>			
+			<property name="Severity">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned long getSeverity(void);</line>
+						<line>public: void setSeverity(unsigned long aValue);</line>
+					</unmanaged>
+					<remarks>
+						The default value of severity is 0
+					</remarks>
+				</doc>
+			</property>
+			<attribute name="m_definition">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_definition;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</attribute>
+			<attribute name="m_description">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_description;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</attribute>
+			<attribute name="m_severity">
+				<doc>
+					<unmanaged>
+						<line>protected: unsigned long m_severity;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</attribute>
+		</class>
+
+		<class name="AeEvent">
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT AeEvent</line>
+				</unmanaged>
+				<remarks>
+				<para>
+				An event object is created by the server application if simple or tracking-related 
+				events occur. Condition-related events are created by the toolkit if the state of
+				a condition <see cref="AeCondition"/> changes. 
+				</para>
+				<para>
+				For transmission to the OPC Clients, the created event objects are fired by the Application core class.
+				</para>
+				</remarks>
+			</doc>
+			<ctor name="AeEvent">
+				<doc>
+					<unmanaged>
+						<line>public: AeEvent(</line>
+						<line>   EnumEventType anEventType, </line>
+						<line>   tstring&amp; aSource, </line>
+						<line>   unsigned long aCategoryId </line>
+						<line>   );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+			<dtor name="AeEvent">
+				<doc>
+					<unmanaged>
+						<line>public: virtual ~AeEvent();</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</dtor>
+			<property name="Type">
+				<doc>
+					<unmanaged>
+						<line>public: EnumEventType getType(void);</line>
+						<line>public: void setType(EnumEventType aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>			
+			<property name="Source">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getSource(void);</line>
+						<line>public: void setSource(tstring&amp; aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+			<property name="CategoryId">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned long getCategoryId(void);</line>
+						<line>public: void setCategoryId(unsigned long aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+			<property name="Severity">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned long getSeverity(void);</line>
+						<line>public: void setSeverity(unsigned long aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+			<property name="ActorId">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getActorId(void);</line>
+						<line>public: void setActorId(tstring&amp; aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+			<property name="Message">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getMessage(void);</line>
+						<line>public: void setMessage(tstring&amp; aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>			
+			<property name="AttributeValueList">
+				<doc>
+					<unmanaged>
+						<line>public: const std::vector&lt;Variant&gt;&amp; getAttributeValueList(void);</line>
+						<line>public: void setAttributeValueList(std::vector&lt;Variant&gt;&amp; aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+			<property name="OccurenceTime">
+				<doc>
+					<unmanaged>
+						<line>public: const DateTime&amp; getOccurenceTime(void);</line>
+						<line>public: void setOccurenceTime(DateTime&amp; aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			<method name="Fire">
+				<doc>
+					<unmanaged>
+						<line>long fire(void);</line>
+					</unmanaged>
+					<remarks>
+					Triggers the event send to the OPC client.
+					</remarks>
+				</doc>
+			</method>
+			<attribute name="m_type">
+				<doc>
+					<unmanaged>
+						<line>protected: EnumEventType m_type;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_source">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_source;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_occurenceTime">
+				<doc>
+					<unmanaged>
+						<line>protected: DateTime m_occurenceTime;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_categoryId">
+				<doc>
+					<unmanaged>
+						<line>protected: unsigned long m_categoryId;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_severity">
+				<doc>
+					<unmanaged>
+						<line>protected: unsigned long m_severity;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_actorId">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_actorId;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_message">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_message;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+			<attribute name="m_attributeValueList">
+				<doc>
+					<unmanaged>
+						<line>protected: std::vector&lt;Variant&gt; m_attributeValueList;</line>
+					</unmanaged>
+				</doc>
+			</attribute>
+		</class>
+
+		<class name="IAddressSpaceElement">
+		
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT IAddressSpaceElement;</line>
+				</unmanaged>
+				<remarks>
+				</remarks>
+			</doc>
+			
+			<method name="AddChild">
+				<doc>
+					<unmanaged>
+						<line>public: virtual BOOL addChild(AddressSpaceElement* aChild) = 0;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			
+		  	<method name="RemoveChild">
+				<doc>
+					<unmanaged>
+						<line>public: virtual BOOL removeChild(AddressSpaceElement* aChild) = 0;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			
+		  	<method name="GetChildren">
+				<doc>
+					<unmanaged>
+						<line>public: virtual std::vector&lt;AddressSpaceElement*&gt; getChildren(void) = 0;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			
+		  	<method name="GetParent">
+				<doc>
+					<unmanaged>
+						<line>public: virtual AddressSpaceElement* getParent(void) = 0;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>			
+		</class>		
+
+		<class name="AddressSpaceElement">
+		
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT AddressSpaceElement : public IAddressSpaceElement;</line>
+				</unmanaged>
+				<remarks>
+				</remarks>
+			</doc>
+			
+			<ctor name="AddressSpaceElement.all">
+				<doc>
+					<unmanaged>						
+						<line>protected: AddressSpaceElement(</line>
+						<line>   tstring&amp; aName, </line>
+						<line>   unsigned long anUserData, </line>
+						<line>   unsigned long anObjectHandle, </line>
+						<line>   unsigned long aParentHandle</line>
+						<line>   );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+			<ctor name="AddressSpaceElement.def">
+				<doc>
+					<unmanaged>
+						<line>protected: AddressSpaceElement();</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>			
+			<dtor name="AddressSpaceElement">
+				<doc>
+					<unmanaged>
+						<line>public: virtual ~AddressSpaceElement();</line>
+					</unmanaged>
+					<remarks>						
+					</remarks>					
+				</doc>
+			</dtor>
+
+		  	<property name="Name">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getName(void);</line>
+						<line>public: void setName(tstring&amp; aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>			
+
+		  	<property name="HasChildren">
+				<doc>
+					<unmanaged>
+						<line>public: BOOL getHasChildren(void);</line>
+						<line>public: void setHasChildren(BOOL aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+			
+		  	<property name="IsBrowsable">
+				<doc>
+					<unmanaged>
+						<line>public: BOOL getIsBrowsable(void);</line>
+						<line>public: void setIsBrowsable(BOOL aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+			
+		  	<property name="UserData">
+				<doc>
+					<unmanaged>
+						<line>public: virtual unsigned long getUserData(void);</line>
+						<line>public: virtual void setUserData(unsigned long aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>						
+
+			<method name="AddChild">
+				<doc>
+					<unmanaged>
+						<line>public: virtual BOOL addChild(AddressSpaceElement* aChild);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>			
+
+		  	<method name="RemoveChild">
+				<doc>
+					<unmanaged>
+						<line>public: virtual BOOL removeChild(AddressSpaceElement* aChild);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>
+			
+		  	<method name="GetChildren">
+				<doc>
+					<unmanaged>
+						<line>public: virtual std::vector&lt;AddressSpaceElement*&gt; getChildren(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			
+		  	<method name="GetParent">
+				<doc>
+					<unmanaged>
+						<line>public: virtual AddressSpaceElement* getParent(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+		</class>		
+
+		<class name="AddressSpaceRoot">
+		
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT AddressSpaceRoot : public IAddressSpaceElement</line>
+				</unmanaged>
+				<remarks>
+				</remarks>
+			</doc>
+			
+			<ctor name="AddressSpaceRoot.default">
+				<doc>
+					<unmanaged>
+						<line>protected: AddressSpaceRoot(AddressSpaceElement* aRoot);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+			
+			<ctor name="AddressSpaceRoot.typed">
+				<doc>
+					<unmanaged>
+						<line>protected: AddressSpaceRoot(</line>
+						<line>EnumAddressSpaceType anAddressSpaceType,</line>
+						<line>AddressSpaceElement* aRoot</line>
+						<line>);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+			
+		  	<method name="AddChild">
+				<doc>
+					<unmanaged>
+						<line>public: virtual BOOL addChild(AddressSpaceElement* aChild);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+		  	
+			<method name="RemoveChild">
+				<doc>
+					<unmanaged>						
+						<line>public: virtual BOOL removeChild(AddressSpaceElement* aChild);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>
+			
+			<method name="GetChildren">
+				<doc>
+					<unmanaged>
+						<line>public: virtual std::vector &lt;AddressSpaceElement*&gt; getChildren(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			
+			<method name="GetParent">			
+				<doc>
+					<unmanaged>						
+						<line>public: virtual AddressSpaceElement* getParent();</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>			
+			
+			<method name="QueryAddressSpaceElementData">
+				<doc>
+					<unmanaged>						
+						<line>public: virtual long queryAddressSpaceElementData(</line>
+						<line>    tstring&amp; anElementId, </line>
+						<line>    AddressSpaceElement*&amp; anElement</line>
+						<line>    ) = 0;</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="QueryAddressSpaceElementChildren">
+				<doc>
+					<unmanaged>						
+						<line>public: virtual long queryAddressSpaceElementChildren( </line>
+						<line>    tstring&amp; anElementId, </line>
+						<line>    std::vector&lt;AddressSpaceElement*&gt;&amp; aChildrenList </line>
+						<line>    ) = 0;</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>
+			
+			<attribute name="m_namespaceType">
+				<doc>
+					<unmanaged>
+						<line>protected: EnumAddressSpaceType m_namespaceType;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</attribute>
+			<attribute name="m_elements">
+				<doc>
+					<unmanaged>
+						<line>protected: std::map&lt;unsigned long, AddressSpaceElement*&gt; m_elements;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</attribute>
+			<attribute name="m_root">
+				<doc>
+					<unmanaged>
+						<line>protected: AddressSpaceElement* m_root;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</attribute>			
+			
+		</class>
+
+		<class name="Creator">
+		
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT Creator;</line>
+				</unmanaged>
+				<remarks>
+				</remarks>
+			</doc>
+			
+		  	<method name="CreateDaAddressSpaceRoot">
+				<doc>
+					<unmanaged>
+						<line>public: virtual DaAddressSpaceRoot* createDaAddressSpaceRoot(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			
+		  	<method name="CreateAeAddressSpaceRoot">
+				<doc>
+					<unmanaged>
+						<line>public: virtual AeAddressSpaceRoot* createAeAddressSpaceRoot(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			<method name="CreateDaAddressSpaceElement">
+				<doc>
+					<unmanaged>
+						<line>public: virtual DaAddressSpaceElement* createDaAddressSpaceElement(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			
+		  	<method name="CreateAeAddressSpaceElement">
+				<doc>
+					<unmanaged>
+						<line>public: virtual AeAddressSpaceElement* createAeAddressSpaceElement(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+		  	<method name="CreateInternalDaAddressSpaceElement">
+				<doc>
+					<unmanaged>
+						<line>public: virtual DaAddressSpaceElement* createInternalDaAddressSpaceElement(</line>
+						<line>    tstring&amp; anItemId,</line>
+						<line>    tstring&amp; aName,</line>
+						<line>    unsigned long anUserData,</line>
+						<line>    unsigned long anObjectHandle,</line>
+						<line>    unsigned long aParentHandle</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>					
+					<para>
+					This method should be overloaded in order to allow creation of custom address space elements from within the toolkit.
+					</para>
+					<para>
+					The user should never call this method. Actually the parameters of the method are Toolkit internal values that the user may not access.
+					With the string based namespace, this method is used to allow creation of dynamical address space.
+					</para>
+					</remarks>
+				</doc>
+			</method>
+		  	<method name="CreateInternalAeAddressSpaceElement">
+				<doc>
+					<unmanaged>
+						<line>public: virtual AeAddressSpaceElement* createInternalAeAddressSpaceElement(</line>
+						<line>    tstring&amp; aName,</line>
+						<line>    unsigned long anUserData,</line>
+						<line>    unsigned long anObjectHandle,</line>
+						<line>    unsigned long aParentHandle</line>
+						<line>);</line>
+					</unmanaged>
+					<remarks>
+					<para>
+					This method should be overloaded in order to allow creation of custom address space elements from within the toolkit.
+					</para>
+					<para>
+					The user should never call this method. Actually the parameters of the method are Toolkit internal values that the user may not access.
+					With the string based namespace, this method is used to allow creation of dynamical address space.
+					</para>					
+					</remarks>
+				</doc>
+			</method>
+		  	<method name="CreateRequest">
+				<doc>
+					<unmanaged>
+						<line>public: virtual DaRequest* createRequest(</line>
+						<line>    EnumTransactionType aTransactionType,</line>
+						<line>    unsigned long aSessionHandle,</line>
+						<line>    DaAddressSpaceElement* anElement,</line>
+						<line>    int aPropertyId,</line>
+						<line>    unsigned long aRequestHandle</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+			
+		  	<method name="CreateTransaction">
+				<doc>
+					<unmanaged>
+						<line>public: virtual DaTransaction* createTransaction(</line>
+						<line>    EnumTransactionType aTransactionType,</line>
+						<line>    std::vector&lt;DaRequest*&gt;&amp; aRequestList,</line>
+						<line>    unsigned long aSessionKey</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+		  	<method name="CreateSession">
+				<doc>
+					<unmanaged>
+						<line>public: virtual DaSession* createSession(</line>
+						<line>    EnumSessionType aType,</line>
+						<line>    unsigned long aHandle);</line>
+					</unmanaged>
+					<remarks>
+					NOTE: please be note thet the session can be also an AE Session. The name was not changed due to backwords compatibility issues
+					</remarks>
+				</doc>
+			</method>
+		  	<method name="CreateWebTemplate">
+				<doc>
+					<unmanaged>
+						<line>public: virtual WebTemplate* createWebTemplate(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+		</class>
+
+		<enum name="EnumAddressSpaceType">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumAddressSpaceType{</line>
+					<line>    EnumAddressSpaceType_OBJECT_BASED = 0x01,</line>
+					<line>    EnumAddressSpaceType_STRING_BASED = 0x02,</line>
+					<line>    EnumAddressSpaceType_OBJECT_STRING_BASED = 0x03</line>
+					<line>} EnumAddressSpaceType;</line>
+				</unmanaged>	
+			</doc>
+		</enum>
+
+		<enum name="EnumApplicationType">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumApplicationType{</line>
+					<line>    EnumApplicationType_EXECUTABLE	= 0x01,</line>
+					<line>    EnumApplicationType_LIBRARY		= 0x00</line>
+					<line> } EnumApplicationType;</line>
+				</unmanaged>
+			</doc>
+		</enum>
+
+		<enum name="EnumIoMode">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumIoMode{</line>
+					<line>    EnumIoMode_NONE          = 0x00,</line>
+					<line>    EnumIoMode_POLL          = 0x01,</line>
+					<line>    EnumIoMode_REPORT        = 0x02,</line>
+					<line>    EnumIoMode_POLL_OWNCACHE = 0x11</line>
+					<line>}	EnumIoMode;</line>
+				</unmanaged>
+			</doc>
+		</enum>
+
+		<enum name="EnumTransactionType">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumTransactionType{</line>
+					<line>    EnumTransactionType_READ  = 0x01,</line>
+					<line>    EnumTransactionType_WRITE = 0x02</line>
+					<line>}	EnumTransactionType;</line>
+				</unmanaged>
+			</doc>
+		</enum>
+
+		<enum name="EnumRequestState">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumRequestState{</line>
+					<line>    EnumRequestState_CREATED    = 0x01,</line>
+					<line>    EnumRequestState_PENDING    = 0x03,</line>	
+					<line>    EnumRequestState_INPROGRESS = 0x04,</line>	
+					<line>    EnumRequestState_COMPLETED  = 0x05</line>
+					<line>} EnumRequestState;</line>
+				</unmanaged>
+			</doc>
+		</enum>
+
+		<enum name="EnumSessionType">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumSessionType{</line>
+					<line>    EnumSessionType_DA = 0x01,</line>
+					<line>    EnumSessionType_XMLDA = 0x06,</line>
+					<line>    EnumSessionType_AE = 0x08</line>
+					<line>}	EnumSessionType;</line>
+				</unmanaged>
+			</doc>
+		</enum>
+
+		<enum name="EnumSessionState">
+			<doc>
+				<unmanaged>
+					<line>typedef enum tagEnumSessionState{</line>
+					<line>    EnumSessionState_CREATE  =  0,</line>
+					<line>    EnumSessionState_LOGON   =  1,</line>
+					<line>    EnumSessionState_LOGOFF  =  2,</line>
+					<line>    EnumSessionState_MOFIFY  =  3,</line>
+					<line>    EnumSessionState_DESTROY = -1</line>
+					<line>    }	EnumSessionState;</line>
+				</unmanaged>
+			</doc>
+		</enum>		
+
+		<class name="WebTemplate">
+		
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT WebTemplate;</line>
+				</unmanaged>
+				<remarks>
+				</remarks>
+			</doc>
+			
+			<ctor name="WebTemplate">
+				<doc>
+					<unmanaged>						
+						<line>public: WebTemplate();</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+			
+			<method name="HandleWebTemplate">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long handleWebTemplate(</line>
+						<line>    TCHAR* aTemplateName,</line>
+						<line>    unsigned long aNumArgs,</line>
+						<line>    TCHAR* *anArgs,</line>
+						<line>    tstring&amp; aResult</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</method>			
+		</class>		
+
+		<class name="DaAddressSpaceElement">
+
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT DaAddressSpaceElement : public AddressSpaceElement</line>
+				</unmanaged>
+				<remarks>				
+				</remarks>
+			</doc>
+
+			<ctor name="DaAddressSpaceElement.default">
+				<doc>
+					<unmanaged>
+						<line>protected: DaAddressSpaceElement();</line>
+					</unmanaged>
+					<remarks>
+						<para>
+						The default constructor creates an unitinialized instance of DaAddressSpaceElement. 
+						The user must initialize all propertuiies and then add it to the address space as a child to a 
+						specified DaAddressSpaceElement.
+						</para>
+						<para>
+						<line>The default values are:</line>
+						<line>ItemId = string.Empty</line>
+						<line>AccessRights = EnumAccessRights.READABLE</line>
+						<line>IoMode = EnumIoMode.NONE</line>
+						<line>Datatype = null</line>
+						<line>Active = false</line>
+						<line>UpdateRate = -1</line>
+						</para>												
+						<note>
+						The direct usage of this constructor is not recommended. 
+						It is preferred that all the address space elements should be build by the <see cref="Creator"/>.
+						For customized elements derived from DaAddressSpaceElement the user should define custom create methods within the Creator class.						
+						</note>
+						<note>
+						The user should only release a DaAddressSpaceElement instance if it was <b>not</b> successfully 
+						added to the address space. As soon as the element is part of the address space, the Toolkit is responsible for the 
+						release of the elements.
+						</note>
+					</remarks>
+				</doc>
+			</ctor>
+
+			<ctor name="DaAddressSpaceElement.internal">
+				<doc>
+					<unmanaged>
+						<line>protected: DaAddressSpaceElement(</line>
+						<line>    tstring anItemId,</line>
+						<line>    tstring aName,</line>
+						<line>    unsigned long anUserData,</line>
+						<line>    unsigned long anObjectHandle,</line>
+						<line>    unsigned long aParentHandle</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					This is the base constructor for custom string based address space elements.
+					</remarks>
+				</doc>
+			</ctor>			
+
+			<method name="AddChild">
+				<doc>
+					<unmanaged>
+						<line>public: virtual BOOL addChild(AddressSpaceElement* aChild);</line>
+					</unmanaged>
+					<remarks>					
+					overrides the <see cref="AddressSpaceElement.AddChild"/>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="RemoveChild">
+				<doc>
+					<unmanaged>
+						<line>public: virtual BOOL removeChild(AddressSpaceElement* aChild);</line>
+					</unmanaged>
+					<remarks>
+					overrides the <see cref="AddressSpaceElement.RemoveChild"/>
+					</remarks>
+				</doc>
+			</method>			
+
+			<method name="GetCacheValue">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long getCacheValue(ValueQT&amp; aCacheValue);</line>
+					</unmanaged>
+					<remarks>										
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="QueryCacheValue">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long queryCacheValue(</line>
+						<line>DaSession* aSession,</line>
+						<line>ValueQT&amp; aCacheValue</line>
+						<line>);</line>
+					</unmanaged>
+					<remarks>
+						<para>
+						This method should serve as interface for complex customized cache value queries. The default implementation disregards the session parameter provided and just returns the cache value.
+						</para>
+						<para>
+						For a demo usecase see the Server\Session sample.
+						</para>
+					</remarks>
+				</doc>
+			</method>			
+
+			<method name="QueryProperties">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long queryProperties(std::vector&lt;DaProperty*&gt;&amp; aPropertyList);</line>
+					</unmanaged>
+					<remarks>
+						<para>
+						no default implementation
+						</para>
+						<para>
+						when overriden, the user must take care of allocation and release of the <see cref="DaProperty"/> 
+						elements added to the <b>aPropertyList</b> parameter.
+						</para>
+					</remarks>
+				</doc>
+			</method>			
+
+			<method name="ValueChanged">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long valueChanged(ValueQT&amp; aNewValue);</line>
+					</unmanaged>
+					<remarks>
+						<para>
+						Does the value QT cache refresh.
+						</para>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="GetParent">
+				<doc>
+					<unmanaged>
+						<line>public: virtual AddressSpaceElement* getParent(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="GetChildren">
+				<doc>
+					<unmanaged>
+						<line>public: virtual std::vector&lt;AddressSpaceElement*&gt; getChildren(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="Change">
+				<doc>
+					<unmanaged>
+						<line>public: virtual void change(</line>
+						<line>    BOOL isActive, </line>
+						<line>    int anUpdateRate </line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					this method should be overriden and used as an event in the user application
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="SetEUInfoAnalog">
+				<doc>
+					<unmanaged>
+						<line>public: long setEUInfoAnalog(</line>
+						<line>    double lowEULimit,</line>
+						<line>    double highEULimit</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="SetEUInfoEnumerated">
+				<doc>
+					<unmanaged>
+						<line>public: long setEUInfoEnumerated(</line>
+						<line>    std::vector&lt;tstring&gt; enumeratedValues</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<property name="AccessRights">
+				<doc>
+					<unmanaged>
+						<line>public: EnumAccessRights getAccessRights(void);</line>
+						<line>public: void setAccessRights(EnumAccessRights aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="IoMode">
+				<doc>
+					<unmanaged>
+						<line>public: EnumIoMode getIoMode(void);</line>
+						<line>public: void setIoMode(EnumIoMode aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="Datatype">
+				<doc>
+					<unmanaged>
+						<line>public: VARENUM getDatatype(void);</line>
+						<line>public: void setDatatype(VARENUM aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="UpdateRate">
+				<doc>
+					<unmanaged>
+						<line>public: int getUpdateRate(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="Active">
+				<doc>
+					<unmanaged>
+						<line>public: BOOL getActive(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="ItemId">
+
+
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getItemId(void);</line>
+						<line>public: void setItemId(tstring&amp; aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+		</class>
+
+		<class name="DaAddressSpaceRoot">
+
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT DaAddressSpaceRoot : public AddressSpaceRoot;</line>
+				</unmanaged>
+				<remarks>
+				</remarks>
+			</doc>
+
+			<ctor name="DaAddressSpaceRoot.typed">
+				<doc>
+					<unmanaged>
+						<line>public: DaAddressSpaceRoot(EnumAddressSpaceType anAddressSpaceType);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+
+			<ctor name="DaAddressSpaceRoot.default">
+				<doc>
+					<unmanaged>
+						<line>public: DaAddressSpaceRoot();</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>			
+
+			<method name="QueryAddressSpaceElementProperties">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long queryAddressSpaceElementProperties(</line>
+						<line>    const tstring&amp; anElementID, </line>
+						<line>    std::vector&lt;DaProperty*&gt;&amp; aPropertyList</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="QueryAddressSpaceElementData">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long queryAddressSpaceElementData( </line>
+						<line>    const tstring&amp; anElementId,</line>
+						<line>    AddressSpaceElement*&amp; anElement</line>
+						<line>    ); </line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>			
+
+			<method name="QueryAddressSpaceElementChildren">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long queryAddressSpaceElementChildren(</line>
+						<line>    const tstring&amp; anElementId, </line>
+						<line>    std::vector&lt;AddressSpaceElement*&gt;&amp; aChildrenList</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>			
+
+			<method name="ValuesChanged.array">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long valuesChanged(</line>
+						<line>    std::vector&lt;DaAddressSpaceElement*&gt;&amp; anElementList, </line>
+						<line>    std::vector&lt;ValueQT*&gt;&amp; aValueList </line>
+            <line>    );</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>			
+
+			<method name="ValuesChanged.list">
+				<doc>
+					<unmanaged>
+            <line>public: virtual long valuesChanged(</line>
+            <line>    std::vector&lt;DaAddressSpaceElement*&gt;&amp; anElementList, </line>
+            <line>    std::vector&lt;ValueQT*&gt;&amp; aValueList </line>
+            <line>    );</line>
+					</unmanaged>
+					<remarks>	
+					</remarks>
+				</doc>
+			</method>			
+
+			<event name="ActivationStateUpdated">
+
+				<doc>
+					<unmanaged>
+						<line>protected: virtual void activationStateUpdated();</line>
+					</unmanaged>
+					<remarks>
+					<para>
+					The item can be found in an active or inactive state. An item is active when at least one OPC session has an active connection to this item. 
+					In an active state the Item's update rate is set to the minimum update rate of all sessions having this item active.
+					When all sessions are disconnected from this item, it's active state is switches to false and it's update rate is set to -1
+					</para>
+					<para><b>Unmanaged C++</b></para><para>
+					The user must override this method in order to handle the event.
+					</para>
+					<para><b>C#</b></para><para>
+					The user must assign his own handling method to this event.
+					</para>
+					</remarks>
+				</doc>
+			</event>
+		</class>
+
+		<class name="DaProperty">
+
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT DaProperty;</line>
+				</unmanaged>
+				<remarks>
+				</remarks>
+			</doc>
+
+			<ctor name="DaProperty">
+				<doc>
+					<unmanaged>
+						<line>public: DaProperty();</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+
+			<property name="AccessRights">
+				<doc>
+					<unmanaged>
+						<line>public: EnumAccessRights getAccessRights(void);</line>
+						<line>public: void setAccessRights(EnumAccessRights aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="Datatype">
+				<doc>
+					<unmanaged>
+						<line>public: VARENUM getDatatype(void);</line>
+						<line>void setDatatype(VARENUM aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="Description">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getDescription(void);</line>
+						<line>public: void setDescription(tstring&amp; aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="Id">
+				<doc>
+					<unmanaged>
+						<line>public: int getId(void);</line>
+						<line>public: void setId(int aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>			
+
+			<property name="ItemId">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getItemId(void);</line>
+						<line>public: void setItemId(tstring&amp; aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>			
+
+			<property name="Name">
+				<doc>
+					<unmanaged>
+						<line>public: tstring&amp; getName(void);</line>
+						<line>public: void setName(tstring&amp; aValue);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>			
+
+			<method name="HandleReadRequest">
+				<doc>
+					<unmanaged>
+						<line>public: virtual void handleReadRequest(DaRequest&amp; aRequest);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</method>
+
+			<method name="HandleWriteRequest">
+				<doc>
+					<unmanaged>
+						<line>public: virtual void handleWriteRequest(DaRequest&amp; aRequest);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</method>			
+
+			<attribute name="m_id">
+				<doc>
+					<unmanaged>
+						<line>protected: int m_id;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</attribute>			
+
+			<attribute name="m_name">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_name;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</attribute>
+
+			<attribute name="m_itemID">
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_itemId;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</attribute>
+
+			<attribute name="m_description">
+
+				<doc>
+					<unmanaged>
+						<line>protected: tstring m_description;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</attribute>
+			<attribute name="m_datatype">
+				<doc>
+					<unmanaged>
+						<line>protected: VARENUM m_datatype;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</attribute>
+
+			<attribute name="m_accessRights">
+				<doc>
+					<unmanaged>
+						<line>protected: EnumAccessRights m_accessRights;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</attribute>
+
+		</class>
+
+		<class name="DaConstantProperty">
+		
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT ConstantDaProperty : public DaProperty;</line>
+				</unmanaged>
+				<remarks>
+				Represents a property having a readonly constant value
+				</remarks>
+			</doc>
+			
+			<ctor name="DaConstantProperty">
+				<doc>
+					<unmanaged>						
+						<line>public: ConstantDaProperty(</line>
+						<line>    int anId,</line>
+						<line>    tstring&amp; aName,</line>
+						<line>    tstring&amp; anItemId,</line>
+						<line>    ValueQT&amp; aValue</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+
+		  	<property name="Value">
+				<doc>
+					<unmanaged>
+						<line>public: ValueQT&amp; getValue();</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>			
+
+			<method name="HandleReadRequest">
+				<doc>
+					<unmanaged>
+						<line>protected: virtual void handleReadRequest(DaRequest&amp; aRequest);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</method>			
+			
+			<attribute name="m_value">
+				<doc>
+					<unmanaged>
+						<line>protected: ValueQT m_value;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</attribute>			
+		</class>
+
+		<class name="DaRequest">
+		
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT DaRequest;</line>
+				</unmanaged>
+				<remarks>
+				</remarks>
+			</doc>
+			
+			<ctor name="DaRequest">
+				<doc>
+					<unmanaged>
+						<line>public: DaRequest(EnumTransactionType aTransactionType,</line>
+						<line>    unsigned long aSessionHandle,</line>
+						<line>    DaAddressSpaceElement* anElement,</line>
+						<line>    int aPropertyId,</line>
+						<line>    unsigned long aRequestHandle</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+			
+		  	<property name="PropertyId">
+				<doc>
+					<unmanaged>
+						<line>public: int getPropertyId(void)</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			
+		  	<property name="AddressSpaceElement">
+				<doc>
+					<unmanaged>
+						<line>public:DaAddressSpaceElement* getAddressSpaceElement(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			
+		  	<property name="Result">
+				<doc>
+					<unmanaged>						
+						<line>public: long getResult(void);</line>
+						<line>public: void setResult(long aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			
+		  	<property name="RequestState">
+				<doc>
+					<unmanaged>
+						<line>public: EnumRequestState getRequestState(void);</line>
+						<line>public: void setRequestState(EnumRequestState aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			
+		  	<property name="TransactionKey">
+				<doc>
+					<unmanaged>
+						<line>public: EnumRequestState getRequestState(void);</line>
+						<line>public: void setRequestState(EnumRequestState aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			
+		  	<property name="TransactionType">
+				<doc>
+					<unmanaged>
+						<line>public: EnumTransactionType getTransactionType(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			
+		  	<property name="Value">
+				<doc>
+					<unmanaged>
+						<line>public: ValueQT* getValue(void);</line>
+						<line>public: void setValue(ValueQT&amp; aValue);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>			
+			
+			<method name="Complete">
+				<doc>
+					<unmanaged>
+						<line>protected: long complete(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="CompletedInternally">
+				<doc>
+					<unmanaged>
+						<line>public: virtual void completedInternally();</line>
+					</unmanaged>
+					<remarks>
+						<para><b>C#, Visual Basic, C++, Unmanaged C++</b></para><para>
+							Allows Toolkit Core to mark a request as internally completed
+							(when the transaction has been cancelled by the client or when the
+							client disconnects before the transaction completed).
+						</para>
+						<alert class="note">
+							Although this method is public, it is not ment to be used by the
+							vendor OPC Server Application. This method is internally used by
+							the Toolkit Core and is currently reserved for further use.
+						</alert> 
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="ProgressRequestState">
+				<doc>
+					<unmanaged>
+						<line>public: bool progressRequestState(EnumRequestState valueFrom, EnumRequestState valueTo);</line>
+					</unmanaged>
+					<remarks>
+						<para><b>C#, Visual Basic, C++, Unmanaged C++</b></para><para>
+							This menthod should be used when changing the state of a DA
+							Request. It uses a synchronous approach in order to avoid the
+							race condition between DA Requests being internally completed in
+							the Toolkit core and DA Request being manipulated in the vendor
+							OPC Server application.
+						</para>
+						<para>
+							This method is only rellevant if the OPC DA Server namespace is a
+							dynamic (string-based) one.
+						</para>
+					</remarks>
+				</doc>
+			</method>
+		</class>
+
+		<class name="DaSession">
+		
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT DaSession;</line>
+				</unmanaged>
+				<remarks>
+				</remarks>
+			</doc>
+			
+			<ctor name="DaSession">
+				<doc>
+					<unmanaged>						
+						<line>public: DaSession(EnumSessionType aType, unsigned long aHandle);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+
+		  	<event name="Connected">
+				<doc>
+					<unmanaged>
+						<line>public: virtual void handleConnected(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</event>			
+
+			<event name="Disconnected">
+				<doc>
+					<unmanaged>
+						<line>public: virtual void handleDisconnected(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</event>
+
+		  	<property name="ObjectHandle">
+				<doc>
+					<unmanaged>
+						<line>protected: unsigned long getObjectHandle(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+			
+		  	<property name="Type">
+				<doc>
+					<unmanaged>
+						<line>public: EnumSessionType getType(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>			
+			
+			<property name="ClientName">
+				<doc>
+					<unmanaged>
+						<line>public: tstring getClientName(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+			
+			<method name="ConnectSession">
+				<doc>
+					<unmanaged>
+						<line>public: virtual void connectSession(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</method>
+			
+			<method name="DisconnectSession">
+				<doc>
+					<unmanaged>
+						<line>public: virtual void disconnectSession(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</method>
+			
+			<method name="Logon">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long logon(</line>
+						<line>    tstring&amp; aUserName,</line>
+						<line>    tstring&amp; aPassword</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</method>
+
+			<method name="Logoff">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long logoff(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</method>			
+			
+		</class>
+
+		<class name="DaTransaction">
+		
+			<doc>
+				<unmanaged>
+					<line>class TBC_EXPORT DaTransaction;</line>
+				</unmanaged>
+				<remarks>
+				</remarks>
+			</doc>
+			
+			<ctor name="DaTransaction">
+				<doc>
+					<unmanaged>						
+						<line>public: DaTransaction(</line>
+						<line>    EnumTransactionType aTransactionType, </line>
+						<line>    std::vector&lt;DaRequest*gt;&amp; aRequestList, </line>
+						<line>    unsigned long aSessionHandle</line>
+						<line>    );</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</ctor>
+						
+			<method name="HandleReadRequests">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long handleReadRequests(void);</line>
+					</unmanaged>
+					<remarks>						
+					</remarks>					
+				</doc>
+			</method>
+			
+			<method name="HandleWriteRequests">
+				<doc>
+					<unmanaged>
+						<line>public: virtual long handleWriteRequests(void)</line>
+					</unmanaged>
+					<remarks>						
+					</remarks>					
+				</doc>
+			</method>
+			
+			<attribute name="m_requestList">
+				<doc>
+					<unmanaged>
+						<line>protected: std::vector&lt;DaRequest*gt; m_requestList;</line>
+					</unmanaged>
+					<remarks>
+					</remarks>					
+				</doc>
+			</attribute>
+			
+		  	<property name="Key">
+				<doc>
+					<unmanaged>
+						<line>public: unsigned long getKey();</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+
+		  	<property name="Type">
+				<doc>
+					<unmanaged>
+						<line>public: EnumTransactionType getType(void);</line>
+					</unmanaged>
+					<remarks>
+					</remarks>
+				</doc>
+			</property>
+			
+		  	<property name="Requests">
+				<doc>
+					<unmanaged>
+						<line>public: std::vector&lt;DaRequest*&gt;&amp; getRequests(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+			
+			<property name="IsEmpty">
+				<doc>
+					<unmanaged>
+						<line>public: BOOL isEmpty(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+
+			<property name="Session">
+				<doc>
+					<unmanaged>
+						<line>public: DaSession* getSession(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</property>
+			
+			<method name="CompleteRequests">			
+				<doc>
+					<unmanaged>
+						<line>public: long completeRequests(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>
+
+			<method name="CompleteRequest">			
+				<doc>
+					<unmanaged>
+						<line>public: long completeRequest(DaRequest* aRequest);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>
+			
+			<method name="ValuesChanged">
+				<doc>
+					<unmanaged>
+						<line>public: long valuesChanged(void);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>
+			
+			<method name="RemoveRequest">			
+				<doc>
+					<unmanaged>
+						<line>public: void removeRequest(DaRequest* aRequest);</line>
+					</unmanaged>
+					<remarks>					
+					</remarks>
+				</doc>
+			</method>
+			
+		</class>
+
+	</namespace>
+
+</lib>

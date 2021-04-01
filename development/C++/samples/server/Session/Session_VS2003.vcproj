@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="Session"
+	ProjectGUID="{FB83939F-CEB9-4FDD-834A-BE77168A6AD8}"
+	RootNamespace="Session_VS2003"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug Console|Win32"
+			OutputDirectory="bin\VS2003\Console\debug"
+			IntermediateDirectory="bin\VS2003\Console\debug"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="&quot;..\..\..\src\&quot;;&quot;..\..\..\src\server&quot;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;_WIN32_DCOM;STRICT;_DEBUG"
+				MinimalRebuild="TRUE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				UsePrecompiledHeader="3"
+				PrecompiledHeaderFile="$(OutDir)\StdAfx.pch"
+				AssemblerListingLocation="$(OutDir)\"
+				ObjectFile="$(OutDir)\"
+				ProgramDataBaseFileName="$(OutDir)\Session.pdb"
+				WarningLevel="4"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"
+				Description="Performing Custom Build Step"
+				CommandLine="copy &quot;..\..\..\..\bin\Legacy\TBCVS2003D.dll&quot; &quot;$(OutDir)&quot;
+copy &quot;..\..\..\..\bin\Legacy\OTB.dll&quot; &quot;$(OutDir)&quot;
+&quot;$(TargetPath)&quot; /RegServer
+echo OPC Server registered &gt; &quot;$(IntDir)\autoRegister.log&quot;
+"
+				Outputs="&quot;$(OutDir)\autoRegister.log&quot;"/>
+			<Tool
+				Name="VCLinkerTool"
+				IgnoreImportLibrary="TRUE"
+				AdditionalDependencies="TBCVS2003D.lib"
+				OutputFile="$(OutDir)\Session.exe"
+				LinkIncremental="2"
+				SuppressStartupBanner="TRUE"
+				AdditionalLibraryDirectories="&quot;..\..\..\lib\Legacy&quot;"
+				IgnoreDefaultLibraryNames="kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile="$(IntDir)\Session.pdb"
+				SubSystem="1"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				ResourceOutputFileName="$(IntDir)\$(InputName).res"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release Console|Win32"
+			OutputDirectory="bin\VS2003\Console\release"
+			IntermediateDirectory="bin\VS2003\Console\release"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="&quot;..\..\..\src\&quot;;&quot;..\..\..\src\server&quot;"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_WIN32_DCOM;CONSOLE"
+				RuntimeLibrary="2"
+				UsePrecompiledHeader="3"
+				PrecompiledHeaderFile="$(OutDir)\StdAfx.pch"
+				AssemblerListingLocation="$(OutDir)\"
+				ObjectFile="$(OutDir)\"
+				ProgramDataBaseFileName="$(OutDir)\Session.pdb"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"
+				Description="Performing Custom Build Step"
+				CommandLine="copy &quot;..\..\..\..\bin\Legacy\TBCVS2003.dll&quot; &quot;$(OutDir)&quot;
+copy &quot;..\..\..\..\bin\Legacy\OTB.dll&quot; &quot;$(OutDir)&quot;
+&quot;$(TargetPath)&quot; /RegServer
+echo OPC Server registered &gt; &quot;$(IntDir)\autoRegister.log&quot;
+"
+				Outputs="&quot;$(OutDir)\autoRegister.log&quot;"/>
+			<Tool
+				Name="VCLinkerTool"
+				IgnoreImportLibrary="TRUE"
+				AdditionalDependencies="TBCVS2003.lib"
+				OutputFile="$(OutDir)\Session.exe"
+				LinkIncremental="1"
+				SuppressStartupBanner="TRUE"
+				AdditionalLibraryDirectories="&quot;..\..\..\lib\Legacy&quot;"
+				IgnoreDefaultLibraryNames="kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib"
+				GenerateDebugInformation="FALSE"
+				SubSystem="1"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				ResourceOutputFileName="$(IntDir)\$(InputName).res"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\Console.cpp">
+			</File>
+			<File
+				RelativePath=".\OpcServer.cpp">
+			</File>
+			<File
+				RelativePath=".\stdafx.cpp">
+				<FileConfiguration
+					Name="Debug Console|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release Console|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\MyCreator.h">
+			</File>
+			<File
+				RelativePath=".\MyDaAddressSpaceElement.h">
+			</File>
+			<File
+				RelativePath=".\MyDaAddressSpaceRoot.h">
+			</File>
+			<File
+				RelativePath=".\MyRequest.h">
+			</File>
+			<File
+				RelativePath=".\MySession.h">
+			</File>
+			<File
+				RelativePath=".\MyTransaction.h">
+			</File>
+			<File
+				RelativePath=".\OpcServer.h">
+			</File>
+			<File
+				RelativePath=".\Resource.h">
+			</File>
+			<File
+				RelativePath=".\stdafx.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\icon.ico">
+			</File>
+			<File
+				RelativePath=".\Session.rc">
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

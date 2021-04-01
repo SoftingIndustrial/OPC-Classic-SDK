@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<DaSubscriptionCreate>
+		<Session>System.Session</Session>
+		<UpdateRate>1000</UpdateRate>
+		<Property>DaSubscription.Subscription</Property>
+	</DaSubscriptionCreate>
+
+	<DaItemsCreate>
+		<Subscription>DaSubscription.Subscription</Subscription>
+		<ItemIds>
+			<string>ns*2;s*Dynamic.Double</string>
+		</ItemIds>
+		<Property>DaSubscription.Items</Property>
+	</DaItemsCreate>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>DaSubscription.Subscription</Subscription>
+	</DaSubscriptionWaitForNotif>
+
+	<Connect>
+		<Object>DaSubscription.Subscription</Object>
+		<Deep>false</Deep>
+		<Active>false</Active>
+	</Connect>
+
+	<Sleep>
+		<Description>Give the server time to make the changes</Description>
+		<Duration>1000</Duration>
+	</Sleep>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>DaSubscription.Subscription</Subscription>
+		<ExpectValues>false</ExpectValues>
+	</DaSubscriptionWaitForNotif>
+	
+
+	<Connect>
+		<Object>DaSubscription.Subscription</Object>
+	</Connect>
+
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>DaSubscription.Subscription</Subscription>
+	</DaSubscriptionWaitForNotif>
+
+	
+	<Connect>
+		<Object>DaSubscription.Items</Object>
+		<Deep>false</Deep>
+		<Active>false</Active>
+	</Connect>
+
+	<Sleep>
+		<Description>Give the server time to make the changes</Description>
+		<Duration>1000</Duration>
+	</Sleep>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>DaSubscription.Subscription</Subscription>
+		<ExpectValues>false</ExpectValues>
+	</DaSubscriptionWaitForNotif>
+
+
+	<Connect>
+		<Object>DaSubscription.Items</Object>
+	</Connect>
+
+	<DaSubscriptionWaitForNotif>
+		<Subscription>DaSubscription.Subscription</Subscription>
+	</DaSubscriptionWaitForNotif>
+
+
+	<DaItemsRemove>
+		<ItemsProperty>DaSubscription.Items</ItemsProperty>
+	</DaItemsRemove>
+	
+	<DaSubscriptionRemove>
+		<Subscription>DaSubscription.Subscription</Subscription>
+	</DaSubscriptionRemove>
+
+</TestList>

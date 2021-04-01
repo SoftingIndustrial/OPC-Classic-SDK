@@ -1,0 +1,81 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OPCToolboxC++_VS2003", "C++\src\OPCToolboxC++_VS2003.vcproj", "{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03} = {F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPCToolboxNET_VS2003", "NET\src\OPCToolboxNET_VS2003.csproj", "{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03} = {F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OTB_VS2003", "core\src\OTB\OTB_VS2003.vcproj", "{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		DebugStatic = DebugStatic
+		DebugStaticU = DebugStaticU
+		DebugU = DebugU
+		Release = Release
+		ReleaseStatic = ReleaseStatic
+		ReleaseStaticU = ReleaseStaticU
+		ReleaseU = ReleaseU
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Debug.ActiveCfg = Debug|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Debug.Build.0 = Debug|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugStatic.ActiveCfg = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugStatic.Build.0 = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugStaticU.ActiveCfg = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugStaticU.Build.0 = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugU.ActiveCfg = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugU.Build.0 = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Release.ActiveCfg = Release|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Release.Build.0 = Release|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseStatic.ActiveCfg = ReleaseU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseStatic.Build.0 = ReleaseU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseStaticU.ActiveCfg = ReleaseU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseStaticU.Build.0 = ReleaseU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseU.ActiveCfg = ReleaseU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseU.Build.0 = ReleaseU|Win32
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.Debug.ActiveCfg = Debug|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.DebugStatic.ActiveCfg = Debug|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.DebugStatic.Build.0 = Debug|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.DebugStaticU.ActiveCfg = Debug|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.DebugStaticU.Build.0 = Debug|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.DebugU.ActiveCfg = Debug|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.DebugU.Build.0 = Debug|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.Release.ActiveCfg = Release|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.ReleaseStatic.ActiveCfg = Release|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.ReleaseStatic.Build.0 = Release|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.ReleaseStaticU.ActiveCfg = Release|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.ReleaseStaticU.Build.0 = Release|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.ReleaseU.ActiveCfg = Release|.NET
+		{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}.ReleaseU.Build.0 = Release|.NET
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Debug.ActiveCfg = Debug|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Debug.Build.0 = Debug|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugStatic.ActiveCfg = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugStatic.Build.0 = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugStaticU.ActiveCfg = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugStaticU.Build.0 = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugU.ActiveCfg = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.DebugU.Build.0 = DebugU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Release.ActiveCfg = Release|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.Release.Build.0 = Release|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseStatic.ActiveCfg = ReleaseU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseStatic.Build.0 = ReleaseU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseStaticU.ActiveCfg = ReleaseU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseStaticU.Build.0 = ReleaseU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseU.ActiveCfg = ReleaseU|Win32
+		{F72E9DB2-3DFE-4E3B-B8B0-E9008BC77A03}.ReleaseU.Build.0 = ReleaseU|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

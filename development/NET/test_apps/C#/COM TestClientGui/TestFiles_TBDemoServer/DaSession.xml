@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<DaSessionWrite>
+		<Session>System.Session</Session>
+		<ItemIds>
+			<string>IOP.static.R8</string>
+			<string>IOP.static.I4</string>
+			<string>IOP.static.BSTR</string>
+		</ItemIds>
+		<Values>
+			<Value>
+				<Quality>GOOD_LOCAL_OVERRIDE</Quality>
+				<TimeStamp>2012-05-16T13:39:28.6562409Z</TimeStamp>
+				<Data xsi:type="xsd:double">1.2345</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD_LOCAL_OVERRIDE</Quality>
+				<TimeStamp>2012-05-16T13:39:28.6582411Z</TimeStamp>
+				<Data xsi:type="xsd:int">-9876</Data>
+			</Value>
+			<Value>
+				<Quality>UNCERTAIN_LAST_USABLE</Quality>
+				<TimeStamp>2012-05-16T13:39:28.6582411Z</TimeStamp>
+				<Data xsi:type="xsd:string">Grapefruit</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results</ResultsProperty>
+	</DaSessionWrite>
+
+	<Sleep>
+		<Duration>100</Duration>
+	</Sleep>
+
+	<DaSessionRead>
+		<Session>System.Session</Session>
+		<ItemIds>
+			<string>IOP.static.R8</string>
+			<string>IOP.static.I4</string>
+			<string>IOP.static.BSTR</string>
+		</ItemIds>
+		<ValuesProperty>System.Read1.Values</ValuesProperty>
+		<ResultsProperty>System.Read1.Results</ResultsProperty>
+		<ExpectedValues>
+			<Value>
+				<Quality>GOOD_LOCAL_OVERRIDE</Quality>
+				<TimeStamp>2012-05-16T13:39:28.6562409Z</TimeStamp>
+				<Data xsi:type="xsd:double">1.2345</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD_LOCAL_OVERRIDE</Quality>
+				<TimeStamp>2012-05-16T13:39:28.6582411Z</TimeStamp>
+				<Data xsi:type="xsd:int">-9876</Data>
+			</Value>
+			<Value>
+				<Quality>UNCERTAIN_LAST_USABLE</Quality>
+				<TimeStamp>2012-05-16T13:39:28.6582411Z</TimeStamp>
+				<Data xsi:type="xsd:string">Grapefruit</Data>
+			</Value>
+		</ExpectedValues>
+	</DaSessionRead>
+
+	<DaSessionBrowse>
+		<Session>System.Session</Session>
+		<RootID></RootID>
+		<BrowseOptions>
+			<ElementTypeFilter>ALL</ElementTypeFilter>
+		</BrowseOptions>
+		
+		<ExpectedElements>
+				<DaAddressSpaceElement>
+					<ItemId>special</ItemId>
+					<IsBranch>true</IsBranch>
+				</DaAddressSpaceElement>
+				<DaAddressSpaceElement>
+					<ItemId>increment</ItemId>
+					<IsBranch>true</IsBranch>
+				</DaAddressSpaceElement>
+				<DaAddressSpaceElement>
+					<ItemId>maths</ItemId>
+					<IsBranch>true</IsBranch>
+				</DaAddressSpaceElement>
+				<DaAddressSpaceElement>
+					<ItemId>IOP</ItemId>
+					<IsBranch>true</IsBranch>
+				</DaAddressSpaceElement>
+				<DaAddressSpaceElement>
+					<ItemId>watch</ItemId>
+					<IsBranch>true</IsBranch>
+				</DaAddressSpaceElement>
+				<DaAddressSpaceElement>
+					<ItemId>secure</ItemId>
+					<IsBranch>true</IsBranch>
+				</DaAddressSpaceElement>
+				<DaAddressSpaceElement>
+					<ItemId>modes</ItemId>
+					<IsBranch>true</IsBranch>
+				</DaAddressSpaceElement>
+				<DaAddressSpaceElement>
+					<ItemId>dynamic</ItemId>
+					<IsBranch>true</IsBranch>
+				</DaAddressSpaceElement>
+				<DaAddressSpaceElement>
+					<ItemId>time</ItemId>
+					<IsBranch>true</IsBranch>
+				</DaAddressSpaceElement>
+		</ExpectedElements>
+	</DaSessionBrowse>
+
+	<DaSessionBrowse>
+		<Session>System.Session</Session>
+		<RootID>IOP.dynamic</RootID>
+		<BrowseOptions>
+			<ElementTypeFilter>ALL</ElementTypeFilter>
+		</BrowseOptions>
+	</DaSessionBrowse>
+
+</TestList>

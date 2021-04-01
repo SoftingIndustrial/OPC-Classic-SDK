@@ -1,0 +1,285 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1046EE5D-7945-440A-8D57-EAA3AB0AC10C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DemoClient</RootNamespace>
+    <AssemblyName>DemoClient2.0</AssemblyName>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2010\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\VS2010\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2010\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\VS2010\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Softing.OPCToolbox">
+      <Name>Softing.OPCToolbox</Name>
+      <HintPath>..\..\..\..\..\bin\Legacy\TBN20.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogWindows\OptionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogWindows\OptionsDialog.Designer.cs">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockWindows\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockWindows\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockWindows\PropertyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockWindows\PropertyWindow.Designer.cs">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockWindows\ServiceWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockWindows\ServiceWindow.Designer.cs">
+      <DependentUpon>ServiceWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockWindows\ToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockWindows\ToolWindow.Designer.cs">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockWindows\TraceWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockWindows\TraceWindow.Designer.cs">
+      <DependentUpon>TraceWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Options.cs" />
+    <Compile Include="Helper\PropertyGridEditors.cs" />
+    <Compile Include="Helper\ValueConverter.cs" />
+    <Compile Include="Helper\DataTypes.cs" />
+    <Compile Include="Helper\ListViewColumnSorter.cs" />
+    <Compile Include="Helper\CustomPropertyCollection.cs" />
+    <Compile Include="Helper\XMLSchema.cs">
+      <DependentUpon>XMLSchema.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About\AboutDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogWindows\OptionsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockWindows\MainWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockWindows\PropertyWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockWindows\ServiceWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServiceWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockWindows\ToolWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockWindows\TraceWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TraceWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControls\AddressSpaceControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddressSpaceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControls\ConditionsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConditionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControls\EventsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EventsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControls\ItemsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ItemsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControls\ServerDiscoveryControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServerDiscoveryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TabControls\AddressSpaceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControls\AddressSpaceControl.Designer.cs">
+      <DependentUpon>AddressSpaceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControls\ConditionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControls\ConditionsControl.Designer.cs">
+      <DependentUpon>ConditionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControls\EventsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControls\EventsControl.Designer.cs">
+      <DependentUpon>EventsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControls\ItemsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControls\ItemsControl.Designer.cs">
+      <DependentUpon>ItemsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControls\ServerDiscoveryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControls\ServerDiscoveryControl.Designer.cs">
+      <DependentUpon>ServerDiscoveryControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Helper\XMLSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Helper\XMLSchema.xsx">
+      <DependentUpon>XMLSchema.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\about.ico" />
+    <Content Include="Resources\about.PNG" />
+    <Content Include="Resources\activate.ico" />
+    <Content Include="Resources\BrowseNode.ico" />
+    <Content Include="Resources\connect.ico" />
+    <Content Include="Resources\Blue.ico" />
+    <Content Include="Resources\BlueDisable.ico" />
+    <Content Include="Resources\RedDisable.ico" />
+    <Content Include="Resources\GreenDisable.ico" />
+    <Content Include="Resources\delete.ico" />
+    <Content Include="Resources\disconnect.ico" />
+    <Content Include="Resources\events.ico" />
+    <Content Include="Resources\Green.ico" />
+    <Content Include="Resources\green_yellow1.ico" />
+    <Content Include="Resources\green_yellow2.ico" />
+    <Content Include="Resources\green_yellow3.ico" />
+    <Content Include="Resources\green_yellow4.ico" />
+    <Content Include="Resources\GreyTag.ico" />
+    <Content Include="Resources\localPC.ico" />
+    <Content Include="Resources\Node.ico" />
+    <Content Include="Resources\Prop.ico" />
+    <Content Include="Resources\properties.ico" />
+    <Content Include="Resources\Red.ico" />
+    <Content Include="Resources\red_green1.ico" />
+    <Content Include="Resources\red_green2.ico" />
+    <Content Include="Resources\red_green3.ico" />
+    <Content Include="Resources\red_green4.ico" />
+    <Content Include="Resources\red_yellow1.ico" />
+    <Content Include="Resources\red_yellow2.ico" />
+    <Content Include="Resources\red_yellow3.ico" />
+    <Content Include="Resources\red_yellow4.ico" />
+    <Content Include="Resources\remote.ico" />
+    <Content Include="Resources\remotePC.ico" />
+    <Content Include="Resources\remoteServers.ico" />
+    <Content Include="Resources\service.ico" />
+    <Content Include="Resources\icon.ico" />
+    <Content Include="Resources\Tag.ico" />
+    <Content Include="Resources\trace.ico" />
+    <Content Include="Resources\write.ico" />
+    <Content Include="Resources\yellow.ico" />
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

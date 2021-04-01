@@ -1,0 +1,46 @@
+//-----------------------------------------------------------------------------
+//                                                                            |
+//                   Softing Industrial Automation GmbH                       |
+//                        Richard-Reitzner-Allee 6                            |
+//                           85540 Haar, Germany                              |
+//                                                                            |
+//                 This is a part of the Softing OPC Toolkit                  |
+//        Copyright (c) 1998-2020 Softing Industrial Automation GmbH          |
+//                           All Rights Reserved                              |
+//                                                                            |
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//                           OPC Toolkit - Demo                               |
+//                                                                            |
+//  Filename    : SOServer.rc                                                 |
+//  Version     : 4.47.1                                                      |
+//  Date        : 27-July-2020                                                |
+//                                                                            |
+//  Description : resources                                                   |
+//                                                                            |
+//  This code and information is provided "as is" without warranty of         |
+//  any kind, either expressed or implied, including but not limited          |
+//  to the implied warranties of merchantability and/or fitness for a         |
+//  particular purpose.                                                       |
+//                                                                            |
+//-----------------------------------------------------------------------------
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+#include "SOVersion.h"
+#include "SOModule.h"
+#include "winres.h"
+#ifndef SOFLAG_DEMO_VERSION
+#ifndef UNDER_CE
+#include "SOSrvmc.rc"
+#else // Windows CE supports only one language for FormatMessage -> English Language
+LANGUAGE 0x9,0x1
+1 11 SOSrv409.bin
+#endif
+#endif
+#include "version.rc"
+
+ICON_SOSERVER       ICON    DISCARDABLE     "SOServer.ico"
+IMAGE_SOSERVER      BITMAP  DISCARDABLE      "SOServer.bmp"

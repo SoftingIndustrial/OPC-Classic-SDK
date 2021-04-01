@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<title>Configuration - Trace</title></head>
+	<link rel="stylesheet" type="text/css" href="styles/www.css">
+		<body>
+			<form method="POST" action="cfg_trace.html">
+				<table width="590">
+					<tr>
+						<td><img src="pics/space.gif" width="1" height="8" border="0" alt=""></td>
+					</tr>
+					<tr>
+						<td width="370" bgcolor="#e4ebee" class="headerLine"><b>Configuration - <a href="cfg_trace.html">Trace</a></b></td>
+					<td width="220" bgcolor="#e4ebee" class="headerLine" align="right"><font color="Gray"><%#CURRENTTIME#%></font></td>
+					</tr>
+					<tr>
+						<td><img src="pics/space.gif" width="1" height="8" border="0" alt=""></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td bgColor="#cccccc">
+							<input type="image" src="pics/write.jpg" title="Change" width="25" height="25" ID="CMD##TRACE##CHANGE"
+								NAME="CMD##TRACE##CHANGE">
+						</td>
+					</tr>
+				</table>
+				<table width="590">
+					<tr>
+						<td width="200"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+						<td width="390"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+					</tr>
+					<tr>
+						<td bgcolor="#e4ebee" colspan="2"><b>Current Settings:</b></td>
+					</tr>
+					<tr>
+						<td>Trace Level Error:</td>
+						<td><%#TRACE##INFO##TLERR#%></td>
+					</tr>
+					<tr>
+						<td>Trace Level Warning:</td>
+						<td><%#TRACE##INFO##TLWRN#%></td>
+					</tr>
+					<tr>
+						<td>Trace Level Information:</td>
+						<td><%#TRACE##INFO##TLINF#%></td>
+					</tr>
+					<tr>
+						<td>Trace Level Debug:</td>
+						<td><%#TRACE##INFO##TLDEB#%></td>
+					</tr>
+					<tr>
+						<td>Trace File Enable:</td>
+						<td><%#TRACE##INFO##TFENABLE##NY#%></td>
+					</tr>
+					<tr>
+						<td>Trace File Name 1:</td>
+						<td><%#TRACE##INFO##TFNAME1#%></td>
+					</tr>
+					<tr>
+						<td>Trace File Name 2:</td>
+						<td><%#TRACE##INFO##TFNAME2#%></td>
+					</tr>
+					<tr>
+						<td>Trace File Maximum Size:</td>
+						<td><%#TRACE##INFO##TFMAXSIZE#%></td>
+					</tr>
+					<tr>
+						<td><img src="pics/space.gif" width="1" height="8" border="0" alt=""></td>
+					</tr>
+				</table>
+				<table width="590">
+					<tr>
+						<td width="200"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+						<td width="390"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+					</tr>
+					<tr>
+						<td bgcolor="#e4ebee" colspan="2"><b>New Settings:</b></td>
+					</tr>
+					<tr>
+						<td>Trace Level Error:</td>
+						<td><input class="editField" type="text" name="TRACE##TLERR" size="15" value="<%#TRACE##INFO##TLERR#%>"></td>
+					</tr>
+					<tr>
+						<td>Trace Level Warning:</td>
+						<td><input class="editField" type="text" name="TRACE##TLWRN" size="15" value="<%#TRACE##INFO##TLWRN#%>"></td>
+					</tr>
+					<tr>
+						<td>Trace Level Information:</td>
+						<td><input class="editField" type="text" name="TRACE##TLINF" size="15" value="<%#TRACE##INFO##TLINF#%>"></td>
+					</tr>
+					<tr>
+						<td>Trace Level Debug:</td>
+						<td><input class="editField" type="text" name="TRACE##TLDEB" size="15" value="<%#TRACE##INFO##TLDEB#%>"></td>
+					</tr>
+					<tr>
+						<td>Trace File Enable:</td>
+						<td><input type="checkbox" name="TRACE##TFENABLE" value="1" <%#TRACE##INFO##TFENABLE##CHECKED#%>></td>
+					</tr>
+					<tr>
+						<td>Trace File Name 1:</td>
+						<td><input class="editField" type="text" name="TRACE##TFNAME1" size="50" value="<%#TRACE##INFO##TFNAME1#%>"></td>
+					</tr>
+					<tr>
+						<td>Trace File Name 2:</td>
+						<td><input class="editField" type="text" name="TRACE##TFNAME2" size="50" value="<%#TRACE##INFO##TFNAME2#%>"></td>
+					</tr>
+					<tr>
+						<td>Trace File Maximum Size:</td>
+						<td><input class="editField" type="text" name="TRACE##TFMAXSIZE" size="15" value="<%#TRACE##INFO##TFMAXSIZE#%>"></td>
+					</tr>
+					<tr>
+						<td><img src="pics/space.gif" width="1" height="4" border="0" alt=""></td>
+					</tr>
+				</table>
+				<table width="590">
+					<tr>
+						<td><%#MESSAGE###%></td>
+					</tr>
+				</table>
+			</form>
+		</body>
+</html>

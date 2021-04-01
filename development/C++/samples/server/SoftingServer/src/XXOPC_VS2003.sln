@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XXOPCsrv", "XXOPCsrv\XXOPCsrv_VS2003.vcproj", "{C9B60CBB-3595-4813-B06C-0BA8D7AE6FA8}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XXOPCsvc", "XXOPCsvc\XXOPCsvc_VS2003.vcproj", "{42AEB6D4-212D-4741-ACAA-8272D4F80CF6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C9B60CBB-3595-4813-B06C-0BA8D7AE6FA8}.Debug.ActiveCfg = Debug|Win32
+		{C9B60CBB-3595-4813-B06C-0BA8D7AE6FA8}.Debug.Build.0 = Debug|Win32
+		{C9B60CBB-3595-4813-B06C-0BA8D7AE6FA8}.Release.ActiveCfg = Release|Win32
+		{C9B60CBB-3595-4813-B06C-0BA8D7AE6FA8}.Release.Build.0 = Release|Win32
+		{42AEB6D4-212D-4741-ACAA-8272D4F80CF6}.Debug.ActiveCfg = Debug|Win32
+		{42AEB6D4-212D-4741-ACAA-8272D4F80CF6}.Debug.Build.0 = Debug|Win32
+		{42AEB6D4-212D-4741-ACAA-8272D4F80CF6}.Release.ActiveCfg = Release|Win32
+		{42AEB6D4-212D-4741-ACAA-8272D4F80CF6}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

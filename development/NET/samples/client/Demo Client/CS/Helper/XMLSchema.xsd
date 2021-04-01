@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.softing.com/OPCToolboxClient" xmlns:tb="http://www.softing.com/OPCToolboxClient" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.00">
+  <xs:element name="OPCToolboxClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Sessions" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DASession" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Subscriptions" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="DASubscription" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Items" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="DAItem" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:attribute name="ItemId" type="xs:string" use="required" />
+                                          <xs:attribute name="ItemPath" type="xs:string" use="optional" />
+                                          <xs:attribute name="RequestedDatatype" type="xs:string" use="optional" />
+                                          <xs:attribute name="Deadband" type="xs:double" use="optional" />
+                                          <xs:attribute name="Active" type="xs:boolean" use="optional" default="true" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="UpdateRate" type="xs:double" use="required" />
+                              <xs:attribute name="Name" type="xs:string" use="optional" />
+                              <xs:attribute name="KeepAliveTime" type="xs:unsignedInt" use="optional" />
+                              <xs:attribute name="Deadband" type="xs:double" use="optional" />
+                              <xs:attribute name="LocaleId" type="xs:string" use="optional" />
+                              <xs:attribute name="Active" type="xs:boolean" use="optional" default="true" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Url" type="xs:string" use="required" />
+                  <xs:attribute name="LocaleId" type="xs:string" use="optional" />
+                  <xs:attribute name="ClientName" type="xs:string" use="optional" />
+                  <xs:attribute name="DcomClsctx" type="xs:string" use="optional" />
+                  <xs:attribute name="ForcedOpcVersion" use="optional">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="DEFAULT" />
+                        <xs:enumeration value="DA10" />
+                        <xs:enumeration value="DA20" />
+                        <xs:enumeration value="DA30" />
+                        <xs:enumeration value="AE10" />
+                        <xs:enumeration value="XMLDA10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="AESession" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Subscriptions" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="AESubscription" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="BufferTime" type="xs:unsignedInt" use="optional" default="0" />
+                              <xs:attribute name="MaxSize" type="xs:unsignedInt" use="optional" default="0" />
+                              <xs:attribute name="Active" type="xs:boolean" use="optional" default="true" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Url" type="xs:string" use="required" />
+                  <xs:attribute name="LocaleId" type="xs:string" use="optional" />
+                  <xs:attribute name="ClientName" type="xs:string" use="optional" />
+                  <xs:attribute name="DcomClsctx" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

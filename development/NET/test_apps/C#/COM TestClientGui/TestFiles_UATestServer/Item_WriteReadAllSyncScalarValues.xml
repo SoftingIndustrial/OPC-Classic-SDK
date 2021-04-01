@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<TestList StopIfOneFailed="false"  DisplayName="Read/Write tests on DA3" RunInParallel="false">
+	<DaSubscriptionCreate>
+		<Session>System.Session</Session>
+		<UpdateRate>1000</UpdateRate>
+		<Property>System.Subscription_DA3</Property>
+	</DaSubscriptionCreate>
+	
+	<DaItemsCreate>
+		<Subscription>System.Subscription_DA3</Subscription>
+		<ItemIds>
+			<string>CTT.Static.All Profiles.Scalar.Double</string>
+			<string>CTT.Static.All Profiles.Scalar.Boolean</string>
+			<string>CTT.Static.All Profiles.Scalar.Byte</string>
+			<string>CTT.Static.All Profiles.Scalar.Date Time</string>
+			<string>CTT.Static.All Profiles.Scalar.Float</string>
+			<string>CTT.Static.All Profiles.Scalar.Int16</string>
+			<string>CTT.Static.All Profiles.Scalar.Int32</string>
+			<string>CTT.Static.All Profiles.Scalar.Int64</string>
+			<string>CTT.Static.All Profiles.Scalar.String</string>
+			<!--string>CTT.Static.All Profiles.Scalar.Sbyte</string>-->
+			<string>CTT.Static.All Profiles.Scalar.UInt16</string>
+			<string>CTT.Static.All Profiles.Scalar.UInt32</string>
+			<string>CTT.Static.All Profiles.Scalar.UInt64</string>
+		</ItemIds>
+		<Property>System.StaticItems_DA3</Property>
+	</DaItemsCreate>
+
+    <Connect>
+      <Object>System.Session</Object>
+      <Active>false</Active>
+    </Connect>
+    
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite V" >
+	<DaItemWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<Values>
+			<Value>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</Values>
+	</DaItemWrite>
+	
+	<Sleep>
+		<Duration>100</Duration>
+	</Sleep>
+	
+	<DaItemRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExpectedValues>
+			<Value>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</ExpectedValues>
+	</DaItemRead>
+	</TestList>
+	
+	<Sleep>
+		<Duration>100</Duration>
+	</Sleep>
+
+    <Connect>
+      <Object>System.Session</Object>
+      <Active>true</Active>
+    </Connect>
+    
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite VQ" >
+	<DaItemWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<Values>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</Values>
+	</DaItemWrite>
+	
+	<Sleep>
+		<Duration>100</Duration>
+	</Sleep>
+	
+	<DaItemRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExpectedValues>
+				<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</ExpectedValues>
+	</DaItemRead>
+	</TestList>
+	
+	<Sleep>
+		<Duration>100</Duration>
+	</Sleep>
+	
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>false</Active>
+    </Connect>
+	
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite VT" >
+	<DaItemWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<Values>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</Values>
+	</DaItemWrite>
+	
+	<Sleep>
+		<Duration>100</Duration>
+	</Sleep>
+	
+	<DaItemRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExpectedValues>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</ExpectedValues>
+	</DaItemRead>
+	</TestList>
+	
+	<Sleep>
+		<Duration>100</Duration>
+	</Sleep>
+	
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>true</Active>
+    </Connect>
+	
+	<TestList StopIfOneFailed="false"  DisplayName="itemWrite VQT" >
+	<DaItemWrite>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<Values>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</Values>
+	</DaItemWrite>
+	
+	<Sleep>
+		<Duration>100</Duration>
+	</Sleep>
+	
+	<DaItemRead>
+		<ItemsProperty>System.StaticItems_DA3</ItemsProperty>
+		<ExpectedValues>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:double">-4.95065645841246544E-324</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:boolean">true</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedByte">122</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:dateTime">2013-10-10T17:40:50Z</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:float">-1.79769313486</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:short">-6552</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:int">-2094167293</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:long">-5223372036854775808</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:string">abcdefghijklmnoprsstuvxy123456789ABCDEFGHIJKLMNOPRSTUVXYZ</Data>
+			</Value>
+			<!--Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:byte">1</Data>
+			</Value>-->
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedShort">65351</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedInt">65254676</Data>
+			</Value>
+			<Value>
+				<Quality>GOOD</Quality>
+				<TimeStamp>2013-04-13T11:40:52.1895963Z</TimeStamp>
+				<Data xsi:type="xsd:unsignedLong">154467400551615</Data>
+			</Value>
+		</ExpectedValues>
+	 </DaItemRead>
+	</TestList>
+    <DaSubscriptionRemove>
+      <Subscription>System.Subscription_DA3</Subscription>
+    </DaSubscriptionRemove>
+   </TestList>
+</TestList>

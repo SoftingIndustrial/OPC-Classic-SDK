@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd" StopIfOneFailed="false" RunInParallel="false" RepeatDuration="1">
+
+	<DaSessionCreate DisplayName="Default OPC specification">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>Performance.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<TestList StopIfOneFailed="false"  DisplayName="create variables of type double" >
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+		
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemType</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	
+	<Sleep>
+		<Duration>3000</Duration>
+	</Sleep>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_0.StartStopSimulationCommand.ChangeInterval</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_0.StartStopSimulationCommand.RepeatCount</string>
+		</ItemIds>
+		<Values>
+			<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_0.StartStopSimulationCommand.Increment</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_0.StartStopSimulationCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:boolean">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<StressServer>
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<SessionsCount>1000</SessionsCount>
+		<SubscriptionsCount>1000</SubscriptionsCount>
+		<!--<SubscriptionRate>10</SubscriptionRate>-->
+		<ItemsCount>10000</ItemsCount>
+	</StressServer>
+
+	
+	</TestList>
+</TestList>

@@ -1,0 +1,132 @@
+/* $Id: OPCVersion.rc2 158 2008-05-08 19:49:34Z ln $
+ * ----------------------------------------------------------------------------
+ *
+ * PROJECT: 		S7/S5 OPC Server
+ *
+ * COMPONENT:		res
+ *
+ * REVISION:		$Revision: 158 $ 	$Author: ln $
+ *					$Date: 2008-05-08 21:49:34 +0200 (Do, 08 Mai 2008) $
+ *
+ * ----------------------------------------------------------------------------
+ *	(c) 2005 - 2011 Softing Industrial Automation GmbH - All rights reserved.
+ * ----------------------------------------------------------------------------
+ */
+
+#include <winver.h>
+
+#ifndef _OPCVERPROD_H_
+#include "OPCVerProd.h"
+#endif
+
+#ifndef _OPCVERAPP_H_
+#include "OPCVerApp.h"
+#endif
+
+#include "BuildNr.h"
+
+VS_VERSION_INFO         VERSIONINFO
+    FILEVERSION             APP_VER_MAJOR,APP_VER_MINOR,APP_VER_SERVP,APP_VER_BUILD
+    PRODUCTVERSION          PROD_VER_MAJOR,PROD_VER_MINOR,PROD_VER_SERVP,PROD_VER_BUILD
+    FILEFLAGSMASK           VS_FFI_FILEFLAGSMASK
+#ifdef DEBUG
+#   ifdef _OFFICIAL_BUILD
+    FILEFLAGS               VS_FF_DEBUG|VS_FF_PRERELEASE
+#   else  // !_OFFICIAL_BUILD
+    FILEFLAGS               VS_FF_DEBUG|VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE
+#   endif // _OFFICIAL_BUILD
+#else  // !DEBUG
+#   ifdef _OFFICIAL_BUILD
+    FILEFLAGS               0 // final version
+#   else  // !_OFFICIAL_BUILD
+    FILEFLAGS               VS_FF_PRIVATEBUILD
+#   endif // _OFFICIAL_BUILD
+#endif  // DEBUG
+#ifdef _WIN32
+    FILEOS                  VOS_NT_WINDOWS32
+#else
+    FILEOS                  VOS_DOS_WINDOWS16
+#endif
+#ifdef APP_FILETYPE
+    FILETYPE                APP_FILETYPE
+#else // ! APP_FILETYPE
+    FILETYPE                VFT_APP
+#endif // APP_FILETYPE
+#ifdef APP_FILESUBTYPE
+    FILESUBTYPE             APP_FILESUBTYPE
+#else
+    FILESUBTYPE             VFT2_UNKNOWN
+#endif
+
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        // ************     German version info
+#ifdef _WIN32
+        BLOCK "040704b0"        // Lang=German, CharSet=Unicode
+#else  // ! _WIN32
+        BLOCK "040704E4"        // Lang=German, CharSet=Windows Multilingual
+#endif // _WIN32
+        BEGIN
+            VALUE "CompanyName",        PROD_COMPANYNAME "\0"
+            VALUE "FileVersion",        APP_VERSION_STR "\0"
+            VALUE "LegalCopyright",     PROD_COPYRIGHT_SHORT "\0"
+            VALUE "Copyright",			PROD_COPYRIGHT "\0"
+            VALUE "ProductName",        PROD_PRODUCTNAME "\0"
+            VALUE "OriginalFilename",   APP_ORIGINALFILENAME "\0"
+            VALUE "InternalName",       APP_INTERNALNAME "\0"
+            VALUE "ProductVersion",     PROD_FULL_VERSION_STR "\0"
+            VALUE "FileDescription",    APP_FILEDESCRIPTION "\0"
+#ifdef APP_TRADEMARKS
+            VALUE "LegalTrademarks",    APP_TRADEMARKS "\0"
+#endif
+#ifndef _OFFICIAL_BUILD
+            VALUE "PBuild",				"PBuild\0"
+#endif // _OFFICIAL_BUILD
+        END
+
+        // ************     US English version info
+#ifdef _WIN32
+        BLOCK "040904b0"        // Lang=US English, CharSet=Unicode
+#else  // ! _WIN32
+        BLOCK "040904E4"        // Lang=US English, CharSet=Windows Multilingual
+#endif // _WIN32
+        BEGIN
+            VALUE "CompanyName",        PROD_COMPANYNAME "\0"
+            VALUE "FileVersion",        APP_VERSION_STR "\0"
+            VALUE "LegalCopyright",     PROD_COPYRIGHT_SHORT "\0"
+            VALUE "Copyright",			PROD_COPYRIGHT "\0"
+            VALUE "ProductName",        PROD_PRODUCTNAME "\0"
+            VALUE "OriginalFilename",   APP_ORIGINALFILENAME "\0"
+            VALUE "InternalName",       APP_INTERNALNAME "\0"
+            VALUE "ProductVersion",     PROD_FULL_VERSION_STR "\0"
+            VALUE "FileDescription",    APP_FILEDESCRIPTION "\0"
+#ifdef APP_TRADEMARKS
+            VALUE "LegalTrademarks",    APP_TRADEMARKS "\0"
+#endif
+#ifndef _OFFICIAL_BUILD
+            VALUE "PBuild",				"PBuild\0"
+#endif // _OFFICIAL_BUILD
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+#ifdef _WIN32
+        VALUE "Translation", 0x407, 1200,
+              // German language (0x407) and Unicode (1200)
+                             0x409, 1200
+              // English language (0x409) and Unicode (1200)
+#else  // ! _WIN32
+        VALUE "Translation", 0x407, 1252,
+              // German language (0x407) and the Windows ANSI codepage (1252)
+                             0x409, 1252
+              // English language (0x409) and the Windows ANSI codepage (1252)
+#endif // _WIN32
+    END
+END
+
+/* ------------------------------------------------------------------------------------------------
+ * $URL: http://srviad.dhcp.softing.com/svn/OPC/Products/S7S5_OPCServer/trunk/src/res/OPCVersion.rc2 $
+ * ------------------------------------------------------------------------------------------------
+ */

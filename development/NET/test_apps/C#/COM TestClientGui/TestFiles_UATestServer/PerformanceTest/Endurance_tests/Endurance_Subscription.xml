@@ -1,0 +1,1121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<DaSessionCreate DisplayName="Default OPC specification">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>Performance.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<TestList StopIfOneFailed="false"  DisplayName="create variables of type double" >
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+		
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemType</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	
+	<Sleep>
+		<Duration>3000</Duration>
+	</Sleep>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_0.StartStopSimulationCommand.ChangeInterval</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_0.StartStopSimulationCommand.RepeatCount</string>
+		</ItemIds>
+		<Values>
+			<Value>
+				<Data xsi:type="xsd:unsignedInt">99999999</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_0.StartStopSimulationCommand.Increment</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_0.StartStopSimulationCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:boolean">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSubscribeChildItems DisplayName="BrowseFilter = All; branches to return">
+		<Session>Performance.Session</Session>
+		<RootID>Test Folder.TestItems_0</RootID>
+		<RootPath></RootPath>
+	</DaSubscribeChildItems>
+	
+</TestList>
+	
+	
+
+	<DaSessionCreate DisplayName="Default OPC specification">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>Performance.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<TestList StopIfOneFailed="false"  DisplayName="create variables of type double" >
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+		
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemType</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">2</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	
+	<Sleep>
+		<Duration>3000</Duration>
+	</Sleep>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_1.StartStopSimulationCommand.ChangeInterval</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_1.StartStopSimulationCommand.RepeatCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">99999999</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_1.StartStopSimulationCommand.Increment</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_1.StartStopSimulationCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:boolean">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+</TestList>
+	
+	<DaSubscribeChildItems DisplayName="BrowseFilter = All; branches to return">
+		<Session>Performance.Session</Session>
+		<RootID>Test Folder.TestItems_1</RootID>
+		<RootPath></RootPath>
+	</DaSubscribeChildItems>
+	
+	<DaSessionCreate DisplayName="Default OPC specification">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>Performance.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<TestList StopIfOneFailed="false"  DisplayName="create variables of type double" >
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+		
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemType</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">3</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	
+	<Sleep>
+		<Duration>3000</Duration>
+	</Sleep>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_2.StartStopSimulationCommand.ChangeInterval</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_2.StartStopSimulationCommand.RepeatCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">99999999</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_2.StartStopSimulationCommand.Increment</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_2.StartStopSimulationCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:boolean">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+</TestList>
+	
+	<DaSubscribeChildItems DisplayName="BrowseFilter = All; branches to return">
+		<Session>Performance.Session</Session>
+		<RootID>Test Folder.TestItems_2</RootID>
+		<RootPath></RootPath>
+	</DaSubscribeChildItems>
+	
+	<DaSessionCreate DisplayName="Default OPC specification">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>Performance.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<TestList StopIfOneFailed="false"  DisplayName="create variables of type double" >
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+		
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemType</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">4</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<Sleep>
+		<Duration>3000</Duration>
+	</Sleep>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_3.StartStopSimulationCommand.ChangeInterval</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_3.StartStopSimulationCommand.RepeatCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">99999999</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_3.StartStopSimulationCommand.Increment</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_3.StartStopSimulationCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:boolean">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+</TestList>
+	
+	<DaSubscribeChildItems DisplayName="BrowseFilter = All; branches to return">
+		<Session>Performance.Session</Session>
+		<RootID>Test Folder.TestItems_3</RootID>
+		<RootPath></RootPath>
+	</DaSubscribeChildItems>
+	
+	<DaSessionCreate DisplayName="Default OPC specification">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>Performance.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<TestList StopIfOneFailed="false"  DisplayName="create variables of type double" >
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+		
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemType</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">5</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<Sleep>
+		<Duration>3000</Duration>
+	</Sleep>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_4.StartStopSimulationCommand.ChangeInterval</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_4.StartStopSimulationCommand.RepeatCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">99999999</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_4.StartStopSimulationCommand.Increment</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_4.StartStopSimulationCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:boolean">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+</TestList>
+	
+	<DaSubscribeChildItems DisplayName="BrowseFilter = All; branches to return">
+		<Session>Performance.Session</Session>
+		<RootID>Test Folder.TestItems_4</RootID>
+		<RootPath></RootPath>
+	</DaSubscribeChildItems>
+	
+	<DaSessionCreate DisplayName="Default OPC specification">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>Performance.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<TestList StopIfOneFailed="false"  DisplayName="create variables of type double" >
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+		
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemType</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">6</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<Sleep>
+		<Duration>3000</Duration>
+	</Sleep>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_5.StartStopSimulationCommand.ChangeInterval</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_5.StartStopSimulationCommand.RepeatCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">99999999</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_5.StartStopSimulationCommand.Increment</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_5.StartStopSimulationCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:boolean">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+</TestList>
+	
+	<DaSubscribeChildItems DisplayName="BrowseFilter = All; branches to return">
+		<Session>Performance.Session</Session>
+		<RootID>Test Folder.TestItems_5</RootID>
+		<RootPath></RootPath>
+	</DaSubscribeChildItems>
+	
+	<DaSessionCreate DisplayName="Default OPC specification">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>Performance.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<TestList StopIfOneFailed="false"  DisplayName="create variables of type double" >
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+		
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemType</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">7</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	
+	<Sleep>
+		<Duration>3000</Duration>
+	</Sleep>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_6.StartStopSimulationCommand.ChangeInterval</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_6.StartStopSimulationCommand.RepeatCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">99999999</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_6.StartStopSimulationCommand.Increment</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_6.StartStopSimulationCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:boolean">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+</TestList>
+
+	<DaSubscribeChildItems DisplayName="BrowseFilter = All; branches to return">
+		<Session>Performance.Session</Session>
+		<RootID>Test Folder.TestItems_6</RootID>
+		<RootPath></RootPath>
+	</DaSubscribeChildItems>
+
+
+	<DaSessionCreate DisplayName="Default OPC specification">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>Performance.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<TestList StopIfOneFailed="false"  DisplayName="create variables of type double" >
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+		
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemType</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">8</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	
+	<Sleep>
+		<Duration>3000</Duration>
+	</Sleep>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_7.StartStopSimulationCommand.ChangeInterval</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_7.StartStopSimulationCommand.RepeatCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">99999999</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_7.StartStopSimulationCommand.Increment</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_7.StartStopSimulationCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:boolean">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+</TestList>
+	
+	<DaSubscribeChildItems DisplayName="BrowseFilter = All; branches to return">
+		<Session>Performance.Session</Session>
+		<RootID>Test Folder.TestItems_7</RootID>
+		<RootPath></RootPath>
+	</DaSubscribeChildItems>
+	
+	<DaSessionCreate DisplayName="Default OPC specification">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>Performance.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<TestList StopIfOneFailed="false"  DisplayName="create variables of type double" >
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+		
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemType</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">9</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<Sleep>
+		<Duration>3000</Duration>
+	</Sleep>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_8.StartStopSimulationCommand.ChangeInterval</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_8.StartStopSimulationCommand.RepeatCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">99999999</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_8.StartStopSimulationCommand.Increment</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_8.StartStopSimulationCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:boolean">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+</TestList>
+	
+	<DaSubscribeChildItems DisplayName="BrowseFilter = All; branches to return">
+		<Session>Performance.Session</Session>
+		<RootID>Test Folder.TestItems_8</RootID>
+		<RootPath></RootPath>
+	</DaSubscribeChildItems>
+	
+	<DaSessionCreate DisplayName="Default OPC specification">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>Performance.Session</Property>
+	</DaSessionCreate>
+	
+	
+	<TestList StopIfOneFailed="false"  DisplayName="create variables of type double" >
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+		
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand.ItemType</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">10</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.CreateItemsCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:double">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	
+	<Sleep>
+		<Duration>3000</Duration>
+	</Sleep>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_9.StartStopSimulationCommand.ChangeInterval</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1000</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_9.StartStopSimulationCommand.RepeatCount</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">99999999</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+	
+	
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_9.StartStopSimulationCommand.Increment</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:unsignedInt">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+
+	<DaSessionWrite>
+		<Session>Performance.Session</Session>
+		<ItemIds>
+				<string>Test Folder.TestItems_9.StartStopSimulationCommand</string>
+		</ItemIds>
+		<Values>
+		<Value>
+				<Data xsi:type="xsd:boolean">1</Data>
+			</Value>
+		</Values>
+		<ResultsProperty>System.Read1.Results_DA3</ResultsProperty>
+	</DaSessionWrite>
+</TestList>
+	
+	<DaSubscribeChildItems DisplayName="BrowseFilter = All; branches to return">
+		<Session>Performance.Session</Session>
+		<RootID>Test Folder.TestItems_9</RootID>
+		<RootPath></RootPath>
+	</DaSubscribeChildItems>
+	
+</TestList>

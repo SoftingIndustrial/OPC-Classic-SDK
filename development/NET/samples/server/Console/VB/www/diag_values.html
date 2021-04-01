@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Diagnostics - Process Values</title></head>
+	<link rel="stylesheet" type="text/css" href="styles/www.css">
+		<body>
+			<form method="POST" action="diag_values.html">
+				<table width="590">
+					<tr>
+						<td><img src="pics/space.gif" width="1" height="8" border="0" alt=""></td>
+					</tr>
+					<tr>
+						<td width="370" bgcolor="#e4ebee" class="headerLine"><b>Diagnostics - <a href="diag_values.html">Process 
+									Values</a></b></td>
+					<td width="220" bgcolor="#e4ebee" class="headerLine" align="right"><font color="Gray"><%#CURRENTTIME#%></font></td>
+					</tr>
+					<tr>
+						<td><img src="pics/space.gif" width="1" height="8" border="0" alt=""></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td bgColor="#cccccc">
+							<a href="diag_values.html"><img border="0" src="pics/refresh.jpg" title="Refresh values" width="25" height="25"></a>
+							<a href="diag_values_w.html"><img border="0" src="pics/edit.jpg" title="Edit values" width="25" height="25"></a>
+							<a href="diag_values_c.html"><img border="0" src="pics/autorefresh.jpg" title="Refresh every 5 seconds" width="25"
+									height="25"></a> 
+							<td width="3"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td><td bgColor="#cccccc">
+									<input type="image" src="pics/add.jpg" title="Add Item" width="25" height="25" ID="CMD##ITEMLISTVALUES##ADD"
+								NAME="CMD##ITEMLISTVALUES##ADD"> <input type="image" src="pics/delete.jpg" title="Remove Item" width="25" height="25" ID="CMD##ITEMLISTVALUES##DELETE"
+								NAME="CMD##ITEMLISTVALUES##DELETE">
+						</td>
+					</tr>
+				</table>
+				<table width="590">
+					<tr>
+						<td width="25"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+						<td width="185"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+						<td width="160"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+						<td width="100"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+						<td width="120"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+					</tr>
+					<tr>
+						<td bgcolor="#e4ebee" height="24"><b></b></td>
+						<td bgcolor="#e4ebee"><b>Item</b></td>
+						<td bgcolor="#e4ebee"><b>Value</b></td>
+						<td bgcolor="#e4ebee"><b>Quality</b></td>
+						<td bgcolor="#e4ebee"><b>Timestamp</b></td>
+					</tr>
+					<%#ITEMLISTVALUES##ITEMSREADCHANGE#%>
+					<tr>
+						<td><img src="pics/space.gif" width="1" height="10" border="0" alt=""></td>
+					</tr>
+				</table>
+				<table width="590">
+					<tr>
+						<td width="25"><img src="pics/space.gif" width="1" height="1" border="0" alt=""></td>
+						<td><input class="editField" type="text" name="ITEMLISTVALUES##ITEMID" size="27" value="<%#POSTARG##ITEMLISTVALUES##ITEMID#%>"></td>
+					</tr>
+				</table>
+				<table width="590">
+					<tr>
+						<td><img src="pics/space.gif" width="1" height="10" border="0" alt=""></td>
+					</tr>
+					<tr>
+						<td><%#MESSAGE###%></td>
+					</tr>
+				</table>
+			</form>
+		</body>
+</html>

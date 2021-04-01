@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd" RunInParallel="true">
+  <TestList StopIfOneFailed="false" DisplayName="SystemV30">
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+    </DaSessionCreate>
+
+    <ImportFile>
+      <FilePath>..\DaBrowse.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRate.xml</FilePath>
+    </ImportFile>
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+  </TestList>
+
+  <TestList StopIfOneFailed="false" DisplayName="SystemV30">
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+    </DaSessionCreate>
+
+    <ImportFile>
+      <FilePath>..\DaBrowse.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRate.xml</FilePath>
+    </ImportFile>
+    
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+  </TestList>
+
+  <TestList StopIfOneFailed="false" DisplayName="SystemV30">
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+    </DaSessionCreate>
+
+    <ImportFile>
+      <FilePath>..\DaBrowse.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRate.xml</FilePath>
+    </ImportFile>
+
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+  </TestList>
+
+  <TestList StopIfOneFailed="false" DisplayName="SystemV30">
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+    </DaSessionCreate>
+
+    <ImportFile>
+      <FilePath>..\DaBrowse.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRate.xml</FilePath>
+    </ImportFile>
+
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+  </TestList>
+
+  <TestList StopIfOneFailed="false" DisplayName="SystemV30">
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+    </DaSessionCreate>
+
+    <ImportFile>
+      <FilePath>..\DaBrowse.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRate.xml</FilePath>
+    </ImportFile>
+    
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+  </TestList>
+
+  <TestList StopIfOneFailed="false" DisplayName="SystemV20">
+
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+      <ForcedOpcSpecification>DA20</ForcedOpcSpecification>
+    </DaSessionCreate>
+
+    <ImportFile>
+      <FilePath>..\DaBrowseV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRateV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+    
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+  </TestList>
+
+  <TestList StopIfOneFailed="false" DisplayName="SystemV20">
+
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+      <ForcedOpcSpecification>DA20</ForcedOpcSpecification>
+    </DaSessionCreate>
+
+    <ImportFile>
+      <FilePath>..\DaBrowseV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRateV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+    
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+  </TestList>
+
+  <TestList StopIfOneFailed="false" DisplayName="SystemV20">
+
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+      <ForcedOpcSpecification>DA20</ForcedOpcSpecification>
+    </DaSessionCreate>
+
+    <ImportFile>
+      <FilePath>..\DaBrowseV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRateV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+    
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+  </TestList>
+
+  <TestList StopIfOneFailed="false" DisplayName="SystemV20">
+
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+      <ForcedOpcSpecification>DA20</ForcedOpcSpecification>
+    </DaSessionCreate>
+
+    <ImportFile>
+      <FilePath>..\DaBrowseV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRateV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+  </TestList>
+
+  <TestList StopIfOneFailed="false" DisplayName="SystemV20">
+
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+      <ForcedOpcSpecification>DA20</ForcedOpcSpecification>
+    </DaSessionCreate>
+
+    <ImportFile>
+      <FilePath>..\DaBrowseV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRateV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+  </TestList>
+
+  <TestList StopIfOneFailed="false" DisplayName="StandardV20V30">
+
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+      <ForcedOpcSpecification>DA20</ForcedOpcSpecification>
+    </DaSessionCreate>
+    
+    <ImportFile>
+      <FilePath>../DaItemReadWrite.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>../DaSubscriptionReadWrite20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>../DaBrowseV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRateV20.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_DeadbandV20.xml</FilePath>
+    </ImportFile>
+    
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+
+    <DaSessionCreate DisplayName="Default OPC specification">
+      <Url>{::DaSessionUrl}</Url>
+      <Property>System.Session</Property>
+    </DaSessionCreate>
+
+    <ImportFile>
+      <FilePath>../DaSubscriptionReadWrite.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>../DaSessionReadWrite.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>../DaItemReadWrite.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>../DaBrowse.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_State.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_UpdateRate.xml</FilePath>
+    </ImportFile>
+    <ImportFile>
+      <FilePath>DaSubscription_Deadband.xml</FilePath>
+    </ImportFile>
+    
+    <DaSessionRemove>
+      <Session>System.Session</Session>
+    </DaSessionRemove>
+  </TestList>
+  
+</TestList>

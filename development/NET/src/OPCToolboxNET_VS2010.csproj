@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>TBN40</AssemblyName>
+    <AssemblyOriginatorKeyFile>SoftingKeyPair.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OPCToolboxNET</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\bin\VS2010\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET40</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>.\bin\VS2010\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;NDEBUG;NET40</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Ae\ClientAeSubscription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientAddressSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientAddressSpaceElementBrowseOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientApplication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientEnums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientObjectSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientServerBrowser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\ClientServerStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientDataControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientDataElements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientInfoCollector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientSubscriptionProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientValueComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientValueEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaAddressSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaPropertiesGetOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\Da\ClientDaSubscription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OTBFunctions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OTBStructures.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Ae\ServerAeAddressSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Ae\ServerAeAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Ae\ServerAeCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Ae\ServerAeCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Ae\ServerAeEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Da\ServerDaAddressSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Da\ServerDaProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Da\ServerDaRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Da\ServerDaSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Da\ServerDaTransaction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\ServerAddressSpaceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\ServerApplication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\ServerCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\ServerEnums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\ServerWebTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Trace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValueQT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="client\Control\ClientInfoCollector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ClientInfoCollector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\Control\ClientSubscriptionProperties.resx">
+      <DependentUpon>ClientSubscriptionProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SoftingKeyPair.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.4.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 4.0</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>copy "$(TargetPath)" ..\..\..\..\..\..\bin</PostBuildEvent>
+  </PropertyGroup>
+</Project>

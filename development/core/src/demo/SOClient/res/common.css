@@ -1,0 +1,15 @@
+
+  BODY  { font-family:verdana; font-size:8pt; }
+  TH,TD { font-family:verdana; font-size:8pt; }
+
+  a:visited { color:blue; }
+  a:hover { color:blue;}
+  a:link { color:blue; } 
+
+  img { border-style:none; }
+
+  a { line-height:15px; }
+
+  #idRetail { visibility:hidden; }
+  #idDemo   { visibility:hidden; }
+  

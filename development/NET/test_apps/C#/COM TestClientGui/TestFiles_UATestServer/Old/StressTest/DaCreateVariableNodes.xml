@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<!-- Create Variables -->
+	<DaVariableNodesCreateProxy>
+		<Session>System.Session</Session>
+		<Property>DaVariables.NodeSet1</Property>
+		<Count>1000</Count>
+		<NodeType>Int32</NodeType>
+	</DaVariableNodesCreateProxy>
+	
+	<!-- Monitor Variables -->
+	<DaVariableNodesSubscribeProxy>
+		<Session>System.Session</Session>
+		<NodeSetId>DaVariables.NodeSet1</NodeSetId>
+		<Count>1000</Count>
+		<UpdateRate>1000</UpdateRate>
+		<Property>DaVariables.MonitoredNodeSet1</Property>
+		<SubscriptionProperty>DaVariables.SubscriptionNodeSet1</SubscriptionProperty>
+	</DaVariableNodesSubscribeProxy>
+  
+	<!-- Start Simulation -->
+	<DaVariableNodesSimulationProxy>
+		<Session>System.Session</Session>
+		<NodeSetId>DaVariables.NodeSet1</NodeSetId>
+		<ChangeInterval>1000</ChangeInterval>
+		<ChangesCount>0</ChangesCount>
+		<Increment>1</Increment>
+		<StartStopCommand>1</StartStopCommand>
+	</DaVariableNodesSimulationProxy>
+	
+	<!-- Wait... -->
+	<Sleep>
+		<Duration>10000</Duration>
+	</Sleep>
+	
+	<!-- Stop Simulation -->
+	<DaVariableNodesSimulationProxy>
+		<Session>System.Session</Session>
+		<NodeSetId>DaVariables.NodeSet1</NodeSetId>
+		<StartStopCommand>0</StartStopCommand>
+	</DaVariableNodesSimulationProxy>
+	
+	<!-- Remove Monitor Items -->
+	<DaItemsRemove>
+		<ItemsProperty>DaVariables.MonitoredNodeSet1</ItemsProperty>
+	</DaItemsRemove>
+	
+	<!-- Remove Subscription -->
+	<DaSubscriptionRemove>
+		<Subscription>DaVariables.SubscriptionNodeSet1</Subscription>
+	</DaSubscriptionRemove>
+	
+	<!-- Delete Variables -->
+	<DaVariableNodesDeleteProxy>
+		<Session>System.Session</Session>
+		<NodeSetId>DaVariables.NodeSet1</NodeSetId>
+	</DaVariableNodesDeleteProxy>	
+</TestList>

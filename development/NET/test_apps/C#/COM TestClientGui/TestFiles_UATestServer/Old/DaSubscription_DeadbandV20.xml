@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<DaSubscriptionCreate>
+		<Session>System.Session</Session>
+		<UpdateRate>1000</UpdateRate>
+		<Deadband>5</Deadband>
+		<Property>DaSubscription.Subscription</Property>
+	</DaSubscriptionCreate>
+
+
+		<DaItemsCreate>
+			<Subscription>DaSubscription.Subscription</Subscription>
+			<ItemIds>
+				<string>ns*2;s*TCAnalogItem_Item1</string>
+			</ItemIds>
+			<Property>DaSubscription.Items</Property>
+		</DaItemsCreate>
+	
+	<TestList DisplayName="With Subscription Deadband">
+	
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">-100</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<Sleep>
+			<Description>Try to lose the first notification</Description>
+			<Duration>2000</Duration>
+		</Sleep>
+
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">0</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<Sleep>
+			<Description>Try to lose the first notification</Description>
+			<Duration>2000</Duration>
+		</Sleep>
+
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">1</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<DaSubscriptionWaitForNotif>
+			<Subscription>DaSubscription.Subscription</Subscription>
+			<ExpectValues>false</ExpectValues>
+		</DaSubscriptionWaitForNotif>
+
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">52</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<DaSubscriptionWaitForNotif>
+			<Subscription>DaSubscription.Subscription</Subscription>
+		</DaSubscriptionWaitForNotif>
+
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">73</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<DaSubscriptionWaitForNotif>
+			<Subscription>DaSubscription.Subscription</Subscription>
+			<ExpectValues>false</ExpectValues>
+		</DaSubscriptionWaitForNotif>
+
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">22</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<DaSubscriptionWaitForNotif>
+			<Subscription>DaSubscription.Subscription</Subscription>
+			<ExpectValues>false</ExpectValues>
+		</DaSubscriptionWaitForNotif>
+
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">-28.3</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<DaSubscriptionWaitForNotif>
+			<Subscription>DaSubscription.Subscription</Subscription>
+		</DaSubscriptionWaitForNotif>
+
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">6</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<DaSubscriptionWaitForNotif>
+			<Subscription>DaSubscription.Subscription</Subscription>
+			<ExpectValues>false</ExpectValues>
+		</DaSubscriptionWaitForNotif>
+
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">7</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<DaSubscriptionWaitForNotif>
+			<Subscription>DaSubscription.Subscription</Subscription>
+			<ExpectValues>false</ExpectValues>
+		</DaSubscriptionWaitForNotif>
+
+	</TestList>
+
+	<TestList DisplayName="Without Deadband">
+
+		<DaSubscriptionUpdate>
+			<Subscription>DaSubscription.Subscription</Subscription>
+			<Deadband>0</Deadband>
+		</DaSubscriptionUpdate>
+
+		<Sleep>
+			<Description>Try to lose the first notification</Description>
+			<Duration>2000</Duration>
+		</Sleep>
+
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">1</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<DaSubscriptionWaitForNotif>
+			<Subscription>DaSubscription.Subscription</Subscription>
+		</DaSubscriptionWaitForNotif>
+
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">2</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<DaSubscriptionWaitForNotif>
+			<Subscription>DaSubscription.Subscription</Subscription>
+		</DaSubscriptionWaitForNotif>
+
+		<DaItemWrite>
+			<ItemsProperty>DaSubscription.Items</ItemsProperty>
+			<Values>
+				<Value>
+					<Quality>GOOD</Quality>
+					<TimeStamp>2012-06-13T11:40:52.1895963Z</TimeStamp>
+					<Data xsi:type="xsd:double">3</Data>
+				</Value>
+			</Values>
+		</DaItemWrite>
+
+		<DaSubscriptionWaitForNotif>
+			<Subscription>DaSubscription.Subscription</Subscription>
+		</DaSubscriptionWaitForNotif>
+
+	</TestList>
+
+	<DaItemsRemove>
+		<ItemsProperty>DaSubscription.Items</ItemsProperty>
+	</DaItemsRemove>
+
+	
+	<DaSubscriptionRemove>
+		<Subscription>DaSubscription.Subscription</Subscription>
+	</DaSubscriptionRemove>
+
+
+</TestList>

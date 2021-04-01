@@ -1,0 +1,42 @@
+/* Elements */
+BODY {
+        margin-top: 0px;
+        margin-left: 10pt;
+        color: #000000;
+        font-size : 12px;
+		font-family : verdana,helvetica,arial,sans-serif;
+     }
+TD {
+        margin-top: 0px;
+        margin-bottom: 0px;
+	font-size : 12px;
+	line-height : 12px;
+		font-family : verdana,helvetica,arial,sans-serif;
+   }
+H1 {
+        margin-top: 7px;
+        margin-bottom: 3px;
+	font-size : 14px;
+	line-height : 14px;
+		font-family : verdana,helvetica,arial,sans-serif;
+	 font-weight: bold
+   }
+H2 {	
+        margin-top: 8px;
+        margin-bottom: 6px;
+        font-size : 12px;
+	line-height : 12px;
+		font-family : verdana,helvetica,arial,sans-serif;
+	 font-weight: bold
+   }
+   
+.headerLine		
+{font-family: verdana,helvetica,arial,sans-serif; font-size: 12px; font-weight: bold}
+
+.tableLine		
+{font-family: verdana,helvetica,arial,sans-serif; margin-top: 0px; margin-bottom: 0px; line-height : 11px; font-size: 10px}
+
+.editField		
+{font-family: verdana,helvetica,arial,sans-serif; font-size: 12px}
+
+

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<DaSessionCreate DisplayName="Default OPC specification DA3">
+		<Url>opcda:///Softing.COM TestServer.DA.1/{E4D228D9-1442-4DC9-BFB6-026215D5D302}</Url>
+		<Property>System.Session</Property>
+	</DaSessionCreate>
+
+	
+
+	<ImportFile>
+		<FilePath>WriteRead_BoundaryValues_DA3.0.xml</FilePath>
+	</ImportFile>
+
+</TestList>

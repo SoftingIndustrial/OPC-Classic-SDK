@@ -1,0 +1,116 @@
+//-----------------------------------------------------------------------------
+//                                                                            |
+//                   Softing Industrial Automation GmbH                       |
+//                        Richard-Reitzner-Allee 6                            |
+//                           85540 Haar, Germany                              |
+//                                                                            |
+//                 This is a part of the Softing OPC Toolkit                  |
+//        Copyright (c) 1998-2020 Softing Industrial Automation GmbH          |
+//                           All Rights Reserved                              |
+//                                                                            |
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//                           OPC Toolkit - common                             |
+//                                                                            |
+//  Filename    : Version.rc                                                  |
+//  Version     : 4.47.1                                                      |
+//  Date        : 27-July-2020                                                |
+//                                                                            |
+//  Description : Version Resource for OPC Toolkit                            |
+//                                                                            |
+//-----------------------------------------------------------------------------
+
+#include "SOVersion.h"
+#include "SOModule.h"
+#ifndef UNDER_CE
+#include <winresrc.h>
+#else
+#include <winres.h>
+#endif
+
+#if ! defined(SYSBUILD)
+#define	SYSBUILD "SysBuild"
+#endif
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION MAJOR_VERSION_NUMBER,MINOR_VERSION_NUMBER,PATCH_VERSION_NUMBER,BUILD_NUMBER
+ PRODUCTVERSION MAJOR_VERSION_NUMBER,MINOR_VERSION_NUMBER,0,0
+ FILEFLAGSMASK 0x3fL
+#if defined(_DEBUG)
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40000L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "Softing Industrial Automation GmbH\0"
+
+#if defined(_DEBUG)
+            VALUE "FileVersion", VERSION_TEXT "." BUILD_NUMBER_STR " (debug)\0"
+#else
+            VALUE "FileVersion", VERSION_TEXT "." BUILD_NUMBER_STR "\0"
+#endif
+
+#if defined(_MSC_VER)
+#if _MSC_VER == 1100
+            VALUE "Compiler", "Microsoft Visual C++ 5.0\0"
+#elif _MSC_VER == 1200
+            VALUE "Compiler", "Microsoft Visual C++ 6.0\0"
+#elif _MSC_VER == 1300
+            VALUE "Compiler", "Microsoft Visual C++ .NET 2002\0"
+#elif _MSC_VER == 1310
+            VALUE "Compiler", "Microsoft Visual C++ .NET 2003\0"
+#elif _MSC_VER == 1400
+            VALUE "Compiler", "Microsoft Visual C++ 2005\0"
+#elif _MSC_VER == 1500
+            VALUE "Compiler", "Microsoft Visual C++ 2008\0"
+#elif _MSC_VER == 1600
+            VALUE "Compiler", "Microsoft Visual C++ 2010\0"
+#elif _MSC_VER == 1700
+            VALUE "Compiler", "Microsoft Visual C++ 2012\0"
+#elif _MSC_VER == 1800
+            VALUE "Compiler", "Microsoft Visual C++ 2013\0"
+#endif
+#else
+#if defined(__BORLANDC__)
+            VALUE "Compiler", "Borland C++ Builder 4.0\0"
+#endif
+#endif
+#if defined(UNDER_CE)
+#if _MSC_VER == 300
+            VALUE "Compiler", "Microsoft eMbedded Visual C++ 3.0\0"
+#else
+            VALUE "Compiler", "Microsoft eMbedded Visual C++ 4.0\0"
+#endif
+#endif
+
+            VALUE "LegalCopyright", "Copyright © Softing Industrial Automation GmbH 1998-2019"
+            VALUE "FileDescription", FILE_DESCRIPTION "\0"
+            VALUE "ProductName", PRODUCT_NAME "\0"
+            VALUE "OriginalFilename", ORIGINAL_FILENAME "\0"
+            VALUE "InternalName", INTERNAL_NAME "\0"
+            VALUE "ProductVersion", VERSION_TEXT "\0"
+#if defined(TB_OEM)
+            VALUE "SpecialBuild", SPECIAL_BUILD "\0"
+#endif
+			VALUE "SysBuild", """SYSBUILD""" "\0"
+
+		END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END

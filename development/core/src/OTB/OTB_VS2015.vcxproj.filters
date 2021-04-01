@@ -1,0 +1,990 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="OTB">
+      <UniqueIdentifier>{b4d1e596-e894-470a-8b4c-f7b41ad0ebfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OTB\Common">
+      <UniqueIdentifier>{770b68e5-d22f-4d04-9c01-4811dec3f22d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OTB\Client">
+      <UniqueIdentifier>{cfcd07b3-bef9-4572-9681-b1a7664043cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OTB\Client\DA">
+      <UniqueIdentifier>{5e448330-b48b-4c38-a9f1-caf5e22fb6de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OTB\Client\AE">
+      <UniqueIdentifier>{a1ca0ce3-a1b1-46a0-bb65-462f6abe24cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OTB\Server">
+      <UniqueIdentifier>{6c9a1b03-7541-4bc0-83d3-27e1c2e04a35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OTB\Server\AE">
+      <UniqueIdentifier>{15eb5064-4d92-4b75-9082-1d263d438b7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OTB\Server\DA">
+      <UniqueIdentifier>{ca465e4b-03a4-49b9-9a53-c275c85120f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SOCmn">
+      <UniqueIdentifier>{0c1c6694-2794-4a67-b89f-7384760c8c03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SOClt">
+      <UniqueIdentifier>{04e685e0-7e09-482c-a833-a52dfdbafa8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SODaC">
+      <UniqueIdentifier>{80facb89-c9de-41a3-951c-080dada7d140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SOSrv">
+      <UniqueIdentifier>{1499c157-439e-4d86-adf8-948102269d2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SODaS">
+      <UniqueIdentifier>{7096c928-1bf7-4b03-97da-8b1bbdbe77ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SOAeS">
+      <UniqueIdentifier>{df4b01b5-6349-48db-9d8e-c12e234b41e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SOAsS">
+      <UniqueIdentifier>{d0184ce0-66aa-4e88-9469-64d1a3fc747f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SOAeC">
+      <UniqueIdentifier>{575a71f2-c8d4-4db7-a44a-1893b109a09c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Extimpl.cpp">
+      <Filter>OTB\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="OTB.cpp">
+      <Filter>OTB\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>OTB\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientJob.cpp">
+      <Filter>OTB\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="OTC.cpp">
+      <Filter>OTB\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientDACreator.cpp">
+      <Filter>OTB\Client\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientDAItem.cpp">
+      <Filter>OTB\Client\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientDASession.cpp">
+      <Filter>OTB\Client\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientDASubscription.cpp">
+      <Filter>OTB\Client\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientAECreator.cpp">
+      <Filter>OTB\Client\AE</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientAESession.cpp">
+      <Filter>OTB\Client\AE</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientAESubscription.cpp">
+      <Filter>OTB\Client\AE</Filter>
+    </ClCompile>
+    <ClCompile Include="OTS.cpp">
+      <Filter>OTB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="SrvApp.cpp">
+      <Filter>OTB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="WebServer.cpp">
+      <Filter>OTB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerAEAddressSpaceElement.cpp">
+      <Filter>OTB\Server\AE</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerAECondition.cpp">
+      <Filter>OTB\Server\AE</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerAEConditionClass.cpp">
+      <Filter>OTB\Server\AE</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerAECreator.cpp">
+      <Filter>OTB\Server\AE</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerAEServer.cpp">
+      <Filter>OTB\Server\AE</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDAAddressSpaceElement.cpp">
+      <Filter>OTB\Server\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDACache.cpp">
+      <Filter>OTB\Server\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDACreator.cpp">
+      <Filter>OTB\Server\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDAGroup.cpp">
+      <Filter>OTB\Server\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDAItem.cpp">
+      <Filter>OTB\Server\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDANode.cpp">
+      <Filter>OTB\Server\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDAProperty.cpp">
+      <Filter>OTB\Server\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDAServer.cpp">
+      <Filter>OTB\Server\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDATag.cpp">
+      <Filter>OTB\Server\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDATransaction.cpp">
+      <Filter>OTB\Server\DA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnData.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnElement.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnEvent.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnEventPool.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnException.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnExpat.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnFunctions.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnHttp.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnList.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnObject.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnSocket.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnSocketClt.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnSocketSrv.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnString.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnSync.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnThread.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnTime.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnTP.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnTrace.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnVariant.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnXML.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltBrowse.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltComServer.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltElement.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltEntry.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltHttp.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltServer.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltServerBrowser.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltShutdown.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltStorage.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltTask.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltThread.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOClt\SOCltTP.cpp">
+      <Filter>SOClt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCBrowse.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCCallback.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCComBrowse.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCComGroup.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCComServer.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCEntry.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCGroup.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCItem.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCServer.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCTPBrowse.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCTPCall.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCTPGroup.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCTPServer.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCXmlBrowse.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCXmlCall.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCXmlGroup.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaC\SODaCXmlServer.cpp">
+      <Filter>SODaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvBrowser.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvComEnum.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvComObject.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvEntry.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvHttp.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvHttpEx.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvServer.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvTP.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvTrace.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvTraceEx.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvWatch.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOSrv\SOSrvXML.cpp">
+      <Filter>SOSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSCache.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSComEnum.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSComGroup.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSComServer.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSEntry.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSGroup.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSItem.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSItemTag.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSNode.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSProperty.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSRequest.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSServer.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSTag.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSTPGroup.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSTPServer.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSTransaction.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSWatch.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SODaS\SODaSXmlServer.cpp">
+      <Filter>SODaS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSArea.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSAreaBrowser.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSAttribute.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSCategory.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSComAreaBrowser.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSComServer.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSComSubscription.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSCondition.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSEntry.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSEvent.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSServer.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSSource.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSSubCondition.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSSubscription.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSTPAreaBrowser.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSTPServer.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSTPSubscription.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeS\SOAeSWatch.cpp">
+      <Filter>SOAeS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAsS\SOAsSAttribute.cpp">
+      <Filter>SOAsS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAsS\SOAsSCondition.cpp">
+      <Filter>SOAsS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAsS\SOAsSEntry.cpp">
+      <Filter>SOAsS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAsS\SOAsSItemTag.cpp">
+      <Filter>SOAsS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCBrowse.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCCallback.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCComBrowse.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCComServer.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCComSubscription.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCEntry.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCEvent.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCServer.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCSubscription.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCTPBrowse.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCTPCall.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCTPServer.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOAeC\SOAeCTPSubscription.cpp">
+      <Filter>SOAeC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOCmn\SOCmnHandleManager.cpp">
+      <Filter>SOCmn</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OTB.def">
+      <Filter>OTB\Common</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OTB.h">
+      <Filter>OTB\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="OTBCfg.h">
+      <Filter>OTB\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\OTcommon.h">
+      <Filter>OTB\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SOModule.h">
+      <Filter>OTB\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\SOVersion.h">
+      <Filter>OTB\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>OTB\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientJob.h">
+      <Filter>OTB\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="OTC.h">
+      <Filter>OTB\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\OTClient.h">
+      <Filter>OTB\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientDACreator.h">
+      <Filter>OTB\Client\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientDAItem.h">
+      <Filter>OTB\Client\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientDASession.h">
+      <Filter>OTB\Client\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientDASubscription.h">
+      <Filter>OTB\Client\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientAECreator.h">
+      <Filter>OTB\Client\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientAESession.h">
+      <Filter>OTB\Client\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientAESubscription.h">
+      <Filter>OTB\Client\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\OTServer.h">
+      <Filter>OTB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="SrvApp.h">
+      <Filter>OTB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="WebServer.h">
+      <Filter>OTB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerAEAddressSpaceElement.h">
+      <Filter>OTB\Server\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerAEArea.h">
+      <Filter>OTB\Server\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerAECondition.h">
+      <Filter>OTB\Server\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerAEConditionClass.h">
+      <Filter>OTB\Server\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerAECreator.h">
+      <Filter>OTB\Server\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerAEServer.h">
+      <Filter>OTB\Server\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerAESource.h">
+      <Filter>OTB\Server\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDAAddressSpaceElement.h">
+      <Filter>OTB\Server\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDACache.h">
+      <Filter>OTB\Server\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDACreator.h">
+      <Filter>OTB\Server\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDAGroup.h">
+      <Filter>OTB\Server\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDAItem.h">
+      <Filter>OTB\Server\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDANode.h">
+      <Filter>OTB\Server\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDAProperty.h">
+      <Filter>OTB\Server\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDAServer.h">
+      <Filter>OTB\Server\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDATag.h">
+      <Filter>OTB\Server\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDATransaction.h">
+      <Filter>OTB\Server\DA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmn.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnCfg.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnData.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnElement.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnEvent.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnEventPool.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnException.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnFunctions.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnHttp.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnList.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnObject.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnOsCompat.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnSocket.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnString.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnSync.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnThread.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnTime.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnTP.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnTrace.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnVariant.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnXML.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOClt.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltBrowse.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltComServer.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltElement.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltEntry.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltError.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltHttp.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltServer.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltServerBrowser.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltShutdown.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltStorage.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltTask.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltThread.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCltTP.h">
+      <Filter>SOClt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaC.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCBrowse.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCCallback.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCComBrowse.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCComGroup.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCComServer.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCEntry.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCGroup.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCItem.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCServer.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCTPBrowse.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SODaC\SODaCTPCall.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCTPGroup.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCTPServer.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCXmlBrowse.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SODaC\SODaCXmlCall.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCXmlGroup.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaCXmlServer.h">
+      <Filter>SODaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOSrv.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOSrvBrowser.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOSrv\SOSrvComEnum.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOSrv\SOSrvComObject.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOSrvEntry.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOSrvHttp.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOSrv\SOSrvHttpEx.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOSrvServer.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOSrvTP.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOSrvTrace.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOSrv\SOSrvTraceEx.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOSrvWatch.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOSrvXML.h">
+      <Filter>SOSrv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaS.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSCache.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SODaS\SODaSComEnum.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SODaS\SODaSComGroup.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SODaS\SODaSComServer.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSEntry.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSGroup.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSItem.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSItemTag.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSNode.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSProperty.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSRequest.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSServer.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSTag.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SODaS\SODaSTPGroup.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SODaS\SODaSTPServer.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSTransaction.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SODaSWatch.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SODaS\SODaSXmlServer.h">
+      <Filter>SODaS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeS.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSArea.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSAreaBrowser.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSAttribute.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSCategory.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOAeS\SOAeSComAreaBrowser.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOAeS\SOAeSComServer.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOAeS\SOAeSComSubscription.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSCondition.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSEntry.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSEvent.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSServer.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSSource.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSSubCondition.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSSubscription.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOAeS\SOAeSTPAreaBrowser.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOAeS\SOAeSTPServer.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOAeS\SOAeSTPSubscription.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeSWatch.h">
+      <Filter>SOAeS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAsS.h">
+      <Filter>SOAsS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAsSAttribute.h">
+      <Filter>SOAsS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAsSCondition.h">
+      <Filter>SOAsS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAsSEntry.h">
+      <Filter>SOAsS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAsSItemTag.h">
+      <Filter>SOAsS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeC.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCBrowse.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCCallback.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCComBrowse.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCComServer.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCComSubscription.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCEntry.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCEvent.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCServer.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCSubscription.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCTPBrowse.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOAeC\SOAeCTPCall.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCTPServer.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOAeCTPSubscription.h">
+      <Filter>SOAeC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SOCmnHandleManager.h">
+      <Filter>SOCmn</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\SOSrv\SOSrv.rc">
+      <Filter>OTB\Common</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\SOSrv\SOSrvmc.mc">
+      <Filter>SOSrv</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

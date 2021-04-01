@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softing-ia.com/TestClientCOM.xsd">
+
+	<Connect DisplayName="Connect state">
+      <Object>System.Session</Object>
+      <Active>false</Active>
+    </Connect>
+	
+<GetDaProperties DisplayName="DAProfiles_DA3">
+	<Session>System.Session</Session>
+		<RootID>CTT.Static.DA Profile.AnalogType.Double</RootID>
+		<ExecutionType>SYNCHRONOUS</ExecutionType>
+		<DaGetPropertiesOptions>
+      <WhatPropertyData>ALL</WhatPropertyData>
+		</DaGetPropertiesOptions>
+	<ExpectedElements>
+     <DaProperty>
+          <Description>Item Canonical DataType</Description>
+		  <Id>1</Id>
+			<ValueQT>
+				<Data xsi:type="xsd:short">5</Data>
+			</ValueQT>
+        </DaProperty>
+		
+		<DaProperty>
+          <Description>Item Value</Description>
+		  <Id>2</Id>
+			<ValueQT>
+				<Data xsi:type="xsd:double">0.0</Data>
+			</ValueQT>
+        </DaProperty>
+		
+		<DaProperty>
+          <Description>Item Quality</Description>
+		  <Id>3</Id>
+			<ValueQT>
+				<Data xsi:type="xsd:short">192</Data>
+			</ValueQT>
+        </DaProperty>
+		
+		<DaProperty>
+          <Description>Item Timestamp</Description>
+		  <Id>4</Id>
+			<!--<ValueQT>
+				<Data xsi:type="xsd:string">09:30:11</Data>
+				<Id>4</Id>
+			</ValueQT>-->
+        </DaProperty>
+		
+		<DaProperty>
+          <Description>Item Access Rights</Description>
+		  <Id>5</Id>
+			<ValueQT>
+				<Data xsi:type="xsd:int">3</Data>
+			</ValueQT>
+        </DaProperty>
+		
+		<DaProperty>
+          <Description>Server Scan Rate</Description>
+		  <Id>6</Id>
+			<ValueQT>
+				<Data xsi:type="xsd:float">100</Data>
+			</ValueQT>
+        </DaProperty>
+	
+		<DaProperty>
+          <Description>EUType</Description>
+		  <Id>7</Id>
+			<ValueQT>
+				<Data xsi:type="xsd:int">1</Data>
+			</ValueQT>
+		</DaProperty>
+		
+		<DaProperty>
+          <Description>Low InstrumentRange</Description>
+		  <Id>105</Id>
+			<ValueQT>
+				<Data xsi:type="xsd:double">0.0</Data>
+			</ValueQT>
+		</DaProperty>
+		<DaProperty>
+          <Description>High InstrumentRange</Description>
+		  	<Id>104</Id>
+			<ValueQT>
+				<Data xsi:type="xsd:double">120.0</Data>
+			</ValueQT>
+		</DaProperty>
+		
+		<DaProperty>
+          <Description>Low EU</Description>
+		  <Id>103</Id>
+			<ValueQT>
+				<Data xsi:type="xsd:double">0.0</Data>
+			</ValueQT>
+		</DaProperty>
+		
+		<DaProperty>
+          <Description>High EU</Description>
+		  <Id>102</Id>
+			<ValueQT>
+				<Data xsi:type="xsd:double">100.0</Data>
+			</ValueQT>
+		</DaProperty>
+		
+		<DaProperty>
+          <Description>EU Units</Description>
+		  <Id>100</Id>
+			<ValueQT>
+				<Data xsi:type="xsd:string">0</Data>
+			</ValueQT>
+		</DaProperty>
+		
+	</ExpectedElements>
+</GetDaProperties>		
+
+	<Connect DisplayName="Active state">
+      <Object>System.Session</Object>
+      <Active>true</Active>
+    </Connect>
+	
+<GetDaProperties DisplayName="AllProfiles_DA3">
+		<Session>System.Session</Session>
+		<RootID>CTT.Static.All Profiles.Scalar.String</RootID>
+		<ExecutionType>SYNCHRONOUS</ExecutionType>
+		<DaGetPropertiesOptions>
+      <WhatPropertyData>ALL</WhatPropertyData>
+		</DaGetPropertiesOptions>
+	<ExpectedElements>
+     <DaProperty>
+          <Description>Item Canonical DataType</Description>
+			<ValueQT>
+				<Data xsi:type="xsd:short">8</Data>
+			</ValueQT>
+        </DaProperty>
+		<DaProperty>
+          <Description>Item Value</Description>
+			<!--<ValueQT>
+				<Data xsi:type="xsd:string">n5BOWY3csCmzoQEsbPVrU6NHWDr1z8uLW0NjC9</Data>
+			</ValueQT>-->
+        </DaProperty>
+		<DaProperty>
+          <Description>Item Quality</Description>
+			<ValueQT>
+				<Data xsi:type="xsd:short">192</Data>
+			</ValueQT>
+        </DaProperty>
+		<DaProperty>
+          <Description>Item Timestamp</Description>
+			<!--<ValueQT>
+				<Data xsi:type="xsd:string">09:30:11</Data>
+				<Id>4</Id>
+			</ValueQT>-->
+        </DaProperty>
+		<DaProperty>
+          <Description>Item Access Rights</Description>
+			<ValueQT>
+				<Data xsi:type="xsd:int">3</Data>
+			</ValueQT>
+        </DaProperty>
+		<DaProperty>
+          <Description>Server Scan Rate</Description>
+			<ValueQT>
+				<Data xsi:type="xsd:float">100</Data>
+			</ValueQT>
+        </DaProperty>
+      </ExpectedElements>
+	</GetDaProperties>
+	
+</TestList>
