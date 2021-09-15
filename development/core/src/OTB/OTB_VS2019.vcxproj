@@ -45,25 +45,25 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -75,19 +75,19 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -119,28 +119,28 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\bin\VS2019\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\bin\VS2019\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\bin\VS2019\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\bin\VS2019\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\bin\VS2019\$(Platform)\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\bin\VS2019\$(Platform)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\bin\VS2019\$(Platform)\$(Configuration)\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\bin\VS2019\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">.\bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">.\bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">.\bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">.\bin\VS2019\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">.\bin\VS2019\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">.\bin\VS2019\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">.\bin\VS2019\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">true</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">./bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">./bin\VS2017\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">./bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">./bin\VS2017\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">./bin\VS2019\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">./bin\VS2019\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">./bin\VS2019\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">./bin\VS2019\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">false</LinkIncremental>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">OTBuD</TargetName>
@@ -173,10 +173,10 @@
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTB.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTB.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2019\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -188,23 +188,23 @@
       <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTB.dll</OutputFile>
+      <OutputFile>bin\VS2019\$(Platform)\$(Configuration)\OTB.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
-      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTB.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTB.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTB.lib</ImportLibrary>
+      <ImportLibrary>.\bin\VS2019\$(Platform)\$(Configuration)\OTB.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" ..\..\..\bin
-copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+      <Command>xcopy "$(TargetPath)" "..\..\..\bin\" /F /R /Y /I
+xcopy "$(TargetDir)$(TargetName).lib" "..\..\lib\" /F /R /Y /I
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -228,10 +228,10 @@ copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBx64.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTBx64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2019\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -243,22 +243,22 @@ copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
       <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBx64.dll</OutputFile>
+      <OutputFile>bin\VS2019\$(Platform)\$(Configuration)\OTBx64.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
-      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBx64.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTBx64.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBx64.lib</ImportLibrary>
+      <ImportLibrary>.\bin\VS2019\$(Platform)\$(Configuration)\OTBx64.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" ..\..\..\bin
-copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+      <Command>xcopy "$(TargetPath)" "..\..\..\bin\" /F /R /Y /I
+xcopy "$(TargetDir)$(TargetName).lib" "..\..\lib\" /F /R /Y /I
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -303,7 +303,7 @@ copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBD.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTBD.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
@@ -337,10 +337,10 @@ xcopy "$(TargetDir)$(TargetName).lib" "..\..\lib\" /F /R /Y /I
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBDx64.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTBDx64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2019\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -353,22 +353,22 @@ xcopy "$(TargetDir)$(TargetName).lib" "..\..\lib\" /F /R /Y /I
       <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBDx64.dll</OutputFile>
+      <OutputFile>bin\VS2019\$(Platform)\$(Configuration)\OTBDx64.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBDx64.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTBDx64.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBDx64.lib</ImportLibrary>
+      <ImportLibrary>.\bin\VS2019\$(Platform)\$(Configuration)\OTBDx64.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" ..\..\..\bin
-copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+      <Command>xcopy "$(TargetPath)" "..\..\..\bin\" /F /R /Y /I
+xcopy "$(TargetDir)$(TargetName).lib" "..\..\lib\" /F /R /Y /I
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -392,10 +392,10 @@ copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTB.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTB.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2019\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -408,23 +408,23 @@ copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
       <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBuD.dll</OutputFile>
+      <OutputFile>bin\VS2019\$(Platform)\$(Configuration)\OTBuD.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBuD.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTBuD.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBuD.lib</ImportLibrary>
+      <ImportLibrary>.\bin\VS2019\$(Platform)\$(Configuration)\OTBuD.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" ..\..\..\bin
-copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+      <Command>xcopy "$(TargetPath)" "..\..\..\bin\" /F /R /Y /I
+xcopy "$(TargetDir)$(TargetName).lib" "..\..\lib\" /F /R /Y /I
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -447,10 +447,10 @@ copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBuDx64.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTBuDx64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2019\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -463,22 +463,22 @@ copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
       <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBuDx64.dll</OutputFile>
+      <OutputFile>bin\VS2019\$(Platform)\$(Configuration)\OTBuDx64.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBuDx64.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTBuDx64.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBuDx64.lib</ImportLibrary>
+      <ImportLibrary>.\bin\VS2019\$(Platform)\$(Configuration)\OTBuDx64.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" ..\..\..\bin
-copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+      <Command>xcopy "$(TargetPath)" "..\..\..\bin\" /F /R /Y /I
+xcopy "$(TargetDir)$(TargetName).lib" "..\..\lib\" /F /R /Y /I
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -502,10 +502,10 @@ copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTB.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTB.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2019\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -517,23 +517,23 @@ copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
       <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBu.dll</OutputFile>
+      <OutputFile>bin\VS2019\$(Platform)\$(Configuration)\OTBu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
-      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBu.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTBu.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBu.lib</ImportLibrary>
+      <ImportLibrary>.\bin\VS2019\$(Platform)\$(Configuration)\OTBu.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" ..\..\..\bin
-copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+      <Command>xcopy "$(TargetPath)" "..\..\..\bin\" /F /R /Y /I
+xcopy "$(TargetDir)$(TargetName).lib" "..\..\lib\" /F /R /Y /I
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -556,10 +556,10 @@ copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBx64.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bin\VS2017\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\bin\VS2017\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTBx64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\bin\VS2019\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\bin\VS2019\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -571,22 +571,22 @@ copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
       <AdditionalIncludeDirectories>.;..\..\common;..\SOSrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <OutputFile>bin\VS2017\$(Platform)\$(Configuration)\OTBux64.dll</OutputFile>
+      <OutputFile>bin\VS2019\$(Platform)\$(Configuration)\OTBux64.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\OTB.def</ModuleDefinitionFile>
-      <ProgramDatabaseFile>.\bin\VS2017\$(Platform)\$(Configuration)\OTBux64.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\bin\VS2019\$(Platform)\$(Configuration)\OTBux64.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\bin\VS2017\$(Platform)\$(Configuration)\OTBux64.lib</ImportLibrary>
+      <ImportLibrary>.\bin\VS2019\$(Platform)\$(Configuration)\OTBux64.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" ..\..\..\bin
-copy "$(TargetDir)\$(TargetName).lib" ..\..\lib
+      <Command>xcopy "$(TargetPath)" "..\..\..\bin\" /F /R /Y /I
+xcopy "$(TargetDir)$(TargetName).lib" "..\..\lib\" /F /R /Y /I
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
