@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB162D04-7C12-4700-AB7D-9D1A5B823E2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OPCToolboxNET</RootNamespace>
+    <AssemblyName>TBN461</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\VS2019\AnyCPU\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET461</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\VS2017\AnyCPU\Release\</OutputPath>
+    <DefineConstants>TRACE;NDEBUG;NET461</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="client\Ae\ClientAeAttribute.cs" />
+    <Compile Include="client\Ae\ClientAeCategory.cs" />
+    <Compile Include="client\Ae\ClientAeCondition.cs" />
+    <Compile Include="client\Ae\ClientAeEvent.cs" />
+    <Compile Include="client\Ae\ClientAeSession.cs" />
+    <Compile Include="client\Ae\ClientAeSubscription.cs" />
+    <Compile Include="client\ClientAddressSpaceElement.cs" />
+    <Compile Include="client\ClientAddressSpaceElementBrowseOptions.cs" />
+    <Compile Include="client\ClientApplication.cs" />
+    <Compile Include="client\ClientEnums.cs" />
+    <Compile Include="client\ClientObjectSpaceElement.cs" />
+    <Compile Include="client\ClientServerBrowser.cs" />
+    <Compile Include="client\ClientServerStatus.cs" />
+    <Compile Include="client\Control\ClientDataControl.cs" />
+    <Compile Include="client\Control\ClientDataElements.cs" />
+    <Compile Include="client\Control\ClientInfoCollector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientSubscriptionProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\Control\ClientValueComparer.cs" />
+    <Compile Include="client\Control\ClientValueEditor.cs" />
+    <Compile Include="client\Da\ClientDaAddressSpaceElement.cs" />
+    <Compile Include="client\Da\ClientDaItem.cs" />
+    <Compile Include="client\Da\ClientDaPropertiesGetOptions.cs" />
+    <Compile Include="client\Da\ClientDaProperty.cs" />
+    <Compile Include="client\Da\ClientDaSession.cs" />
+    <Compile Include="client\Da\ClientDaSubscription.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="OTBFunctions.cs" />
+    <Compile Include="OTBStructures.cs" />
+    <Compile Include="server\Ae\ServerAeAddressSpaceElement.cs" />
+    <Compile Include="server\Ae\ServerAeAttribute.cs" />
+    <Compile Include="server\Ae\ServerAeCategory.cs" />
+    <Compile Include="server\Ae\ServerAeCondition.cs" />
+    <Compile Include="server\Ae\ServerAeEvent.cs" />
+    <Compile Include="server\Da\ServerDaAddressSpaceElement.cs" />
+    <Compile Include="server\Da\ServerDaProperty.cs" />
+    <Compile Include="server\Da\ServerDaRequest.cs" />
+    <Compile Include="server\Da\ServerDaSession.cs" />
+    <Compile Include="server\Da\ServerDaTransaction.cs" />
+    <Compile Include="server\ServerAddressSpaceElement.cs" />
+    <Compile Include="server\ServerApplication.cs" />
+    <Compile Include="server\ServerCreator.cs" />
+    <Compile Include="server\ServerEnums.cs" />
+    <Compile Include="server\ServerWebTemplate.cs" />
+    <Compile Include="Trace.cs" />
+    <Compile Include="ValueQT.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="client\Control\ClientInfoCollector.resx">
+      <DependentUpon>ClientInfoCollector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\Control\ClientSubscriptionProperties.resx">
+      <DependentUpon>ClientSubscriptionProperties.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" ..\..\..\..\..\..\bin</PostBuildEvent>
+  </PropertyGroup>
+</Project>
