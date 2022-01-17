@@ -674,6 +674,8 @@ SODaSNameSpaceRoot* SODaSEntry::getNameSpaceRoot(
 		return NULL;
 	}
 
+	SOCmnSingleLock<SOCmnSync> lock(&g_engineSync);
+
 	if (m_nsRoot[serverInstance] != NULL)
 	{
 		m_nsRoot[serverInstance]->addRef();
