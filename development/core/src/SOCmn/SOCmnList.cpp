@@ -717,7 +717,7 @@ BOOL SOCmnListHeader::create(
 		// something went wrong and the old type can not determined
 		SOCMN_FREE_OBJECT_C(m_info, (SOCmnListInfoFullList*));
 		SOCMN_FREE_OBJECT_C(m_info, (SOCmnListInfoSimpleList*));
-		SOCMN_FREE_OBJECT_C(m_info, (SOCmnListInfoSimpleList*));
+		SOCMN_FREE_OBJECT_C(m_info, (SOCmnListInfoMap*));
 	}
 
 	WORD hashTableSize = 17;

@@ -91,6 +91,9 @@ static SOCmnList<SOCltCallback> g_callbackQueue;
 
 SOCltEntry::SOCltEntry(IN DWORD objType)
 	:  SOCltElement(SOCMNOBJECT_TYPE_ENTRY | SOCMNOBJECT_TYPE_ROOT | objType)
+#ifdef SOFEATURE_DCOM
+	,  m_bCoUnInit(false)
+#endif
 {
 	m_terminateLock = TRUE;
 #ifdef SOFEATURE_DCOM
@@ -146,6 +149,7 @@ BOOL SOCltEntry::initialize(
 	if (SUCCEEDED(res))
 	{
 		m_coInit = coInit;
+		m_bCoUnInit = true;
 	}
 
 #endif // SOFEATURE_DCOM
@@ -225,7 +229,7 @@ BOOL SOCltEntry::terminate(void)
 	removeAllBranches(TRUE);
 #ifdef SOFEATURE_DCOM
 
-	if (m_coInit != 0)
+	if (m_bCoUnInit)
 	{
 		::CoUninitialize();
 	}

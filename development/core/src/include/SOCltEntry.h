@@ -84,6 +84,7 @@ protected:
 	BOOL m_terminateLock;           // termination lock
 #ifdef SOFEATURE_DCOM
 	DWORD m_coInit;                 // COM init mode
+	bool  m_bCoUnInit;              // Flag for CoUnInitialize, because m_coInit can be set to zero (COINIT_MULTITHREADED == 0).
 #endif
 
 // Overrides
