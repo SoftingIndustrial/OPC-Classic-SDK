@@ -61,6 +61,7 @@
 
 static SODaSEntry* g_engine = NULL;
 static SOCmnSync g_engineSync;
+static SOCmnSync g_namespaceSync;
 
 #ifdef SOFEATURE_DCOM
 #ifndef SOFEATURE_COMBINED_SERVER
@@ -674,7 +675,7 @@ SODaSNameSpaceRoot* SODaSEntry::getNameSpaceRoot(
 		return NULL;
 	}
 
-	SOCmnSingleLock<SOCmnSync> lock(&g_engineSync);
+	SOCmnSingleLock<SOCmnSync> lock(&g_namespaceSync);
 
 	if (m_nsRoot[serverInstance] != NULL)
 	{
